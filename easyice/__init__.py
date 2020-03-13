@@ -29,8 +29,8 @@ def process_ts(*, filename: str) -> Optional[Dict[str, str]]:
     data = dict()
 
     def load_data(typename: str):
-        json_path = full_path + typename + ".json"
-        with codecs.open(path, mode="rt", encoding="utf-8") as fin:
+        json_path = full_path + "." + typename + ".json"
+        with codecs.open(json_path, encoding="utf-8") as fin:
             json = fin.read()
             data[typename] = json
 

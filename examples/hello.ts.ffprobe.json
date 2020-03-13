@@ -189,7 +189,7 @@
         }
     ],
     "format": {
-        "filename": "./examples/hello.ts",
+        "filename": "/home/codetalks/Workspace/libeasyice/examples/hello.ts",
         "nb_streams": 2,
         "nb_programs": 1,
         "format_name": "mpegts",

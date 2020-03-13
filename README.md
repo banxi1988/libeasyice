@@ -260,4 +260,9 @@ usage: examples/hls.cpp
 
 
 
+### python wrapper build
+
+1. install python3-dev or build python3 with --shared-library
+2. `pip install wheel`
+
 

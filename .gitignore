@@ -8,6 +8,8 @@
 *.a
 *.so
 tags
-
-
+build/
+dist/
+*.egg-info
+!examples/hello.ts
 

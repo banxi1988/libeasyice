@@ -13,45 +13,47 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "libeasyice.h"
 #include <unistd.h>
 
-void demo_callback(UDPLIVE_CALLBACK_TYPE type,const char* json,void *pApp)
+void demo_callback(UDPLIVE_CALLBACK_TYPE type, const char *json, void *pApp)
 {
-    printf("type=%d,content=%s,pApp=%s\n",type,json,(char*)pApp);
+    printf("{\"type\":%d,\"json\":\"%s\"},", type, json);
 }
 
-int main(int argc,char** argv)
+int main(int argc, char **argv)
 {
-    const char* pdata = "pdata";
+    const char *pdata = "pdata";
     easyice_global_init();
 
-    EASYICE* handle  = easyice_init();
-    easyice_setopt(handle,EASYICEOPT_MRL, (void*)"udp://127.0.0.1:1234");
-    easyice_setopt(handle,EASYICEOPT_UDPLIVE_LOCAL_IP, (void*)"0.0.0.0");
-    easyice_setopt(handle,EASYICEOPT_UDPLIVE_FUNCTION, (void*)demo_callback);
-    easyice_setopt(handle,EASYICEOPT_UDPLIVE_DATA, (void*)"pdata");
+    EASYICE *handle = easyice_init();
+    easyice_setopt(handle, EASYICEOPT_MRL, (void *)"udp://127.0.0.1:1234");
+    easyice_setopt(handle, EASYICEOPT_UDPLIVE_LOCAL_IP, (void *)"0.0.0.0");
+    easyice_setopt(handle, EASYICEOPT_UDPLIVE_FUNCTION, (void *)demo_callback);
+    easyice_setopt(handle, EASYICEOPT_UDPLIVE_DATA, (void *)"pdata");
 
     //设置回调函数调用间隔周期
-    easyice_setopt(handle,EASYICEOPT_UDPLIVE_CB_UPDATE_INTERVAL, (void*)1000000);//1s
-    
+    easyice_setopt(handle, EASYICEOPT_UDPLIVE_CB_UPDATE_INTERVAL, (void *)1000000); //1s
+
     //设置计算 tsRate 的间隔周期，支持检测期间动态调整
-    easyice_setopt(handle,EASYICEOPT_UDPLIVE_CALCTSRATE_INTERVAL, (void*)1000);//1s
-    
+    easyice_setopt(handle, EASYICEOPT_UDPLIVE_CALCTSRATE_INTERVAL, (void *)1000); //1s
+
     //执行后立即返回，后台线程开始启动分析任务
     EASYICEcode ret = easyice_process(handle);
     if (ret != EASYICECODE_OK)
     {
-    	printf("process error\n");
+        printf("process error\n");
         _exit(-1);
     }
 
-   // 注意：easyice_process 调用之后才能执行录制命令
-    easyice_setopt(handle,EASYICEOPT_UDPLIVE_START_RECORD, (void*)"/tmp/r.ts");
-
+    // 注意：easyice_process 调用之后才能执行录制命令
+    easyice_setopt(handle, EASYICEOPT_UDPLIVE_START_RECORD, (void *)"/tmp/r.ts");
 
     //stop analysis after 10s
-    while(1)sleep(10);
-    
-  //  easyice_setopt(handle,EASYICEOPT_UDPLIVE_STOP_RECORD,NULL);
-    
+    while (1)
+    {
+        sleep(10);
+    }
+
+    //  easyice_setopt(handle,EASYICEOPT_UDPLIVE_STOP_RECORD,NULL);
+
     easyice_cleanup(handle);
     easyice_global_cleanup();
     printf("success\n");

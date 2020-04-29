@@ -1,0 +1,3038 @@
+接收网络类型->单播
+localAddr=0.0.0.0
+type=7,content={
+   "1" : [
+      {
+         "pid" : 256,
+         "type" : "H.264"
+      },
+      {
+         "pid" : 257,
+         "type" : "AAC"
+      },
+      {
+         "pid" : 256,
+         "type" : "PCR"
+      }
+   ],
+   "remote_address" : "127.0.0.1",
+   "remote_port" : 37565
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.036290321499109268,
+      "total" : 9,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.0080645158886909485,
+      "total" : 2,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.63709676265716553,
+      "total" : 158,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.29435482621192932,
+      "total" : 73,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.024193547666072845,
+      "total" : 6,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : null
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : null
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 256",
+         "offset" : 1504,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PID = 256",
+         "offset" : 3008,
+         "type" : "连续计数错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PID = 256",
+         "offset" : 4512,
+         "type" : "连续计数错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 0",
+         "offset" : 7332,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PID = 256",
+         "offset" : 7520,
+         "type" : "连续计数错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "PID = 256",
+         "offset" : 9024,
+         "type" : "连续计数错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "PID = 17",
+         "offset" : 10152,
+         "type" : "连续计数错误"
+      },
+      "00008" : {
+         "index" : 7,
+         "message" : "PID = 0",
+         "offset" : 10340,
+         "type" : "连续计数错误"
+      },
+      "00009" : {
+         "index" : 8,
+         "message" : "PID = 257",
+         "offset" : 10528,
+         "type" : "连续计数错误"
+      },
+      "00010" : {
+         "index" : 9,
+         "message" : "PID = 256",
+         "offset" : 12032,
+         "type" : "连续计数错误"
+      },
+      "00011" : {
+         "index" : 10,
+         "message" : "PID = 0",
+         "offset" : 13348,
+         "type" : "连续计数错误"
+      },
+      "00012" : {
+         "index" : 11,
+         "message" : "PID = 257",
+         "offset" : 13536,
+         "type" : "连续计数错误"
+      },
+      "00013" : {
+         "index" : 12,
+         "message" : "PID = 256",
+         "offset" : 15040,
+         "type" : "连续计数错误"
+      },
+      "00014" : {
+         "index" : 13,
+         "message" : "PID = 256",
+         "offset" : 16544,
+         "type" : "连续计数错误"
+      },
+      "00015" : {
+         "index" : 14,
+         "message" : "PID = 257",
+         "offset" : 18048,
+         "type" : "连续计数错误"
+      },
+      "00016" : {
+         "index" : 15,
+         "message" : "PID = 0",
+         "offset" : 18800,
+         "type" : "连续计数错误"
+      },
+      "00017" : {
+         "index" : 16,
+         "message" : "PID = 256",
+         "offset" : 19552,
+         "type" : "连续计数错误"
+      },
+      "00018" : {
+         "index" : 17,
+         "message" : "PID = 256",
+         "offset" : 21056,
+         "type" : "连续计数错误"
+      },
+      "00019" : {
+         "index" : 18,
+         "message" : "PID = 257",
+         "offset" : 22560,
+         "type" : "连续计数错误"
+      },
+      "00020" : {
+         "index" : 19,
+         "message" : "PID = 0",
+         "offset" : 23500,
+         "type" : "连续计数错误"
+      },
+      "00021" : {
+         "index" : 20,
+         "message" : "PID = 4096",
+         "offset" : 23688,
+         "type" : "连续计数错误"
+      },
+      "00022" : {
+         "index" : 21,
+         "message" : "PID = 256",
+         "offset" : 24064,
+         "type" : "连续计数错误"
+      },
+      "00023" : {
+         "index" : 22,
+         "message" : "PID = 257",
+         "offset" : 25568,
+         "type" : "连续计数错误"
+      },
+      "00024" : {
+         "index" : 23,
+         "message" : "PID = 256",
+         "offset" : 27072,
+         "type" : "连续计数错误"
+      },
+      "00025" : {
+         "index" : 24,
+         "message" : "PID = 257",
+         "offset" : 28576,
+         "type" : "连续计数错误"
+      },
+      "00026" : {
+         "index" : 25,
+         "message" : "PID = 0",
+         "offset" : 29328,
+         "type" : "连续计数错误"
+      },
+      "00027" : {
+         "index" : 26,
+         "message" : "PID = 4096",
+         "offset" : 29516,
+         "type" : "连续计数错误"
+      },
+      "00028" : {
+         "index" : 27,
+         "message" : "PID = 256",
+         "offset" : 30080,
+         "type" : "连续计数错误"
+      },
+      "00029" : {
+         "index" : 28,
+         "message" : "PID = 0",
+         "offset" : 30456,
+         "type" : "连续计数错误"
+      },
+      "00030" : {
+         "index" : 29,
+         "message" : "PID = 4096",
+         "offset" : 30644,
+         "type" : "连续计数错误"
+      },
+      "00031" : {
+         "index" : 30,
+         "message" : "PID = 257",
+         "offset" : 31584,
+         "type" : "连续计数错误"
+      },
+      "00032" : {
+         "index" : 31,
+         "message" : "PID = 0",
+         "offset" : 34216,
+         "type" : "连续计数错误"
+      },
+      "00033" : {
+         "index" : 32,
+         "message" : "PID = 4096",
+         "offset" : 34404,
+         "type" : "连续计数错误"
+      },
+      "00034" : {
+         "index" : 33,
+         "message" : "PID = 256",
+         "offset" : 34592,
+         "type" : "连续计数错误"
+      },
+      "00035" : {
+         "index" : 34,
+         "message" : "PID = 256",
+         "offset" : 36096,
+         "type" : "连续计数错误"
+      },
+      "00036" : {
+         "index" : 35,
+         "message" : "PID = 257",
+         "offset" : 37600,
+         "type" : "连续计数错误"
+      },
+      "00037" : {
+         "index" : 36,
+         "message" : "PID = 256",
+         "offset" : 39104,
+         "type" : "连续计数错误"
+      },
+      "00038" : {
+         "index" : 37,
+         "message" : "PID = 257",
+         "offset" : 40608,
+         "type" : "连续计数错误"
+      },
+      "00039" : {
+         "index" : 38,
+         "message" : "PID = 256",
+         "offset" : 42112,
+         "type" : "连续计数错误"
+      },
+      "00040" : {
+         "index" : 39,
+         "message" : "PID = 256",
+         "offset" : 43616,
+         "type" : "连续计数错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 0 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 0 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 40 次.\r\n",
+         "errors" : 40,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 0 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 0 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 0 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 0 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 0 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 0 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 0 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.045088566839694977,
+      "total" : 28,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.0080515295267105103,
+      "total" : 5,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.66988730430603027,
+      "total" : 416,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.23993559181690216,
+      "total" : 149,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.037037037312984467,
+      "total" : 23,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : [
+      {
+         "llPcr_Ac" : -1,
+         "llPcr_Oj" : 0,
+         "llPcr_interval" : -1,
+         "llTime" : 1588127497511557
+      }
+   ]
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : [
+      {
+         "fRate" : 294400,
+         "llTime" : 1588127497054475
+      }
+   ]
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 257",
+         "offset" : 46624,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PID = 0",
+         "offset" : 48316,
+         "type" : "连续计数错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PID = 4096",
+         "offset" : 48504,
+         "type" : "连续计数错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 256",
+         "offset" : 49632,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PID = 0",
+         "offset" : 51136,
+         "type" : "连续计数错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "PID = 4096",
+         "offset" : 51324,
+         "type" : "连续计数错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "PID = 256",
+         "offset" : 51512,
+         "type" : "连续计数错误"
+      },
+      "00008" : {
+         "index" : 7,
+         "message" : "PID = 17",
+         "offset" : 51888,
+         "type" : "连续计数错误"
+      },
+      "00009" : {
+         "index" : 8,
+         "message" : "间隔：0,PID = 17",
+         "offset" : 51888,
+         "type" : "SDT_actual 错误"
+      },
+      "00010" : {
+         "index" : 9,
+         "message" : "PID = 256",
+         "offset" : 52640,
+         "type" : "连续计数错误"
+      },
+      "00011" : {
+         "index" : 10,
+         "message" : "PID = 257",
+         "offset" : 53580,
+         "type" : "连续计数错误"
+      },
+      "00012" : {
+         "index" : 11,
+         "message" : "PID = 0",
+         "offset" : 54896,
+         "type" : "连续计数错误"
+      },
+      "00013" : {
+         "index" : 12,
+         "message" : "PID = 256",
+         "offset" : 56588,
+         "type" : "连续计数错误"
+      },
+      "00014" : {
+         "index" : 13,
+         "message" : "PID = 0",
+         "offset" : 56964,
+         "type" : "连续计数错误"
+      },
+      "00015" : {
+         "index" : 14,
+         "message" : "PID = 4096",
+         "offset" : 57152,
+         "type" : "连续计数错误"
+      },
+      "00016" : {
+         "index" : 15,
+         "message" : "PID = 257",
+         "offset" : 58092,
+         "type" : "连续计数错误"
+      },
+      "00017" : {
+         "index" : 16,
+         "message" : "PID = 0",
+         "offset" : 58844,
+         "type" : "连续计数错误"
+      },
+      "00018" : {
+         "index" : 17,
+         "message" : "PID = 4096",
+         "offset" : 59032,
+         "type" : "连续计数错误"
+      },
+      "00019" : {
+         "index" : 18,
+         "message" : "PID = 256",
+         "offset" : 59596,
+         "type" : "连续计数错误"
+      },
+      "00020" : {
+         "index" : 19,
+         "message" : "PID = 4096",
+         "offset" : 61100,
+         "type" : "连续计数错误"
+      },
+      "00021" : {
+         "index" : 20,
+         "message" : "PID = 256",
+         "offset" : 61288,
+         "type" : "连续计数错误"
+      },
+      "00022" : {
+         "index" : 21,
+         "message" : "PID = 256",
+         "offset" : 62604,
+         "type" : "连续计数错误"
+      },
+      "00023" : {
+         "index" : 22,
+         "message" : "PID = 256",
+         "offset" : 64108,
+         "type" : "连续计数错误"
+      },
+      "00024" : {
+         "index" : 23,
+         "message" : "PID = 257",
+         "offset" : 65612,
+         "type" : "连续计数错误"
+      },
+      "00025" : {
+         "index" : 24,
+         "message" : "PID = 0",
+         "offset" : 66364,
+         "type" : "连续计数错误"
+      },
+      "00026" : {
+         "index" : 25,
+         "message" : "PID = 4096",
+         "offset" : 66552,
+         "type" : "连续计数错误"
+      },
+      "00027" : {
+         "index" : 26,
+         "message" : "PID = 256",
+         "offset" : 67116,
+         "type" : "连续计数错误"
+      },
+      "00028" : {
+         "index" : 27,
+         "message" : "PID = 256",
+         "offset" : 68620,
+         "type" : "连续计数错误"
+      },
+      "00029" : {
+         "index" : 28,
+         "message" : "PID = 0",
+         "offset" : 68808,
+         "type" : "连续计数错误"
+      },
+      "00030" : {
+         "index" : 29,
+         "message" : "PID = 4096",
+         "offset" : 68996,
+         "type" : "连续计数错误"
+      },
+      "00031" : {
+         "index" : 30,
+         "message" : "PID = 257",
+         "offset" : 70124,
+         "type" : "连续计数错误"
+      },
+      "00032" : {
+         "index" : 31,
+         "message" : "PID = 256",
+         "offset" : 71628,
+         "type" : "连续计数错误"
+      },
+      "00033" : {
+         "index" : 32,
+         "message" : "PID = 256",
+         "offset" : 73132,
+         "type" : "连续计数错误"
+      },
+      "00034" : {
+         "index" : 33,
+         "message" : "PID = 256",
+         "offset" : 74636,
+         "type" : "连续计数错误"
+      },
+      "00035" : {
+         "index" : 34,
+         "message" : "PID = 257",
+         "offset" : 76140,
+         "type" : "连续计数错误"
+      },
+      "00036" : {
+         "index" : 35,
+         "message" : "PID = 256",
+         "offset" : 79148,
+         "type" : "连续计数错误"
+      },
+      "00037" : {
+         "index" : 36,
+         "message" : "PID = 0",
+         "offset" : 79712,
+         "type" : "连续计数错误"
+      },
+      "00038" : {
+         "index" : 37,
+         "message" : "PID = 4096",
+         "offset" : 79900,
+         "type" : "连续计数错误"
+      },
+      "00039" : {
+         "index" : 38,
+         "message" : "PID = 257",
+         "offset" : 80652,
+         "type" : "连续计数错误"
+      },
+      "00040" : {
+         "index" : 39,
+         "message" : "PID = 0",
+         "offset" : 80840,
+         "type" : "连续计数错误"
+      },
+      "00041" : {
+         "index" : 40,
+         "message" : "PID = 4096",
+         "offset" : 81028,
+         "type" : "连续计数错误"
+      },
+      "00042" : {
+         "index" : 41,
+         "message" : "PID = 257",
+         "offset" : 82156,
+         "type" : "连续计数错误"
+      },
+      "00043" : {
+         "index" : 42,
+         "message" : "PID = 0",
+         "offset" : 82344,
+         "type" : "连续计数错误"
+      },
+      "00044" : {
+         "index" : 43,
+         "message" : "PID = 4096",
+         "offset" : 82532,
+         "type" : "连续计数错误"
+      },
+      "00045" : {
+         "index" : 44,
+         "message" : "PID = 256",
+         "offset" : 84036,
+         "type" : "连续计数错误"
+      },
+      "00046" : {
+         "index" : 45,
+         "message" : "PCR 间隔超过40ms,PID = 256",
+         "offset" : 84036,
+         "type" : "PCR 不连续错误"
+      },
+      "00047" : {
+         "index" : 46,
+         "message" : "PID = 256",
+         "offset" : 85164,
+         "type" : "连续计数错误"
+      },
+      "00048" : {
+         "index" : 47,
+         "message" : "PID = 256",
+         "offset" : 86668,
+         "type" : "连续计数错误"
+      },
+      "00049" : {
+         "index" : 48,
+         "message" : "PID = 256",
+         "offset" : 88172,
+         "type" : "连续计数错误"
+      },
+      "00050" : {
+         "index" : 49,
+         "message" : "PID = 256",
+         "offset" : 89676,
+         "type" : "连续计数错误"
+      },
+      "00051" : {
+         "index" : 50,
+         "message" : "PID = 0",
+         "offset" : 90616,
+         "type" : "连续计数错误"
+      },
+      "00052" : {
+         "index" : 51,
+         "message" : "PAT 间隔时间大于 0.5 秒",
+         "offset" : 90616,
+         "type" : "PAT 错误"
+      },
+      "00053" : {
+         "index" : 52,
+         "message" : "PID = 4096",
+         "offset" : 90804,
+         "type" : "连续计数错误"
+      },
+      "00054" : {
+         "index" : 53,
+         "message" : "PMT 间隔时间大于 0.5 秒",
+         "offset" : 90804,
+         "type" : "PMT 错误"
+      },
+      "00055" : {
+         "index" : 54,
+         "message" : "PID = 256",
+         "offset" : 91180,
+         "type" : "连续计数错误"
+      },
+      "00056" : {
+         "index" : 55,
+         "message" : "PID = 256",
+         "offset" : 92684,
+         "type" : "连续计数错误"
+      },
+      "00057" : {
+         "index" : 56,
+         "message" : "PID = 257",
+         "offset" : 94188,
+         "type" : "连续计数错误"
+      },
+      "00058" : {
+         "index" : 57,
+         "message" : "PID = 0",
+         "offset" : 95316,
+         "type" : "连续计数错误"
+      },
+      "00059" : {
+         "index" : 58,
+         "message" : "PID = 4096",
+         "offset" : 95504,
+         "type" : "连续计数错误"
+      },
+      "00060" : {
+         "index" : 59,
+         "message" : "PID = 256",
+         "offset" : 95692,
+         "type" : "连续计数错误"
+      },
+      "00061" : {
+         "index" : 60,
+         "message" : "PID = 256",
+         "offset" : 97196,
+         "type" : "连续计数错误"
+      },
+      "00062" : {
+         "index" : 61,
+         "message" : "PID = 0",
+         "offset" : 97572,
+         "type" : "连续计数错误"
+      },
+      "00063" : {
+         "index" : 62,
+         "message" : "PID = 4096",
+         "offset" : 97760,
+         "type" : "连续计数错误"
+      },
+      "00064" : {
+         "index" : 63,
+         "message" : "PID = 256",
+         "offset" : 98700,
+         "type" : "连续计数错误"
+      },
+      "00065" : {
+         "index" : 64,
+         "message" : "PID = 17",
+         "offset" : 98888,
+         "type" : "连续计数错误"
+      },
+      "00066" : {
+         "index" : 65,
+         "message" : "PID = 256",
+         "offset" : 100204,
+         "type" : "连续计数错误"
+      },
+      "00067" : {
+         "index" : 66,
+         "message" : "PID = 256",
+         "offset" : 101708,
+         "type" : "连续计数错误"
+      },
+      "00068" : {
+         "index" : 67,
+         "message" : "PID = 256",
+         "offset" : 103212,
+         "type" : "连续计数错误"
+      },
+      "00069" : {
+         "index" : 68,
+         "message" : "PID = 0",
+         "offset" : 104528,
+         "type" : "连续计数错误"
+      },
+      "00070" : {
+         "index" : 69,
+         "message" : "PID = 257",
+         "offset" : 104716,
+         "type" : "连续计数错误"
+      },
+      "00071" : {
+         "index" : 70,
+         "message" : "PID = 256",
+         "offset" : 106220,
+         "type" : "连续计数错误"
+      },
+      "00072" : {
+         "index" : 71,
+         "message" : "PID = 0",
+         "offset" : 106784,
+         "type" : "连续计数错误"
+      },
+      "00073" : {
+         "index" : 72,
+         "message" : "PID = 256",
+         "offset" : 107724,
+         "type" : "连续计数错误"
+      },
+      "00074" : {
+         "index" : 73,
+         "message" : "PID = 257",
+         "offset" : 109228,
+         "type" : "连续计数错误"
+      },
+      "00075" : {
+         "index" : 74,
+         "message" : "PID = 17",
+         "offset" : 110356,
+         "type" : "连续计数错误"
+      },
+      "00076" : {
+         "index" : 75,
+         "message" : "间隔：0,PID = 17",
+         "offset" : 110356,
+         "type" : "SDT_actual 错误"
+      },
+      "00077" : {
+         "index" : 76,
+         "message" : "PID = 256",
+         "offset" : 110732,
+         "type" : "连续计数错误"
+      },
+      "00078" : {
+         "index" : 77,
+         "message" : "PID = 0",
+         "offset" : 111484,
+         "type" : "连续计数错误"
+      },
+      "00079" : {
+         "index" : 78,
+         "message" : "PID = 4096",
+         "offset" : 111672,
+         "type" : "连续计数错误"
+      },
+      "00080" : {
+         "index" : 79,
+         "message" : "PID = 256",
+         "offset" : 112236,
+         "type" : "连续计数错误"
+      },
+      "00081" : {
+         "index" : 80,
+         "message" : "PID = 256",
+         "offset" : 113740,
+         "type" : "连续计数错误"
+      },
+      "00082" : {
+         "index" : 81,
+         "message" : "PID = 256",
+         "offset" : 115244,
+         "type" : "连续计数错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 1 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 1 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 117 次.\r\n",
+         "errors" : 117,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 1 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 1 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 2 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 2 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 0 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 2 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 0 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata
+type=3,content={
+   "PSI" : {
+      "CAT" : null,
+      "NIT" : null,
+      "PAT" : [
+         [
+            {
+               "CRC_32" : 716244146,
+               "current_next_indicator" : 1,
+               "last_section_number" : 0,
+               "programs" : [
+                  {
+                     "network_pmt_PID" : 4096,
+                     "program_number" : 1,
+                     "reserved" : 7
+                  }
+               ],
+               "reserved_1" : 3,
+               "reserved_2" : 3,
+               "section_length" : 13,
+               "section_number" : 0,
+               "section_syntax_indicator" : 1,
+               "table_id" : 0,
+               "transport_stream_id" : 1,
+               "version_number" : 0
+            }
+         ]
+      ],
+      "PMT" : {
+         "1" : [
+            {
+               "CRC_32" : 2374146567,
+               "b_null" : 0,
+               "components" : [
+                  {
+                     "ES_info_length" : 0,
+                     "descriptors" : null,
+                     "elementary_PID" : 256,
+                     "reserved_1" : 7,
+                     "reserved_2" : 15,
+                     "stream_type" : 27
+                  },
+                  {
+                     "ES_info_length" : 6,
+                     "descriptors" : [
+                        {
+                           "dr_name" : "iso_639language_descriptor",
+                           "str_tree" : [
+                              {
+                                 "lstItem" : [
+                                    {
+                                       "element" : "descriptor_tag",
+                                       "exist" : true,
+                                       "value" : "0x0A"
+                                    },
+                                    {
+                                       "element" : "descriptor_length",
+                                       "exist" : true,
+                                       "value" : "0x04"
+                                    },
+                                    {
+                                       "element" : "code_count",
+                                       "exist" : true,
+                                       "value" : "0x01"
+                                    },
+                                    {
+                                       "element" : "iso_639_code",
+                                       "exist" : true,
+                                       "value" : "0x65,0x6E,0x67"
+                                    },
+                                    {
+                                       "element" : "audio_type",
+                                       "exist" : true,
+                                       "value" : "0x00"
+                                    }
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "elementary_PID" : 257,
+                     "reserved_1" : 7,
+                     "reserved_2" : 15,
+                     "stream_type" : 15
+                  }
+               ],
+               "current_next_indicator" : 1,
+               "descriptors" : null,
+               "last_section_number" : 0,
+               "pcr_pid" : 256,
+               "program_info_length" : 0,
+               "program_number" : 1,
+               "reserved_1" : 3,
+               "reserved_2" : 3,
+               "reserved_3" : 7,
+               "reserved_4" : 15,
+               "section_length" : 29,
+               "section_number" : 0,
+               "section_syntax_indicator" : 1,
+               "table_id" : 2,
+               "version_number" : 0
+            }
+         ]
+      }
+   },
+   "SI" : {
+      "BAT" : null,
+      "DIT" : null,
+      "EIT" : null,
+      "RST" : null,
+      "SDT" : [
+         [
+            {
+               "CRC_32" : 2004632522,
+               "current_next_indicator" : 1,
+               "last_section_number" : 0,
+               "original_network_id" : 65281,
+               "reserved_1" : 1,
+               "reserved_2" : 3,
+               "reserved_3" : 3,
+               "reserved_4" : 255,
+               "section_length" : 37,
+               "section_number" : 0,
+               "section_syntax_indicator" : 1,
+               "services" : [
+                  {
+                     "EIT_present_following_flag" : 0,
+                     "EIT_schedule_flag" : 0,
+                     "descriptors" : [
+                        {
+                           "dr_name" : "service_descriptor",
+                           "str_tree" : [
+                              {
+                                 "lstItem" : [
+                                    {
+                                       "element" : "descriptor_tag",
+                                       "exist" : true,
+                                       "value" : "0x48"
+                                    },
+                                    {
+                                       "element" : "descriptor_length",
+                                       "exist" : true,
+                                       "value" : "0x12"
+                                    },
+                                    {
+                                       "element" : "service_type",
+                                       "exist" : true,
+                                       "value" : "0x01"
+                                    },
+                                    {
+                                       "element" : "service_provider_length",
+                                       "exist" : true,
+                                       "value" : "0x06"
+                                    },
+                                    {
+                                       "element" : "service_provider",
+                                       "exist" : true,
+                                       "value" : "FFmpeg"
+                                    },
+                                    {
+                                       "element" : "service_name_length",
+                                       "exist" : true,
+                                       "value" : "0x09"
+                                    },
+                                    {
+                                       "element" : "service_name",
+                                       "exist" : true,
+                                       "value" : "Service01"
+                                    }
+                                 ]
+                              }
+                           ]
+                        }
+                     ],
+                     "descriptors_loop_length" : 20,
+                     "free_CA_mode" : 0,
+                     "reserved_1" : 63,
+                     "running_status" : 4,
+                     "service_id" : 1
+                  }
+               ],
+               "table_id" : 66,
+               "transport_stream_id" : 1,
+               "version_number" : 0
+            }
+         ]
+      ],
+      "SIT" : null,
+      "ST" : null,
+      "TDT" : null,
+      "TOT" : null,
+      "TSDT" : null
+   }
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.045597482472658157,
+      "total" : 29,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.007861635647714138,
+      "total" : 5,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.67452830076217651,
+      "total" : 429,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.23427672684192657,
+      "total" : 149,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.037735849618911743,
+      "total" : 24,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : null
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : [
+      {
+         "fRate" : 459210,
+         "llTime" : 1588127498251156
+      }
+   ]
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 256",
+         "offset" : 116748,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PID = 0",
+         "offset" : 118252,
+         "type" : "连续计数错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PID = 4096",
+         "offset" : 118440,
+         "type" : "连续计数错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 256",
+         "offset" : 118628,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PCR 间隔超过40ms,PID = 256",
+         "offset" : 118628,
+         "type" : "PCR 不连续错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "PCR 精度误差超过正负 500ns,PID = 256",
+         "offset" : 118628,
+         "type" : "PCR 精度错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "",
+         "offset" : 119568,
+         "type" : "同步字节错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 1 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 1 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 121 次.\r\n",
+         "errors" : 121,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 1 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 1 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 2 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 2 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 0 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 2 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 0 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata
+type=0,content=General
+File size                                : 114 KiB
+
+
+
+Video StreamCount: 
+
+Audio StreamCount: ,pApp=pdata
+type=1,content={
+    "programs": [
+        {
+            "program_id": 1,
+            "program_num": 1,
+            "nb_streams": 2,
+            "pmt_pid": 4096,
+            "pcr_pid": 256,
+            "start_pts": 1440000,
+            "start_time": "1.440000",
+            "end_pts": 5480000,
+            "end_time": "5.480000",
+            "tags": {
+                "service_name": "Service01",
+                "service_provider": "FFmpeg"
+            },
+            "streams": [
+                {
+                    "index": 0,
+                    "codec_name": "h264",
+                    "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+                    "profile": "Main",
+                    "codec_type": "video",
+                    "codec_time_base": "1/50",
+                    "codec_tag_string": "[27][0][0][0]",
+                    "codec_tag": "0x001b",
+                    "width": 1920,
+                    "height": 1080,
+                    "coded_width": 1920,
+                    "coded_height": 1080,
+                    "has_b_frames": 1,
+                    "sample_aspect_ratio": "0:1",
+                    "display_aspect_ratio": "0:1",
+                    "pix_fmt": "yuv420p",
+                    "level": 41,
+                    "color_range": "tv",
+                    "color_space": "bt709",
+                    "color_transfer": "bt709",
+                    "color_primaries": "bt709",
+                    "chroma_location": "left",
+                    "field_order": "progressive",
+                    "refs": 1,
+                    "is_avc": "false",
+                    "nal_length_size": "0",
+                    "id": "0x100",
+                    "r_frame_rate": "25/1",
+                    "avg_frame_rate": "25/1",
+                    "time_base": "1/90000",
+                    "start_pts": 129600,
+                    "start_time": "1.440000",
+                    "duration_ts": 363600,
+                    "duration": "4.040000",
+                    "bits_per_raw_sample": "8",
+                    "disposition": {
+                        "default": 0,
+                        "dub": 0,
+                        "original": 0,
+                        "comment": 0,
+                        "lyrics": 0,
+                        "karaoke": 0,
+                        "forced": 0,
+                        "hearing_impaired": 0,
+                        "visual_impaired": 0,
+                        "clean_effects": 0,
+                        "attached_pic": 0,
+                        "timed_thumbnails": 0
+                    }
+                },
+                {
+                    "index": 1,
+                    "codec_name": "aac",
+                    "codec_long_name": "AAC (Advanced Audio Coding)",
+                    "profile": "LC",
+                    "codec_type": "audio",
+                    "codec_time_base": "1/48000",
+                    "codec_tag_string": "[15][0][0][0]",
+                    "codec_tag": "0x000f",
+                    "sample_fmt": "fltp",
+                    "sample_rate": "48000",
+                    "channels": 2,
+                    "channel_layout": "stereo",
+                    "bits_per_sample": 0,
+                    "id": "0x101",
+                    "r_frame_rate": "0/0",
+                    "avg_frame_rate": "0/0",
+                    "time_base": "1/90000",
+                    "start_pts": 239040,
+                    "start_time": "2.656000",
+                    "duration_ts": 1920,
+                    "duration": "0.021333",
+                    "bit_rate": "319875",
+                    "disposition": {
+                        "default": 0,
+                        "dub": 0,
+                        "original": 0,
+                        "comment": 0,
+                        "lyrics": 0,
+                        "karaoke": 0,
+                        "forced": 0,
+                        "hearing_impaired": 0,
+                        "visual_impaired": 0,
+                        "clean_effects": 0,
+                        "attached_pic": 0,
+                        "timed_thumbnails": 0
+                    },
+                    "tags": {
+                        "language": "eng"
+                    }
+                }
+            ]
+        }
+    ],
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "Main",
+            "codec_type": "video",
+            "codec_time_base": "1/50",
+            "codec_tag_string": "[27][0][0][0]",
+            "codec_tag": "0x001b",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 1,
+            "sample_aspect_ratio": "0:1",
+            "display_aspect_ratio": "0:1",
+            "pix_fmt": "yuv420p",
+            "level": 41,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "false",
+            "nal_length_size": "0",
+            "id": "0x100",
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1",
+            "time_base": "1/90000",
+            "start_pts": 129600,
+            "start_time": "1.440000",
+            "duration_ts": 363600,
+            "duration": "4.040000",
+            "bits_per_raw_sample": "8",
+            "disposition": {
+                "default": 0,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_time_base": "1/48000",
+            "codec_tag_string": "[15][0][0][0]",
+            "codec_tag": "0x000f",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "id": "0x101",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/90000",
+            "start_pts": 239040,
+            "start_time": "2.656000",
+            "duration_ts": 1920,
+            "duration": "0.021333",
+            "bit_rate": "319875",
+            "disposition": {
+                "default": 0,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0
+            },
+            "tags": {
+                "language": "eng"
+            }
+        }
+    ],
+    "format": {
+        "filename": "/tmp/udp127.0.0.11234",
+        "nb_streams": 2,
+        "nb_programs": 1,
+        "format_name": "mpegts",
+        "format_long_name": "MPEG-TS (MPEG-2 Transport Stream)",
+        "start_time": "1.440000",
+        "duration": "4.040000",
+        "size": "117228",
+        "bit_rate": "232134",
+        "probe_score": 48
+    }
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.042746115475893021,
+      "total" : 33,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.0077720205299556255,
+      "total" : 6,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.66321241855621338,
+      "total" : 512,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.25259068608283997,
+      "total" : 195,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.033678755164146423,
+      "total" : 26,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : [
+      {
+         "llPcr_Ac" : -1,
+         "llPcr_Oj" : 2,
+         "llPcr_interval" : 2000,
+         "llTime" : 1588127499513827
+      }
+   ]
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : [
+      {
+         "fRate" : 18662,
+         "llTime" : 1588127499513827
+      }
+   ]
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 256",
+         "offset" : 119756,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PAT 间隔时间大于 0.5 秒",
+         "offset" : 122576,
+         "type" : "PAT 错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PID = 257",
+         "offset" : 122764,
+         "type" : "连续计数错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 256",
+         "offset" : 124268,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PID = 0",
+         "offset" : 125584,
+         "type" : "连续计数错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "PID = 256",
+         "offset" : 125772,
+         "type" : "连续计数错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "PID = 257",
+         "offset" : 127276,
+         "type" : "连续计数错误"
+      },
+      "00008" : {
+         "index" : 7,
+         "message" : "PID = 0",
+         "offset" : 128028,
+         "type" : "连续计数错误"
+      },
+      "00009" : {
+         "index" : 8,
+         "message" : "PID = 4096",
+         "offset" : 128216,
+         "type" : "连续计数错误"
+      },
+      "00010" : {
+         "index" : 9,
+         "message" : "PMT 间隔时间大于 0.5 秒",
+         "offset" : 128216,
+         "type" : "PMT 错误"
+      },
+      "00011" : {
+         "index" : 10,
+         "message" : "PID = 256",
+         "offset" : 128780,
+         "type" : "连续计数错误"
+      },
+      "00012" : {
+         "index" : 11,
+         "message" : "PID = 257",
+         "offset" : 130284,
+         "type" : "连续计数错误"
+      },
+      "00013" : {
+         "index" : 12,
+         "message" : "PID = 256",
+         "offset" : 131788,
+         "type" : "连续计数错误"
+      },
+      "00014" : {
+         "index" : 13,
+         "message" : "PID = 256",
+         "offset" : 133292,
+         "type" : "连续计数错误"
+      },
+      "00015" : {
+         "index" : 14,
+         "message" : "PID = 257",
+         "offset" : 134796,
+         "type" : "连续计数错误"
+      },
+      "00016" : {
+         "index" : 15,
+         "message" : "PID = 256",
+         "offset" : 136300,
+         "type" : "连续计数错误"
+      },
+      "00017" : {
+         "index" : 16,
+         "message" : "PID = 257",
+         "offset" : 137804,
+         "type" : "连续计数错误"
+      },
+      "00018" : {
+         "index" : 17,
+         "message" : "PID = 256",
+         "offset" : 139308,
+         "type" : "连续计数错误"
+      },
+      "00019" : {
+         "index" : 18,
+         "message" : "PID = 257",
+         "offset" : 140812,
+         "type" : "连续计数错误"
+      },
+      "00020" : {
+         "index" : 19,
+         "message" : "PID = 256",
+         "offset" : 142316,
+         "type" : "连续计数错误"
+      },
+      "00021" : {
+         "index" : 20,
+         "message" : "PID = 0",
+         "offset" : 143256,
+         "type" : "连续计数错误"
+      },
+      "00022" : {
+         "index" : 21,
+         "message" : "PID = 4096",
+         "offset" : 143444,
+         "type" : "连续计数错误"
+      },
+      "00023" : {
+         "index" : 22,
+         "message" : "PID = 256",
+         "offset" : 143820,
+         "type" : "连续计数错误"
+      },
+      "00024" : {
+         "index" : 23,
+         "message" : "PID = 17",
+         "offset" : 145136,
+         "type" : "连续计数错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 2 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 2 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 143 次.\r\n",
+         "errors" : 143,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 2 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 2 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 2 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 2 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 0 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 2 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 0 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.043427228927612305,
+      "total" : 37,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.007042253389954567,
+      "total" : 6,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.66314554214477539,
+      "total" : 565,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.25234740972518921,
+      "total" : 215,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.034037560224533081,
+      "total" : 29,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : [
+      {
+         "llPcr_Ac" : 274725,
+         "llPcr_Oj" : 9,
+         "llPcr_interval" : 2000,
+         "llTime" : 1588127501523466
+      }
+   ]
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : [
+      {
+         "fRate" : 177004,
+         "llTime" : 1588127500645265
+      }
+   ]
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 256",
+         "offset" : 145324,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PID = 0",
+         "offset" : 146640,
+         "type" : "连续计数错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PID = 256",
+         "offset" : 146828,
+         "type" : "连续计数错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 257",
+         "offset" : 148332,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PID = 0",
+         "offset" : 148708,
+         "type" : "连续计数错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "PID = 4096",
+         "offset" : 148896,
+         "type" : "连续计数错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "PID = 256",
+         "offset" : 149836,
+         "type" : "连续计数错误"
+      },
+      "00008" : {
+         "index" : 7,
+         "message" : "PID = 256",
+         "offset" : 151340,
+         "type" : "连续计数错误"
+      },
+      "00009" : {
+         "index" : 8,
+         "message" : "PID = 0",
+         "offset" : 152844,
+         "type" : "连续计数错误"
+      },
+      "00010" : {
+         "index" : 9,
+         "message" : "PID = 4096",
+         "offset" : 153032,
+         "type" : "连续计数错误"
+      },
+      "00011" : {
+         "index" : 10,
+         "message" : "PID = 257",
+         "offset" : 153220,
+         "type" : "连续计数错误"
+      },
+      "00012" : {
+         "index" : 11,
+         "message" : "PID = 256",
+         "offset" : 154348,
+         "type" : "连续计数错误"
+      },
+      "00013" : {
+         "index" : 12,
+         "message" : "PID = 257",
+         "offset" : 155852,
+         "type" : "连续计数错误"
+      },
+      "00014" : {
+         "index" : 13,
+         "message" : "PID = 0",
+         "offset" : 157356,
+         "type" : "连续计数错误"
+      },
+      "00015" : {
+         "index" : 14,
+         "message" : "PID = 4096",
+         "offset" : 157544,
+         "type" : "连续计数错误"
+      },
+      "00016" : {
+         "index" : 15,
+         "message" : "PID = 256",
+         "offset" : 157732,
+         "type" : "连续计数错误"
+      },
+      "00017" : {
+         "index" : 16,
+         "message" : "PCR 间隔超过40ms,PID = 256",
+         "offset" : 157732,
+         "type" : "PCR 不连续错误"
+      },
+      "00018" : {
+         "index" : 17,
+         "message" : "PCR 精度误差超过正负 500ns,PID = 256",
+         "offset" : 157732,
+         "type" : "PCR 精度错误"
+      },
+      "00019" : {
+         "index" : 18,
+         "message" : "PID = 256",
+         "offset" : 158860,
+         "type" : "连续计数错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 2 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 2 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 160 次.\r\n",
+         "errors" : 160,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 2 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 2 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 3 次.\r\n",
+         "errors" : 3,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 2 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 2 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 0 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 2 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 0 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.045248869806528091,
+      "total" : 40,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.0067873303778469563,
+      "total" : 6,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.66968327760696411,
+      "total" : 592,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.24321267008781433,
+      "total" : 215,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.035067874938249588,
+      "total" : 31,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : [
+      {
+         "llPcr_Ac" : -777777,
+         "llPcr_Oj" : 141,
+         "llPcr_interval" : 1000,
+         "llTime" : 1588127502664573
+      }
+   ]
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : [
+      {
+         "fRate" : 73233,
+         "llTime" : 1588127502253849
+      }
+   ]
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 256",
+         "offset" : 160364,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PAT 间隔时间大于 0.5 秒",
+         "offset" : 160552,
+         "type" : "PAT 错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PMT 间隔时间大于 0.5 秒",
+         "offset" : 160740,
+         "type" : "PMT 错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 0",
+         "offset" : 161868,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PID = 4096",
+         "offset" : 162056,
+         "type" : "连续计数错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "PID = 256",
+         "offset" : 162244,
+         "type" : "连续计数错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "PCR 间隔超过40ms,PID = 256",
+         "offset" : 162244,
+         "type" : "PCR 不连续错误"
+      },
+      "00008" : {
+         "index" : 7,
+         "message" : "PCR 精度误差超过正负 500ns,PID = 256",
+         "offset" : 162244,
+         "type" : "PCR 精度错误"
+      },
+      "00009" : {
+         "index" : 8,
+         "message" : "PID = 256",
+         "offset" : 163372,
+         "type" : "连续计数错误"
+      },
+      "00010" : {
+         "index" : 9,
+         "message" : "PID = 256",
+         "offset" : 164876,
+         "type" : "连续计数错误"
+      },
+      "00011" : {
+         "index" : 10,
+         "message" : "PID = 0",
+         "offset" : 166192,
+         "type" : "连续计数错误"
+      },
+      "00012" : {
+         "index" : 11,
+         "message" : "PAT 间隔时间大于 0.5 秒",
+         "offset" : 166192,
+         "type" : "PAT 错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 1 次.\r\n",
+         "errors" : 1,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 4 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 4 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 4,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 167 次.\r\n",
+         "errors" : 167,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 3 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 3 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 3,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 4 次.\r\n",
+         "errors" : 4,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 3 次.\r\n",
+         "errors" : 3,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 2 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 2 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 0 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 2 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 0 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata
+type=2,content={
+   "0" : {
+      "PID" : 0,
+      "percent" : 0.042553190141916275,
+      "total" : 42,
+      "type" : "PAT"
+   },
+   "17" : {
+      "PID" : 17,
+      "percent" : 0.0070921983569860458,
+      "total" : 7,
+      "type" : "SDT/BAT"
+   },
+   "256" : {
+      "PID" : 256,
+      "percent" : 0.67477202415466309,
+      "total" : 666,
+      "type" : "H.264"
+   },
+   "257" : {
+      "PID" : 257,
+      "percent" : 0.24214792251586914,
+      "total" : 239,
+      "type" : "AAC"
+   },
+   "4096" : {
+      "PID" : 4096,
+      "percent" : 0.033434651792049408,
+      "total" : 33,
+      "type" : "PMT"
+   }
+}
+,pApp=pdata
+type=5,content={
+   "1" : [
+      {
+         "llPcr_Ac" : 0,
+         "llPcr_Oj" : -158,
+         "llPcr_interval" : 1000,
+         "llTime" : 1588127503506088
+      }
+   ]
+}
+,pApp=pdata
+type=6,content={
+   "tsrate" : [
+      {
+         "fRate" : 39286,
+         "llTime" : 1588127503453477
+      }
+   ]
+}
+,pApp=pdata
+type=4,content={
+   "msglist" : {
+      "00001" : {
+         "index" : 0,
+         "message" : "PID = 0",
+         "offset" : 166380,
+         "type" : "连续计数错误"
+      },
+      "00002" : {
+         "index" : 1,
+         "message" : "PID = 4096",
+         "offset" : 166568,
+         "type" : "连续计数错误"
+      },
+      "00003" : {
+         "index" : 2,
+         "message" : "PMT 间隔时间大于 0.5 秒",
+         "offset" : 166568,
+         "type" : "PMT 错误"
+      },
+      "00004" : {
+         "index" : 3,
+         "message" : "PID = 256",
+         "offset" : 166756,
+         "type" : "连续计数错误"
+      },
+      "00005" : {
+         "index" : 4,
+         "message" : "PCR 间隔超过40ms,PID = 256",
+         "offset" : 166756,
+         "type" : "PCR 不连续错误"
+      },
+      "00006" : {
+         "index" : 5,
+         "message" : "",
+         "offset" : 167696,
+         "type" : "同步字节错误"
+      },
+      "00007" : {
+         "index" : 6,
+         "message" : "PID = 256",
+         "offset" : 167884,
+         "type" : "连续计数错误"
+      },
+      "00008" : {
+         "index" : 7,
+         "message" : "PID = 17",
+         "offset" : 168824,
+         "type" : "连续计数错误"
+      },
+      "00009" : {
+         "index" : 8,
+         "message" : "间隔：108000000,PID = 17",
+         "offset" : 168824,
+         "type" : "SDT_actual 错误"
+      },
+      "00010" : {
+         "index" : 9,
+         "message" : "PID = 256",
+         "offset" : 169388,
+         "type" : "连续计数错误"
+      },
+      "00011" : {
+         "index" : 10,
+         "message" : "PID = 257",
+         "offset" : 170892,
+         "type" : "连续计数错误"
+      },
+      "00012" : {
+         "index" : 11,
+         "message" : "PID = 256",
+         "offset" : 172396,
+         "type" : "连续计数错误"
+      },
+      "00013" : {
+         "index" : 12,
+         "message" : "PID = 257",
+         "offset" : 173900,
+         "type" : "连续计数错误"
+      },
+      "00014" : {
+         "index" : 13,
+         "message" : "PID = 256",
+         "offset" : 175404,
+         "type" : "连续计数错误"
+      },
+      "00015" : {
+         "index" : 14,
+         "message" : "PID = 256",
+         "offset" : 176908,
+         "type" : "连续计数错误"
+      },
+      "00016" : {
+         "index" : 15,
+         "message" : "PID = 257",
+         "offset" : 178412,
+         "type" : "连续计数错误"
+      },
+      "00017" : {
+         "index" : 16,
+         "message" : "PID = 256",
+         "offset" : 179916,
+         "type" : "连续计数错误"
+      },
+      "00018" : {
+         "index" : 17,
+         "message" : "PID = 256",
+         "offset" : 181420,
+         "type" : "连续计数错误"
+      },
+      "00019" : {
+         "index" : 18,
+         "message" : "PID = 256",
+         "offset" : 182924,
+         "type" : "连续计数错误"
+      },
+      "00020" : {
+         "index" : 19,
+         "message" : "PID = 256",
+         "offset" : 184428,
+         "type" : "连续计数错误"
+      },
+      "00021" : {
+         "index" : 20,
+         "message" : "PID = 0",
+         "offset" : 184992,
+         "type" : "连续计数错误"
+      },
+      "00022" : {
+         "index" : 21,
+         "message" : "PAT 间隔时间大于 0.5 秒",
+         "offset" : 184992,
+         "type" : "PAT 错误"
+      },
+      "00023" : {
+         "index" : 22,
+         "message" : "PID = 4096",
+         "offset" : 185180,
+         "type" : "连续计数错误"
+      },
+      "00024" : {
+         "index" : 23,
+         "message" : "PMT 间隔时间大于 0.5 秒",
+         "offset" : 185180,
+         "type" : "PMT 错误"
+      }
+   },
+   "overview" : {
+      "00" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 1 级-----"
+      },
+      "01" : {
+         "brief" : "同步丢失错误,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "同步丢失错误"
+      },
+      "02" : {
+         "brief" : "同步字节不等于 0x47,共 2 次.\r\n",
+         "errors" : 2,
+         "indicator" : "同步字节错误"
+      },
+      "03" : {
+         "brief" : "PAT 错误,共 5 次.\r\n\t其中:\r\nPAT 间隔大于 0.5 秒,有 5 次.\r\nPID=0 但 table_id 不等于 0,有 0 次. \r\nPAT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 5,
+         "indicator" : "PAT 错误"
+      },
+      "04" : {
+         "brief" : "连续计数错误,共 185 次.\r\n",
+         "errors" : 185,
+         "indicator" : "连续计数错误"
+      },
+      "05" : {
+         "brief" : "PMT 错误,共 5 次.\r\n\t其中:\r\nPMT 间隔时间大于 0.5 秒,有 5 次.\r\nPMT 的 TS 包加扰指示不等于 0,有 0 次.\r\n",
+         "errors" : 5,
+         "indicator" : "PMT 错误"
+      },
+      "06" : {
+         "brief" : "PMT 关联的 PID 没有及时到达,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PID 错误"
+      },
+      "07" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 2 级-----"
+      },
+      "08" : {
+         "brief" : "TS 包的传输错误指示为 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "传输错误"
+      },
+      "09" : {
+         "brief" : "CRC 错误,共 0 次.\r\n\t其中:\r\nCRC 错误出现在 PAT 表中,有 0 次.\r\nCRC 错误出现在 CAT 表中,有 0 次.\r\nCRC 错误出现在 PMT 表中,有 0 次.\r\nCRC 错误出现在 NIT 表中,有 0 次.\r\nCRC 错误出现在 SDT 表中,有 0 次.\r\nCRC 错误出现在 BAT 表中,有 0 次.\r\nCRC 错误出现在 TOT 表中,有 0 次.\r\nCRC 错误出现在 EIT 表中,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CRC 错误"
+      },
+      "10" : {
+         "brief" : "PCR 间隔超过 40ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PCR 间隔错误"
+      },
+      "11" : {
+         "brief" : "未设置不连续标志的情况下前后 PCR 差值大于 100ms,共 5 次.\r\n",
+         "errors" : 5,
+         "indicator" : "PCR 不连续错误"
+      },
+      "12" : {
+         "brief" : "PCR 精度误差超过正负 500ns,共 3 次.\r\n",
+         "errors" : 3,
+         "indicator" : "PCR 精度错误"
+      },
+      "13" : {
+         "brief" : "PTS 间隔超过 700ms,共 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "PTS 错误"
+      },
+      "14" : {
+         "brief" : "CAT 错误,共 0 次.\r\n\t其中:\r\nPID=1 但 table_id 不等于 1,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "CAT 错误"
+      },
+      "15" : {
+         "brief" : "",
+         "errors" : 0,
+         "indicator" : "-----第 3 级-----"
+      },
+      "16" : {
+         "brief" : "NIT_actual 错误,共 0 次.\r\n\t其中:\r\ntable_id 不等于 0x40 或 0x41 或 0x72,有 0 次.\r\nNIT_act 间隔超时,有 0 次.\r\nNIT_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_actual 错误"
+      },
+      "17" : {
+         "brief" : "NIT_other 错误,共 0 次.\r\n\t其中:\r\nNIT_other 间隔超时,有 0 次.\r\nNIT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "NIT_other 错误"
+      },
+      "18" : {
+         "brief" : "SI 表间隔错误,共 3 次.\r\n\t其中:\r\nSI                  section 间隔短于 25ms,有 2 次.\r\nNIT                 section 间隔超时,有 0 次.\r\nBAT                 section 间隔超时,有 0 次.\r\nSDT_act             section 间隔超时,有 1 次.\r\nSDT_other           section 间隔超时,有 0 次.\r\nEIT_PF_act          section 间隔超时,有 0 次.\r\nEIT_PF_other        section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_act    section 间隔超时,有 0 次.\r\nEIT_SCHEDULE_other  section 间隔超时,有 0 次.\r\nTDT                 section 间隔超时,有 0 次.\r\nTOT                 section 间隔超时,有 0 次.\r\n",
+         "errors" : 3,
+         "indicator" : "SI 表间隔错误"
+      },
+      "19" : {
+         "brief" : "有 PID 在 0.5 秒还未被 PMT 和 CAT 关联,有 0 次.",
+         "errors" : 0,
+         "indicator" : "关联 PID 错误"
+      },
+      "20" : {
+         "brief" : "SDT_actual 错误,共 3 次.\r\n\t其中:\r\nSDT_act 间隔超时,有 1 次.\r\nPID=0x11 但 table_id 不等于 0x42,0x46,0x4A 或 0x72,有 0 次.\r\nSDT_act 间隔短于 25ms,有 2 次.\r\n",
+         "errors" : 3,
+         "indicator" : "SDT_actual 错误"
+      },
+      "21" : {
+         "brief" : "SDT_other 错误,共 0 次.\r\n\t其中:\r\nSDT_other 间隔超时,有 0 次.\r\nSDT_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "SDT_other 错误"
+      },
+      "22" : {
+         "brief" : "EIT_actual 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_act 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nEIT_PF_act 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_actual 错误"
+      },
+      "23" : {
+         "brief" : "EIT_other 错误,共 0 次.\r\n\t其中:\r\nEIT_PF_other 间隔超时,有 0 次.\r\nEIT_PF_other 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "EIT_other 错误"
+      },
+      "24" : {
+         "brief" : "EIT_P 或 F 仅出现一个,有 0 次.",
+         "errors" : 0,
+         "indicator" : "EIT_PF 错误"
+      },
+      "25" : {
+         "brief" : "RST 错误,共 0 次\r\n\t其中:\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "RST 错误"
+      },
+      "26" : {
+         "brief" : "TDT 错误,共 0 次\r\n\t其中:\r\nTDT 间隔超时,有 0 次.\r\ntable_id 错误,有 0 次.\r\nRST section 间隔短于 25ms,有 0 次.\r\n",
+         "errors" : 0,
+         "indicator" : "TDT 错误"
+      }
+   }
+}
+,pApp=pdata

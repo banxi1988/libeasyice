@@ -6,10 +6,10 @@ static PyObject *_easyice_process_ts_file(PyObject *self, PyObject *args,
                                           PyObject *kwds)
 {
   char *mrl;
-  static char *kwlist[] = {"mrl", NULL};
+  static const char *kwlist[] = {"mrl", NULL};
   // '$' 表示后面是 keyword arguments only, kw 默认是可选的.
 
-  if (!PyArg_ParseTupleAndKeywords(args, kwds, "$s", kwlist, &mrl))
+  if (!PyArg_ParseTupleAndKeywords(args, kwds, "$s", (char **)kwlist, &mrl))
   {
     return NULL;
   }
@@ -26,30 +26,33 @@ static PyObject *_easyice_process_ts_file(PyObject *self, PyObject *args,
   return PyBool_FromLong(ret_code);
 }
 
-static PyObject *_udplive_cb = NULL;
-static bool _udplive_finished = false;
-
 void _easyice_udplive_callback(UDPLIVE_CALLBACK_TYPE type, const char *json, void *pApp)
 {
   // printf("type=%d,content=%s,pApp=%s\n", type, json, (char *)pApp);
-  printf("[UDPLIVE][Type=%d]. 调用 callback:%p\n", type, callback);
+  printf("[UDPLIVE][Type=%d]. 调用 callback:%p\n", type, pApp);
   PyGILState_STATE state = PyGILState_Ensure();
-  PyObject *args = Py_BuildValue("{s:i,s:s}", "type", type, "json", json);
-  PyObject_CallObject((PyObject *)pApp, args);
+  PyObject *args = Py_BuildValue("(is)", type, json);
+  // _PyObject_Dump(args);
+  PyObject *ret = PyObject_CallObject((PyObject *)pApp, args);
+  if (ret == NULL)
+  {
+    printf("Failed to call callback\n");
+    PyErr_Print();
+  }
   PyGILState_Release(state);
 }
 
 static PyObject *_easyice_process_udplive(PyObject *self, PyObject *args,
                                           PyObject *kwds)
 {
-  const char *mrl;
+  char *mrl;
   PyObject *callback;
-  int cb_update_interval = 1000000;  // 1s
-  int calctsrate_interval_ms = 1000; // 1s
-  static char *kwlist[] = {"mrl", "callback", "cb_update_interval", "calctsrate_interval_ms" NULL};
+  long cb_update_interval = 1000000;  // 1s
+  long calctsrate_interval_ms = 1000; // 1s
+  static const char *kwlist[] = {"mrl", "callback", "cb_update_interval", "calctsrate_interval_ms", NULL};
   // '$' 表示后面是 keyword arguments only, kw 默认是可选的.
 
-  if (!PyArg_ParseTupleAndKeywords(args, kwds, "$sO|ii", kwlist, &mrl, &callback, &cb_update_interval, &calctsrate_interval_ms))
+  if (!PyArg_ParseTupleAndKeywords(args, kwds, "$sOii", (char **)kwlist, &mrl, &callback, &cb_update_interval, &calctsrate_interval_ms))
   {
     return NULL;
   }
@@ -62,7 +65,7 @@ static PyObject *_easyice_process_udplive(PyObject *self, PyObject *args,
   printf("process mrl %s\n", mrl);
   easyice_global_init();
   EASYICE *handle = easyice_init();
-  easyice_setopt(handle, EASYICEOPT_MRL, mrl);
+  easyice_setopt(handle, EASYICEOPT_MRL, (void *)mrl);
   // easyice_setopt(handle, EASYICEOPT_MRL, (void *)"udp://127.0.0.1:1234");
   easyice_setopt(handle, EASYICEOPT_UDPLIVE_LOCAL_IP, (void *)"0.0.0.0");
   easyice_setopt(handle, EASYICEOPT_UDPLIVE_FUNCTION, (void *)_easyice_udplive_callback);
@@ -78,9 +81,20 @@ static PyObject *_easyice_process_udplive(PyObject *self, PyObject *args,
   {
     easyice_cleanup(handle);
     easyice_global_cleanup();
-    }
+    PyErr_SetString(PyExc_Exception, "任务启动出错");
+    return NULL;
+  }
 
-  return PyBool_FromLong(ret_code);
+  return PyLong_FromVoidPtr((void *)handle);
+}
+
+static PyObject *_easyice_cleanup(PyObject *self, PyObject *obj)
+{
+  void *ptr = PyLong_AsVoidPtr(obj);
+  EASYICE *handle = (EASYICE *)ptr;
+  easyice_cleanup(handle);
+  easyice_global_cleanup();
+  Py_RETURN_NONE;
 }
 
 static PyMethodDef _easyice_methods[] = {
@@ -92,6 +106,7 @@ static PyMethodDef _easyice_methods[] = {
      .ml_meth = (PyCFunction)(_easyice_process_udplive),
      .ml_flags = METH_KEYWORDS | METH_VARARGS,
      .ml_doc = "easyice_process process udplive"},
+    {.ml_name = "cleanup", .ml_meth = (PyCFunction)_easyice_cleanup, .ml_flags = METH_O, .ml_doc = "easyice cleanup handle"},
     {NULL, NULL, 0, NULL} /* Sentinel*/
 };
 

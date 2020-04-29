@@ -18,7 +18,7 @@ setup(
     author_email="banxi1988@gmail.com",
     version="0.1",
     description="libeasyice 工具包 包装库",
-    packages=["easyice"],
+    py_modules=["easyice"],
     ext_modules=[_easyice_module],
     zip_safe=True,
     classifiers=[
@@ -28,4 +28,3 @@ setup(
     ],
     python_requires=">=3.6",
 )
-

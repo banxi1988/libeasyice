@@ -17,7 +17,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "zevent.h"
 #include "commondefs.h"
 
-
 class CMpegDec;
 class CLiveSourceBase;
 class CCircularBuffer;
@@ -32,100 +31,100 @@ class CLiveAnalysisImpl
 public:
 	CLiveAnalysisImpl(void);
 	~CLiveAnalysisImpl(void);
-	int OpenMRL(EASYICE* handle);
+	int OpenMRL(EASYICE *handle);
 
-	//ÊÍ·Å×ÊÔ´£¬Ê§°Ü·µ»Øfalse
-	bool Stop(bool bForce = false); 
+	//é‡Šæ”¾èµ„æºï¼Œå¤±è´¥è¿”å›false
+	bool Stop(bool bForce = false);
 
-	//»ñÈ¡½ÚÄ¿ÕªÒªĞÅÏ¢
-	ALL_PROGRAM_BRIEF* GetAllProgramBrief();
+	//è·å–èŠ‚ç›®æ‘˜è¦ä¿¡æ¯
+	ALL_PROGRAM_BRIEF *GetAllProgramBrief();
 
-	//ÊµÊ±·ÖÎöÊ±£¬»ñÈ¡ÂëÂÊ
-	LST_RATE_INFO_T* LockGetRate();
+	//å®æ—¶åˆ†ææ—¶ï¼Œè·å–ç ç‡
+	LST_RATE_INFO_T *LockGetRate();
 	void UnlockRate();
 
-	//ÊµÊ±·ÖÎöÊ±£¬»ñÈ¡PCRĞÅÏ¢
-	LST_PCR_INFO_T* LockGetPcrInfo(int pcr_pid);
+	//å®æ—¶åˆ†ææ—¶ï¼Œè·å–PCRä¿¡æ¯
+	LST_PCR_INFO_T *LockGetPcrInfo(int pcr_pid);
 	void UnlockPcrInfo(int pcr_pid);
 
+	//å¼€å§‹å½•åˆ¶ç æµ
+	int StartRecord(const char *strFileName);
 
-		//¿ªÊ¼Â¼ÖÆÂëÁ÷
-	int StartRecord(const char* strFileName);
-
-	//Í£Ö¹Â¼ÖÆÂëÁ÷
+	//åœæ­¢å½•åˆ¶ç æµ
 	void StopRecord();
 
 private:
-	static void OnRecvData(void* pApp,BYTE* pData,int nLen);
-	static void* MediaInfoThread(void* lpParam);
+	static void OnRecvData(void *pApp, BYTE *pData, int nLen);
+	static void *MediaInfoThread(void *lpParam);
 
-	//´¦ÀíÏß³Ìº¯Êı
-	static void* WorkThread(void* lpParam);
+	//å¤„ç†çº¿ç¨‹å‡½æ•°
+	static void *WorkThread(void *lpParam);
 	void WorkFun();
-	void ProcessItem(BYTE* pItem,int nSize,long long llTime);
+	void ProcessItem(BYTE *pItem, int nSize, long long llTime);
 
-	//Â¼ÖÆÏß³Ìº¯Êı
-	static void* RecordThread(void* lpParam);
+	//å½•åˆ¶çº¿ç¨‹å‡½æ•°
+	static void *RecordThread(void *lpParam);
 
-    void LiveCallBackPidList();
-    void LiveCallBackPsi();
-    void LiveCallBackPcr();
-    void LiveCallBackRate();
-    void LiveCallBackProgramInfoBrief();
-    void LiveCallBackTr101290();
+	void LiveCallBackPidList();
+	void LiveCallBackPsi();
+	void LiveCallBackPcr();
+	void LiveCallBackRate();
+	void LiveCallBackProgramInfoBrief();
+	void LiveCallBackTr101290();
+
 private:
-	CLiveSourceBase* m_pSource;
-	CCircularBuffer* m_pCircularBuffer;
+	CLiveSourceBase *m_pSource;
+	CCircularBuffer *m_pCircularBuffer;
 
-	//´¦ÀíÏß³Ì
+	//å¤„ç†çº¿ç¨‹
 	pthread_t m_hThread;
 	bool m_bStop;
 	int m_nTsLength;
 
-	//Ã½ÌåĞÅÏ¢¼ì²â
-	BYTE* m_pMediaInfoBuffer;
+	//åª’ä½“ä¿¡æ¯æ£€æµ‹
+	BYTE *m_pMediaInfoBuffer;
 	int m_nMediaInfoBufferLen;
 	bool m_bMediaInfoChecked;
 	pthread_t m_hMiThread;
 
-	//ÊÇ·ñÒÑ³õÊ¼»¯Íê±Ï£¬Ö¸ÊÇ·ñÒÑ½âÎöÍêPATÓëPMT£¬µÃµ½ÁËËùÓĞ½ÚÄ¿µÄĞÅÏ¢
+	//æ˜¯å¦å·²åˆå§‹åŒ–å®Œæ¯•ï¼ŒæŒ‡æ˜¯å¦å·²è§£æå®ŒPATä¸PMTï¼Œå¾—åˆ°äº†æ‰€æœ‰èŠ‚ç›®çš„ä¿¡æ¯
 	bool m_bInited;
 
-	//Ö¸Ê¾ºÎÊ±ÊÕµ½µÚÒ»´ÎÊı¾İ
+	//æŒ‡ç¤ºä½•æ—¶æ”¶åˆ°ç¬¬ä¸€æ¬¡æ•°æ®
 	long long m_llFirstByteRecvTime;
 
-	//×îºóÒ»´Îµ÷ÓÃ»Øµ÷µÄÊ±¼ä
+	//æœ€åä¸€æ¬¡è°ƒç”¨å›è°ƒçš„æ—¶é—´
 	long long m_llCbUpdateTime;
 
 	CMpegDec *m_mpegdec;
 	CLivePcrProc *m_pLiveProc;
 
-	//·¢ËÍµ½±¾µØÒÔ¹©vlc²¥·Å
+	//å‘é€åˆ°æœ¬åœ°ä»¥ä¾›vlcæ’­æ”¾
 	//CUdpSend* m_pUdpSend;
 
-	//Ö¸Ê¾ÊÇ·ñÒÑÊÕµ½µÚÒ»¸ö×Ö½ÚµÄÊı¾İ
+	//æŒ‡ç¤ºæ˜¯å¦å·²æ”¶åˆ°ç¬¬ä¸€ä¸ªå­—èŠ‚çš„æ•°æ®
 	bool m_bRecvedFirstByte;
 
-	FILE* m_fpRecordFile;
-	pthread_mutex_t m_mutexRecordFp; //¶ÔÂ¼ÖÆÎÄ¼şÖ¸ÕëµÄËø,±£Ö¤ÎÄ¼şÖ¸ÕëÓĞĞ§ĞÔ
+	FILE *m_fpRecordFile;
+	pthread_mutex_t m_mutexRecordFp; //å¯¹å½•åˆ¶æ–‡ä»¶æŒ‡é’ˆçš„é”,ä¿è¯æ–‡ä»¶æŒ‡é’ˆæœ‰æ•ˆæ€§
 
-	//Â¼ÖÆÏß³Ì
+	//å½•åˆ¶çº¿ç¨‹
 	pthread_t m_hRecordThread;
 
-	//Â¼ÖÆ»º³å
+	//å½•åˆ¶ç¼“å†²
 	CCircularBuffer *m_pRecordBuffer;
-	pthread_mutex_t m_mutexRecordBuf; //¶ÔÂ¼ÖÆ»º³åÖ¸ÕëµÄËø£¬±£Ö¤»º³åÖ¸ÕëµÄÓĞĞ§ĞÔ,ÓÃĞ´²Ù×÷Óëdelete²Ù×÷¡£²»¹Ü¶Á²Ù×÷¡£ÒòÎªÓĞÆäËû»úÖÆ±£Ö¤
+	pthread_mutex_t m_mutexRecordBuf; //å¯¹å½•åˆ¶ç¼“å†²æŒ‡é’ˆçš„é”ï¼Œä¿è¯ç¼“å†²æŒ‡é’ˆçš„æœ‰æ•ˆæ€§,ç”¨å†™æ“ä½œä¸deleteæ“ä½œã€‚ä¸ç®¡è¯»æ“ä½œã€‚å› ä¸ºæœ‰å…¶ä»–æœºåˆ¶ä¿è¯
 	bool m_bStartRecord;
 
-    Clibtr101290* m_pTrcore;
-    EASYICE* m_pHandle;
-    string m_sMrl;
-    ZEvent m_event;
+	Clibtr101290 *m_pTrcore;
+	EASYICE *m_pHandle;
+	string m_sMrl;
+	ZEvent m_event;
 
-    CEiMediaInfo* m_pEiMediaInfo;
-    CTrView* m_pTrView;
+	CEiMediaInfo *m_pEiMediaInfo;
+	CTrView *m_pTrView;
 
-    bool m_bWorkThreadValid;
-    bool m_bMiThreadValid;
-    bool m_bRecordThreadValid;
+	bool m_bWorkThreadValid;
+	bool m_bMiThreadValid;
+	bool m_bRecordThreadValid;
 };

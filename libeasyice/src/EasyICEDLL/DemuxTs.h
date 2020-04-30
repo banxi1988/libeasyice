@@ -19,7 +19,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 using namespace std;
 using namespace tables;
 
-//��·ģʽ�µ�program_idֵ
+//单路模式下的program_id值
 #define SINGLE_MODE_PROG_NUM	-1
 
 class CDemuxTs
@@ -28,39 +28,39 @@ public:
 	CDemuxTs(void);
 	~CDemuxTs(void);
 public:
-	//��ʼ���⸴������Ԥ����һ�λ�������ts�⸴��
+	//初始化解复用器，预分析一段缓冲来对ts解复用
 	/**
-		@brif �Ӹ��������н�����Ŀ��pid��Ϣ.�����浽m_vecPrograms
-		@return �ɹ�����1��ʧ�ܷ���0
+		@brif 从给定缓冲中解析节目的pid信息.并保存到m_vecPrograms
+		@return 成功返回1，失败返回0
 	*/
 	int SetupDemux(BYTE* pData, int nLength,int nTsLen);
 
 	int SetupDemux(TABLES* tables,int nTsLen);
 
-	//��·����ģʽ
+	//单路处理模式
 	void SetupDemux(int VideoPID,int VideoStreamType,int nTsLen);
 
-	//���ý��������Ϣ�洢����
+	//设置解析结果信息存储缓冲
 	void SetOutputBuffer(ALL_PROGRAM_INFO* p);
 
-	//���յ���ts�����д���
+	//对收到的ts包进行处理
 	PARSED_FRAME_INFO AddTsPacket(CTsPacket* tsPacket);
 
-	//����һ��TS��
+	//解码一个TS包
 	int DecodePacket(BYTE *pPacket, int nLen);
 private:
-	//��·��Ŀpid��Ϣ ��Ŀ�ţ���Ŀ��Ϣ
+	//多路节目pid信息 节目号，节目信息
 	map<int,PROGRAM_PIDS> m_mapProgPids;
 
-	//ÿ·��Ŀ�����Ӧ�Ĵ�����,��Ŀ�ţ�������
-	//��Ŀ��=-1 ��ʾ��·����ģʽ
+	//每路节目与其对应的处理器,节目号，处理器
+	//节目号=-1 表示单路处理模式
 	map<int,CProgramParser*> m_mapProgParser;
 
-	//���н�Ŀ����Ϣ
+	//所有节目的信息
 	ALL_PROGRAM_INFO *m_allProgramInfo;
 
 	bool m_bSingleMode;
 
-	//��ID����¼�������������ݵĵڼ�����������264�﷨ʱ���õ�
+	//包ID，记录这是所分析内容的第几个包，解析264语法时会用到
 	long long m_llPacketID;
 };

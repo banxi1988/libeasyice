@@ -10,7 +10,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-//¹«ÓÃº¯Êý¶¨Òå
+//å…¬ç”¨å‡½æ•°å®šä¹‰
 
 #ifndef UTILS_H
 #define UTILS_H
@@ -37,16 +37,16 @@ static void splitstring(const string &SrcString,const string &SplitChars,vector 
     string::size_type sz,i;
     sz = SrcString.size();
     VecOurString.clear();
-    //Æ¥ÅäË«ÒýºÅ£¬ÔÝÊ±²»´¦Àí
+    //åŒ¹é…åŒå¼•å·ï¼Œæš‚æ—¶ä¸å¤„ç†
 //     bool b_match = false;
     for(i = 0;i<sz;i++)
     {
         if(SplitChars.find(SrcString.at(i)) != string::npos)
         {
-            //·¢ÏÖ·Ö¸î·û£¬²¢ÇÒ×Ö·û´®²»ÎªNULL
+            //å‘çŽ°åˆ†å‰²ç¬¦ï¼Œå¹¶ä¸”å­—ç¬¦ä¸²ä¸ä¸ºNULL
             if((i - last_pos) >0)
             {
-                //ÅÅ³ý·Ö¸î·û£¬»ñÈ¡×Ö·û´®
+                //æŽ’é™¤åˆ†å‰²ç¬¦ï¼ŒèŽ·å–å­—ç¬¦ä¸²
                 s = SrcString.substr(last_pos,i - last_pos);
                 VecOurString.push_back(s);
             }
@@ -54,10 +54,10 @@ static void splitstring(const string &SrcString,const string &SplitChars,vector 
         }
     }
 
-    //×îºóÒ»¶ÎÊý¾ÝÌí¼Óµ½·Ö¸î¶ÓÁÐ
+    //æœ€åŽä¸€æ®µæ•°æ®æ·»åŠ åˆ°åˆ†å‰²é˜Ÿåˆ—
     if((i - last_pos) >0)
     {
-        //ÅÅ³ý·Ö¸î·û£¬»ñÈ¡×Ö·û´®
+        //æŽ’é™¤åˆ†å‰²ç¬¦ï¼ŒèŽ·å–å­—ç¬¦ä¸²
         s = SrcString.substr(last_pos,i - last_pos);
         VecOurString.push_back(s);
     }

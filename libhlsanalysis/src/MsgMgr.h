@@ -38,7 +38,7 @@ class CMsgMgr
 	}HA_PARAM_DATA_T;
 
 
-	//¶ÓÁĞÖĞµÄ²ÎÊı½á¹¹
+	//é˜Ÿåˆ—ä¸­çš„å‚æ•°ç»“æ„
 	typedef struct _HA_PARAM_T
 	{
 		_HA_PARAM_T()
@@ -55,7 +55,7 @@ public:
 	CMsgMgr(void);
 	~CMsgMgr(void);
 
-	//È«¾ÖÖ»³õÊ¼»¯Ò»´Î
+	//å…¨å±€åªåˆå§‹åŒ–ä¸€æ¬¡
 	void Destroy();
 	void Init();
 
@@ -67,7 +67,7 @@ public:
 
 
 
-	//½«ÊÂ¼ş·ÅÈë¶ÓÁĞ
+	//å°†äº‹ä»¶æ”¾å…¥é˜Ÿåˆ—
 	void HlsPostMessage(HLS_REPORT_TYPE_T emType);
 	//void HlsPostMessage(HLS_REPORT_TYPE_T emType,int n);
 	void HlsPostMessage(HLS_REPORT_TYPE_T emType,long long llVal);
@@ -86,7 +86,7 @@ private:
 	static void* WorkThread(void* lpParam);
 	void WorkFun();
 
-	//±¾Ä£¿é¶ÔÍâÊÂ¼ş»Øµ÷£¬µÈ´ı»Øµ÷º¯Êı´¦ÀíÍê
+	//æœ¬æ¨¡å—å¯¹å¤–äº‹ä»¶å›è°ƒï¼Œç­‰å¾…å›è°ƒå‡½æ•°å¤„ç†å®Œ
 	void HlsSendMessage(const HA_PARAM_T& param);
 
 	void HlsPostMessageComm( HA_PARAM_T& param);
@@ -103,7 +103,7 @@ private:
 	pthread_t m_hThread;
 	bool m_bWorkThreadValid;
 
-	//±íÊ¾¶ÓÁĞÖĞÊÇ·ñÓĞÊÂ¼ş
+	//è¡¨ç¤ºé˜Ÿåˆ—ä¸­æ˜¯å¦æœ‰äº‹ä»¶
 	ZEvent  m_hEvent;
 
 	bool m_bActiveStop;

@@ -45,10 +45,10 @@ string hls_analysis::get_uri(const string& url)
 
 
 
-//Èç¹ûÔÚ¹¤×÷Ïß³ÌÖĞÓĞ¿ÉÄÜÉæ¼°µ½ÁËÏûÏ¢Çı¶¯µÄAPI£¬ÄÇÃ´²»ÄÜÔÚÖ÷Ïß³ÌÖĞÊ¹ÓÃWaitForSingleObjectÒ»Ààº¯Êı£¬¶ø±ØĞëÊ¹ÓÃÏÂÃæµÄµÄ·½°¸¡£
-//ÎªÁË½â¾öÔÚÖ÷Ïß³ÌÖĞWaitµÄÎÊÌâ£¬Î¢Èí×¨ÃÅÉè¼ÆÁËÒ»¸öº¯ÊıMsgWaitForMultipleObjects£¬Õâ¸öº¯Êı¼´¿ÉÒÔµÈ´ıĞÅºÅ£¨thread,event,mutexµÈµÈ£©£¬
-//Ò²¿ÉÒÔµÈ´ıÏûÏ¢£¨MSG£©¡£¼´²»ÂÛÓĞĞÅºÅ±»¼¤·¢»òÕßÓĞÏûÏ¢µ½À´£¬´Ëº¯Êı¶¼¿ÉÒÔ·µ»Ø¡£
-//²Î¿¼ http://www.cnblogs.com/zhangzhifeng/archive/2011/08/23/2150147.html
+//å¦‚æœåœ¨å·¥ä½œçº¿ç¨‹ä¸­æœ‰å¯èƒ½æ¶‰åŠåˆ°äº†æ¶ˆæ¯é©±åŠ¨çš„APIï¼Œé‚£ä¹ˆä¸èƒ½åœ¨ä¸»çº¿ç¨‹ä¸­ä½¿ç”¨WaitForSingleObjectä¸€ç±»å‡½æ•°ï¼Œè€Œå¿…é¡»ä½¿ç”¨ä¸‹é¢çš„çš„æ–¹æ¡ˆã€‚
+//ä¸ºäº†è§£å†³åœ¨ä¸»çº¿ç¨‹ä¸­Waitçš„é—®é¢˜ï¼Œå¾®è½¯ä¸“é—¨è®¾è®¡äº†ä¸€ä¸ªå‡½æ•°MsgWaitForMultipleObjectsï¼Œè¿™ä¸ªå‡½æ•°å³å¯ä»¥ç­‰å¾…ä¿¡å·ï¼ˆthread,event,mutexç­‰ç­‰ï¼‰ï¼Œ
+//ä¹Ÿå¯ä»¥ç­‰å¾…æ¶ˆæ¯ï¼ˆMSGï¼‰ã€‚å³ä¸è®ºæœ‰ä¿¡å·è¢«æ¿€å‘æˆ–è€…æœ‰æ¶ˆæ¯åˆ°æ¥ï¼Œæ­¤å‡½æ•°éƒ½å¯ä»¥è¿”å›ã€‚
+//å‚è€ƒ http://www.cnblogs.com/zhangzhifeng/archive/2011/08/23/2150147.html
 
 void hls_analysis::Ei_MsgWaitForSingleObjects(const pthread_t *pHandles,int dwMilliseconds)
 {
@@ -114,16 +114,16 @@ void hls_analysis::CreateMulPath( const char *muldir )
 
         strncpy( str, muldir, 512 );
         len=strlen(str);
-        //printf( "×Ö·û´®%s³¤¶È=%d\n", str, len );
+        //printf( "å­—ç¬¦ä¸²%sé•¿åº¦=%d\n", str, len );
         for( i=0; i<len; i++ )
         {
                 if( str[i]=='/' )
                 {
                         str[i] = '\0';
-                        //ÅĞ¶Ï´ËÄ¿Â¼ÊÇ·ñ´æÔÚ,²»´æÔÚÔò´´½¨
+                        //åˆ¤æ–­æ­¤ç›®å½•æ˜¯å¦å­˜åœ¨,ä¸å­˜åœ¨åˆ™åˆ›å»º
                         if( (access(str, R_OK )) != 0 )
                         {
-                                //printf( "´´½¨µÚ%d¼¶Ä¿Â¼ p=[%s]\n", i, str );
+                                //printf( "åˆ›å»ºç¬¬%dçº§ç›®å½• p=[%s]\n", i, str );
                                 mkdir( str ,0777);
                         }
                         str[i]='/';
@@ -131,7 +131,7 @@ void hls_analysis::CreateMulPath( const char *muldir )
         }
         if( len>0 && (access(str, R_OK )) != 0)
         {
-                //printf( "×îºóÒ»¼¶Ä¿Â¼=%s!!!!!!!\n", str );
+                //printf( "æœ€åä¸€çº§ç›®å½•=%s!!!!!!!\n", str );
                 mkdir( str ,0777);
         }
         return;

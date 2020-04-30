@@ -20,11 +20,11 @@ public:
 public:
 	void InitBuffer(int nSize);
 	/**
-	 * @brief 过滤数据
-	 * @param [in] pData输入缓冲
-	 * @param [in] nLen 输入缓冲长度
-	 * @param [out] nRetLen 输出数据长度
-	 * @return 输出数据指针
+	 * @brief 杩囨护鏁版嵁
+	 * @param [in] pData杈撳叆缂撳啿
+	 * @param [in] nLen 杈撳叆缂撳啿闀垮害
+	 * @param [out] nRetLen 杈撳嚭鏁版嵁闀垮害
+	 * @return 杈撳嚭鏁版嵁鎸囬拡
 	*/
 	virtual BYTE* ProcessBuffer(BYTE* pData,int nLen,int& nRetLen) = 0;
 protected:

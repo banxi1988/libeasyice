@@ -137,7 +137,7 @@ inline pic_parameter_set_rbsp_t *CH264DecodeCore::GetActivePps(const Slice* curr
 PARSED_FRAME_INFO CH264DecodeCore::ParseTsContinue(BYTE* pPacket,int nLen)
 {
 	PARSED_FRAME_INFO parsed_frame_info;
-	PARSED_FRAME_INFO needed_parsed_frame_info;//∑˚∫œnew pic Ãıº˛µƒ slice
+	PARSED_FRAME_INFO needed_parsed_frame_info;//Á¨¶Âêànew pic Êù°‰ª∂ÁöÑ slice
 	bool recved_frame_info = false;
 //	m_nPacketLen = nLen;
 
@@ -173,10 +173,10 @@ PARSED_FRAME_INFO CH264DecodeCore::ParseTsContinue(BYTE* pPacket,int nLen)
 
 		if (rbsplen < 0)
 		{
-			rbsplen = m_nDecodeBufPos-m_nByteOffset;//≤ª∫√µƒ¥¶¿Ì∑Ω Ω£¨–Ë“™∏ƒΩ¯°£°£
+			rbsplen = m_nDecodeBufPos-m_nByteOffset;//‰∏çÂ•ΩÁöÑÂ§ÑÁêÜÊñπÂºèÔºåÈúÄË¶ÅÊîπËøõ„ÄÇ„ÄÇ
 		}
 
-		//≤ª∫‹◊º»∑µƒ∑¿÷π“Á≥ˆ
+		//‰∏çÂæàÂáÜÁ°ÆÁöÑÈò≤Ê≠¢Ê∫¢Âá∫
 		if (rbsplen < 3)
 		{
 			goto no_exit;
@@ -223,7 +223,7 @@ PARSED_FRAME_INFO CH264DecodeCore::ParseTsContinue(BYTE* pPacket,int nLen)
 					active_sps = GetActiveSps(active_pps);
 				}
 
-				if (m_oldSlice->pps_id == INT_MAX)	//µ⁄“ª∏ˆslice,»Áπ˚ «I slice≤¢«“∫¨PESÕ∑£¨æÕ»œŒ™ «–¬÷°µƒø™ º
+				if (m_oldSlice->pps_id == INT_MAX)	//Á¨¨‰∏Ä‰∏™slice,Â¶ÇÊûúÊòØI sliceÂπ∂‰∏îÂê´PESÂ§¥ÔºåÂ∞±ËÆ§‰∏∫ÊòØÊñ∞Â∏ßÁöÑÂºÄÂßã
 				{
 					BYTE stream_id;
 					if (slice->slice_type == I_SLICE || slice->slice_type == SI_SLICE)
@@ -235,7 +235,7 @@ PARSED_FRAME_INFO CH264DecodeCore::ParseTsContinue(BYTE* pPacket,int nLen)
 					}
 				}
 
-				//µ⁄“ª∏ˆ÷°±Í÷æ”ÎPESÕ∑≤ª‘⁄Õ¨“ª∏ˆTS∞¸ ±ª·≈–∂œ≤ªµΩ£¨∆¡±Œ¡Àµ⁄“ª∏ˆ≈–∂œΩ‚æˆ¥ÀŒ Ã‚
+				//Á¨¨‰∏Ä‰∏™Â∏ßÊ†áÂøó‰∏éPESÂ§¥‰∏çÂú®Âêå‰∏Ä‰∏™TSÂåÖÊó∂‰ºöÂà§Êñ≠‰∏çÂà∞ÔºåÂ±èËîΩ‰∫ÜÁ¨¨‰∏Ä‰∏™Âà§Êñ≠Ëß£ÂÜ≥Ê≠§ÈóÆÈ¢ò
 				if (/*(m_oldSlice->pps_id != INT_MAX) && */(active_sps != NULL))
 				{
 					parsed_frame_info.bNewPicture = is_new_picture_brief(active_sps,active_pps,slice,m_oldSlice);

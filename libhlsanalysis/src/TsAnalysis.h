@@ -57,16 +57,16 @@ private:
 private:
 	bool m_bInited;
 
-	//ÊÇ·ñÒÑ±¨¸æ¹ý£¬Õï¶ÏÐÅÏ¢£¬Õû¸ö·ÖÎö¹ý³ÌÖ»±¨¸æÒ»´Î
+	//æ˜¯å¦å·²æŠ¥å‘Šè¿‡ï¼Œè¯Šæ–­ä¿¡æ¯ï¼Œæ•´ä¸ªåˆ†æžè¿‡ç¨‹åªæŠ¥å‘Šä¸€æ¬¡
 	bool m_bReportedNullPkt;
 
-	//Ã¿¸ö·ÖÆ¬Ö»±¨¸æÒ»´Î
+	//æ¯ä¸ªåˆ†ç‰‡åªæŠ¥å‘Šä¸€æ¬¡
 	bool m_bReportedCCError;
 	bool m_bReportedTCError;
 
 	SEGMENT_MI_T m_stSegMi;
 	
-	//½â¸´ÓÃÆ÷
+	//è§£å¤ç”¨å™¨
 	CH264Dec* m_pAvcParser;
 
 	CMpegDec *m_pMpegdec;

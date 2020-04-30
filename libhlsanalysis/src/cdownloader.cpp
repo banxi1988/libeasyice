@@ -147,10 +147,10 @@ void CDownloader::Run(const string& url)
 	{
 		m_pMsgMgr->HlsPostMessage(EM_HRT_SYS_WAITTING_FIRST_SEGMENT);
 
-		//Ϊ�������ģ��Ԥ�ȼ���3����Ƭ
-		//û��ʹ�÷��������������rbegin���صĵĲ������һ��Ԫ�صĵ��������������һ��Ԫ�ص���һ���������ڵģ�
+		//为缓冲分析模块预先加载3个分片
+		//没有使用反向迭代器，发现rbegin返回的的不是最后一个元素的迭代器，而是最后一个元素的下一个（不存在的）
 
-		int need_pre_buffer = 2;//�˴�����Ϊ2����ʵ�����ص�һ����������3��
+		int need_pre_buffer = 2;//此处设置为2，加实际下载的一个，共缓存3个
 		if (m_lstOldSegments.size() < need_pre_buffer)
 		{
 			need_pre_buffer = m_lstOldSegments.size();
@@ -328,7 +328,7 @@ void CDownloader::ReloadFun()
 
 		OnNewM3u8(parse.m_lstSegments);
 
-		//��ts�������ٸ���m3u8
+		//等ts下载完再更新m3u8
 		//while(1)
 		//{
 		//	Sleep(50);
@@ -461,7 +461,7 @@ void CDownloader::MainLoop()
 				dl_history.status = false;
 				m_pMsgMgr->HlsPostMessage(EM_HRT_PROTOCOL_HTTP_DOWNLOAD_HISTORY,dl_history);
 
-				//�������͵�ʧ�ܺ��Դ˷�Ƭ
+				//其他类型的失败忽略此分片
 				pthread_mutex_lock(&m_mutex);
 				m_dqTsUrl.pop_front();
 				pthread_mutex_unlock(&m_mutex);

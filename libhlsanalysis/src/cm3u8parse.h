@@ -47,10 +47,10 @@ public:
 
         
 public:
-        //meta情况下解析结果保存在此处
+        //meta鎯呭喌涓嬭В鏋愮粨鏋滀繚瀛樺湪姝ゅ
         list<hls_stream_t> m_lstStreams;
         
-        //非meta情况下解析结果保存在　?        //hls_stream_t* m_pHls;
+        //闈瀖eta鎯呭喌涓嬭В鏋愮粨鏋滀繚瀛樺湪銆�?        //hls_stream_t* m_pHls;
         list<segment_t> m_lstSegments;
 };
 

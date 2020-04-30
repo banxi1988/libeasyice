@@ -29,7 +29,7 @@ typedef struct  _MSG_LIST_T
 }MSG_LIST_T;
 
 public:
-	CTrMsgView();           // ¶¯Ì¬´´½¨ËùÊ¹ÓÃµÄÊÜ±£»¤µÄ¹¹Ôìº¯Êı
+	CTrMsgView();           // åŠ¨æ€åˆ›å»ºæ‰€ä½¿ç”¨çš„å—ä¿æŠ¤çš„æ„é€ å‡½æ•°
 	virtual ~CTrMsgView();
 
 
@@ -52,7 +52,7 @@ private:
 	void InitErrorTypeString();
 
 private:
-	int m_nLastColumn; //×îºóÒ»ÁĞ
+	int m_nLastColumn; //æœ€åä¸€åˆ—
 	int m_nMaxItemPerPage;
     char* m_pStrBuf;
     int m_pStrBufLen;

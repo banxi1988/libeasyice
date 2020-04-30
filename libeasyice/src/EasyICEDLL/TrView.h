@@ -23,18 +23,18 @@ using namespace tr101290_mgr;
 class CTrMsgMgr;
 class CTrMsgView;
 
-// CTrView ÊÓÍ¼
+// CTrView è§†å›¾
 
 class CTrView 
 {
 
 public:
-	CTrView();           // ¶¯Ì¬´´½¨ËùÊ¹ÓÃµÄÊÜ±£»¤µÄ¹¹Ôìº¯Êı
+	CTrView();           // åŠ¨æ€åˆ›å»ºæ‰€ä½¿ç”¨çš„å—ä¿æŠ¤çš„æ„é€ å‡½æ•°
 	~CTrView();
 	static void OnTrReport(REPORT_PARAM_T param);
 
     string ToJson();
-    //¶ÁÍêÖ®ºóÇå¿Õ
+    //è¯»å®Œä¹‹åæ¸…ç©º
     string ReadResultToJson();
     string GetErrorBriefByErrorType(ERROR_TYPE_T emErrType);
     const std::deque<CTrMsgView::MSG_LIST_T>& GetErrorMsgListByErrorType(ERROR_TYPE_T emErrType);
@@ -49,14 +49,14 @@ private:
 	CTrMsgMgr* m_pTrMsgMgr;
     CTrMsgView*  m_pMsgView;
 
-	int m_nLastColumn; //×îºóÒ»ÁĞ
+	int m_nLastColumn; //æœ€åä¸€åˆ—
     char* m_pBriefBuf;
     int m_pBriefBufLen;
 
-    //´íÎóÁĞÃèÊö
+    //é”™è¯¯åˆ—æè¿°
 	vector<string> m_vecResStr;
 
-    //¶ÔÍâÊä³öµÄ´íÎó¼¼Êõ¼ÇÂ¼ÔÚÕâ¸öÊı×éÖĞ
+    //å¯¹å¤–è¾“å‡ºçš„é”™è¯¯æŠ€æœ¯è®°å½•åœ¨è¿™ä¸ªæ•°ç»„ä¸­
 	int* m_pErrCnt;
 
 	int m_nItem_SyncLost;
@@ -86,7 +86,7 @@ private:
 	int m_nItem_rst;
 	int m_nItem_tdt;
 
-	//×îºóÒ»´Î¸üĞÂÊÓÍ¼Ê±¼ä£¬½öÔÚÊµÊ±Ä£Ê½ÏÂÊ¹ÓÃ
+	//æœ€åä¸€æ¬¡æ›´æ–°è§†å›¾æ—¶é—´ï¼Œä»…åœ¨å®æ—¶æ¨¡å¼ä¸‹ä½¿ç”¨
 	long long m_llLastUpdateTime;
 private:
 

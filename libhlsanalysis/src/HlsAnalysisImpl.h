@@ -43,13 +43,13 @@ public:
 	void SetRecord(const HLS_RECORD_INIT_PARAM_T& rc_param);
     void SetReportCB(PF_HLS_REPORT_CB pCB,void* pApp);
 private:
-	//处理线程函数
+	//澶勭悊绾跨▼鍑芥暟
 	static void* WorkThread(void* lpParam);
 	void WorkFun();
 	
 
 private:
-	//处理线程
+	//澶勭悊绾跨▼
 	pthread_t  m_hThread;
     bool m_bWorkThreadValid;
 

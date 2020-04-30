@@ -27,31 +27,31 @@ public:
 
 	void SetTsLen(int nLen);
 
-	//the size must eq to LV3_DATA_DELAY_ERROR+1  Ä¬ÈÏÈ«²¿¿ªÆô
+	//the size must eq to LV3_DATA_DELAY_ERROR+1  é»˜è®¤å…¨éƒ¨å¼€å¯
 	void SetEnable(bool *p);
 
-	//PAT£¬PMTÊÇ·ñ½âÎöÍê±Ï
+	//PATï¼ŒPMTæ˜¯å¦è§£æå®Œæ¯•
 	bool IsDemuxFinish();
 
-	//±ØĞëµ÷ÓÃ±¾º¯ÊıÉèÖÃÆğÊ¼Öµ
+	//å¿…é¡»è°ƒç”¨æœ¬å‡½æ•°è®¾ç½®èµ·å§‹å€¼
 	void SetStartOffset(long long llOffset);
 
 	void SetReportCB(pfReportCB pCB,void* pApp);
 
-	//×îºóÒ»¸ö±»µ÷ÓÃµÄº¯Êı
+	//æœ€åä¸€ä¸ªè¢«è°ƒç”¨çš„å‡½æ•°
 	void AddPacket(BYTE* pPacket);
 
-	//Íâ²¿µ÷ÓÃ
+	//å¤–éƒ¨è°ƒç”¨
 	//void Report(int level,ERROR_NAME_T errName,int pid,long long llVal,double fVal);
 private:
 	//void Report(int level,ERROR_NAME_T errName,long long llOffset,int pid,long long llVal,double fVal);
 
-	//´¦ÀíÒÑÍ¬²½µÄÊı¾İ
+	//å¤„ç†å·²åŒæ­¥çš„æ•°æ®
 	void ProcessPacket(BYTE* pPacket);
 
 	/**
-	 * @brief ³¢ÊÔÍ¬²½
-	 * @return 1 Í¬²½³É¹¦£¬-1 Í¬²½Ê§°Ü
+	 * @brief å°è¯•åŒæ­¥
+	 * @return 1 åŒæ­¥æˆåŠŸï¼Œ-1 åŒæ­¥å¤±è´¥
 	 */
 	int TryToReSync();
 
@@ -66,10 +66,10 @@ private:
 
 	//long long m_llOffset;
 
-	//ÊÇ·ñÒÑÍ¬²½
+	//æ˜¯å¦å·²åŒæ­¥
 	bool m_bSynced;
 
-	//ÉÏÒ»¸öTS°üÍ¬²½×Ö½ÚÊÇ·ñÕıÈ·
+	//ä¸Šä¸€ä¸ªTSåŒ…åŒæ­¥å­—èŠ‚æ˜¯å¦æ­£ç¡®
 	bool m_bPrevPktSync;
 
 	//for check cc
@@ -77,14 +77,14 @@ private:
 private:
 	CDemux* m_pDemuxer;
 
-//ÒÔÇ°µÄÈ«¾Ö±äÁ¿
+//ä»¥å‰çš„å…¨å±€å˜é‡
 private:
 	long long m_llOffset;
 
 	void* m_pApp;
 	pfReportCB  m_pfReportCB;
 
-//ÆäËûÀà»áÓÃµ½µÄ
+//å…¶ä»–ç±»ä¼šç”¨åˆ°çš„
 public:
 	void Report(int level,ERROR_NAME_T errName,long long llOffset,int pid,long long llVal,double fVal);
 	void Report(int level,ERROR_NAME_T errName,int pid,long long llVal,double fVal);

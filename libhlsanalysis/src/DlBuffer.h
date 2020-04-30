@@ -14,7 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "hls_type.h"
 
 
-///���ܶ��̵߳���
+///不能多线程调用
 class CDlBuffer
 {
 public:

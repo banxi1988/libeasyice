@@ -46,7 +46,7 @@ typedef struct _PMTINFO
 	bool parsed;
 }PMTINFO;
 
-//µ¥¸öESÁ÷½á¹¹
+//å•ä¸ªESæµç»“æ„
 typedef struct _ES_INFO
 {
 	_ES_INFO()
@@ -60,7 +60,7 @@ typedef struct _ES_INFO
 	int stream_type;
 }ES_INFO;
 
-//demuxºóµÄÃ¿¸ö½ÚÄ¿µÄĞÅÏ¢
+//demuxåçš„æ¯ä¸ªèŠ‚ç›®çš„ä¿¡æ¯
 typedef struct _PROGRAM_INFO
 {
 	_PROGRAM_INFO()
@@ -82,7 +82,7 @@ public:
 
 	void AddPacket(uint8_t* pPacket);
 
-	//PAT£¬PMTÊÇ·ñ½âÎöÍê±Ï
+	//PATï¼ŒPMTæ˜¯å¦è§£æå®Œæ¯•
 	bool IsDemuxFinish();
 
 private:
@@ -112,10 +112,10 @@ private:
 
 	CTrCore* m_pParent;
 
-	//PAT£¬PMTÊÇ·ñ½âÎöÍê±Ï
+	//PATï¼ŒPMTæ˜¯å¦è§£æå®Œæ¯•
 	bool m_bDemuxFinish;
 
-	//Ñ¡ÓÃµÚÒ»¸öÓöµ½µÄPCR×÷ÎªÏµÍ³Ê±ÖÓ
+	//é€‰ç”¨ç¬¬ä¸€ä¸ªé‡åˆ°çš„PCRä½œä¸ºç³»ç»Ÿæ—¶é’Ÿ
 	int m_nUsedPcrPid;
 
 	//CCalcPcrN1 m_calcPcrN1;
@@ -123,20 +123,20 @@ private:
 
 	long long m_llFirstPcr;
 private:
-	//½â¸´ÓÃºóĞÅÏ¢
+	//è§£å¤ç”¨åä¿¡æ¯
 	vector<PROGRAM_INFO> m_vecDemuxInfoBuf;
 
 	//program_num pmtinfo
     std::map<int,PMTINFO> m_mapPmtmInfo;
 
-	//ÏÂ±êÎªPID£¬ÄÚÈİÎªÊ±¼ä
+	//ä¸‹æ ‡ä¸ºPIDï¼Œå†…å®¹ä¸ºæ—¶é—´
 	long long* m_pOldOccurTime;
 
 	//for LV3_UNREFERENCED_PID
 
 	//map<pid,time>
     std::map<int,long long> m_mapUnReferPid;
-	//ÏÂ±êÎªPID£¬ÄÚÈİÎªÊÇ·ñÒÑÖª£¬ÒÑÖªÎªtrue
+	//ä¸‹æ ‡ä¸ºPIDï¼Œå†…å®¹ä¸ºæ˜¯å¦å·²çŸ¥ï¼Œå·²çŸ¥ä¸ºtrue
 	bool *m_pKnownPid;
 
 };

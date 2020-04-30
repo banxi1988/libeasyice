@@ -95,7 +95,7 @@ void CLiveSourceUdp::WorkFun()
 				m_pRecvDataCB(m_pApp,m_pBuffer,nLen);
 				
 			}
-			else //经过滤器处理
+			else //缁忚繃婊ゅ櫒澶勭悊
 			{
 				int n_tmp_len;
 				BYTE* p_tmp_data = m_pFilter->ProcessBuffer(m_pBuffer,nLen,n_tmp_len);

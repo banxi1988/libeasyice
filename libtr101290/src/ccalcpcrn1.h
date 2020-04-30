@@ -21,27 +21,27 @@ public:
 	CCalcPcrN1();
 	~CCalcPcrN1();
 	
-	///Ôö¼ÓÒ»¸öPCR°ü
+	///å¢åŠ ä¸€ä¸ªPCRåŒ…
 	void AddPcrPacket(long long pcr);
 
 	void Reset();
 	
-	///Ôö¼ÓÒ»¸ö·ÇPCR°ü
+	///å¢åŠ ä¸€ä¸ªéPCRåŒ…
 	void AddPayloadPacket();
 	
-	//Ã»ÓĞ¼ÆËãµ½Ê±·µ»Ø  -1
+	//æ²¡æœ‰è®¡ç®—åˆ°æ—¶è¿”å›  -1
 	long long GetPcr();
 
-	//Ìí¼ÓPCR°üÇ°»ñÈ¡ÉÏÒ»¸öPCRÖµ
+	//æ·»åŠ PCRåŒ…å‰è·å–ä¸Šä¸€ä¸ªPCRå€¼
 	long long GetPcrPrev();
 	
-	//Byte/s ÎªÊä³öÄ£¿éµ÷ÕûPCRÊ±ÉèÖÃ³õÊ¼ÂëÂÊ£¬ÓÃÒÔ²úÉúµÚ¶ş¸öPCRÖµ
+	//Byte/s ä¸ºè¾“å‡ºæ¨¡å—è°ƒæ•´PCRæ—¶è®¾ç½®åˆå§‹ç ç‡ï¼Œç”¨ä»¥äº§ç”Ÿç¬¬äºŒä¸ªPCRå€¼
 	void SetInitRate(double rate);
 private:
 	long long m_pcrBefor;
 	double m_fTransportRate;
 	
-	///°üº¬ÁËPCR°üÊı
+	///åŒ…å«äº†PCRåŒ…æ•°
 	long long m_nPacketCountOfPcr;
 };
 

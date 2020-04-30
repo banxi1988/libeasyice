@@ -19,8 +19,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 using namespace std;
 
-
-
 class CLivePcrProc
 {
 public:
@@ -29,7 +27,7 @@ public:
 		_PROGRAM_PCR_INFO_T()
 		{
 			llpcrPrev = -1;
-			pthread_mutex_init(&mutex,NULL);
+			pthread_mutex_init(&mutex, NULL);
 		}
 		~_PROGRAM_PCR_INFO_T()
 		{
@@ -41,7 +39,7 @@ public:
 		CPcrOj pcrOj;
 		CCalcPcrN1 pcrAc;
 		long long llpcrPrev;
-	}PROGRAM_PCR_INFO_T;
+	} PROGRAM_PCR_INFO_T;
 
 public:
 	CLivePcrProc(void);
@@ -49,41 +47,39 @@ public:
 
 	void SetTsLength(int nLen);
 
-	
-	//ÉèÖÃ¼ÆËãÂëÂÊÊ±¼ä¼ä¸ô(ms)
-	void SetCalcTsRateIntervalTime(const int* pTime);
+	//è®¾ç½®è®¡ç®—ç ç‡æ—¶é—´é—´éš”(ms)
+	void SetCalcTsRateIntervalTime(const int *pTime);
 
-	//ÉèÖÃPCR PID£¬ÈçÓĞ¶à¸ö£¬µ÷ÓÃ¶à´Î
+	//è®¾ç½®PCR PIDï¼Œå¦‚æœ‰å¤šä¸ªï¼Œè°ƒç”¨å¤šæ¬¡
 	void AddPcrPid(int pid);
 
-	void ProcessBuffer(BYTE* pData,int nLen,long long llTime);
+	void ProcessBuffer(BYTE *pData, int nLen, long long llTime);
 
-	//»ñÈ¡ÂëÂÊ,unlock Ê±»áÇå¿Õ
-	LST_RATE_INFO_T* LockGetRate();
+	//è·å–ç ç‡,unlock æ—¶ä¼šæ¸…ç©º
+	LST_RATE_INFO_T *LockGetRate();
 	void UnlockRate();
 
-	//»ñÈ¡PCRĞÅÏ¢,unlock Ê±»áÇå¿Õ
-	LST_PCR_INFO_T* LockGetPcrInfo(int pcr_pid);
+	//è·å–PCRä¿¡æ¯,unlock æ—¶ä¼šæ¸…ç©º
+	LST_PCR_INFO_T *LockGetPcrInfo(int pcr_pid);
 	void UnlockPcrInfo(int pcr_pid);
-//	const map<int,CLivePcrProc::PROGRAM_PCR_INFO_T*>& LockGetPcrInfoAll();
-//	void UnlockPcrInfoAll();
+	//	const map<int,CLivePcrProc::PROGRAM_PCR_INFO_T*>& LockGetPcrInfoAll();
+	//	void UnlockPcrInfoAll();
 
-	//Ñ¡Ôñpid£¬ÒÔºóÔÙ»ñÈ¡PCRĞÅÏ¢Ê±ÎŞĞèÔÙ´Î´«Èë
+	//é€‰æ‹©pidï¼Œä»¥åå†è·å–PCRä¿¡æ¯æ—¶æ— éœ€å†æ¬¡ä¼ å…¥
 	//void SelectPcrPid(int pid);
 	//list<PCR_INFO_T>* LockGetPcrInfo();
 	//void UnlockPcrInfo();
 
 private:
-	map<int,PROGRAM_PCR_INFO_T*> m_mapProgramPcrInfo;
+	map<int, PROGRAM_PCR_INFO_T *> m_mapProgramPcrInfo;
 
 	int m_nTsLength;
 
-	//ÓÃÓÚ¼ÆËãÂëÂÊ
+	//ç”¨äºè®¡ç®—ç ç‡
 	list<RATE_INFO_T> m_lstRate;
 	pthread_mutex_t m_mutexRate;
 
 	int m_nRecvedBytes;
 	long long m_llPrevSysClock;
-	const int* m_pCalcTsRateIt;	//¼ÆËãÂëÂÊÊ±¼ä¸ôÊ±¼ä(ms)
-
+	const int *m_pCalcTsRateIt; //è®¡ç®—ç ç‡æ—¶é—´éš”æ—¶é—´(ms)
 };

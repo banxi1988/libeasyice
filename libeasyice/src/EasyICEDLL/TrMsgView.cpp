@@ -10,7 +10,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// TrMsgView.cpp :  µœ÷Œƒº˛
+// TrMsgView.cpp : ÂÆûÁé∞Êñá‰ª∂
 //
 
 #include "TrMsgView.h"
@@ -18,7 +18,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "string_res.h"
 #include <stdio.h>
 
-//MSG¥∞ø⁄◊Ó¥Ûœ‘ æÃı ˝
+//MSGÁ™óÂè£ÊúÄÂ§ßÊòæÁ§∫Êù°Êï∞
 #define MAX_MSG_CNT 5000
 
 
@@ -299,7 +299,7 @@ void CTrMsgView::InitErrorTypeString()
 	//m_vecErrTypeString[TR_LV3_SI_REPET_ERR]=(IDS_TR_LV3_INT_EIT_SCHEDULE_OTHER);
 	//m_vecErrTypeString[TR_LV3_SI_REPET_ERR]=(IDS_TR_LV3_INT_TOT);
 
-///¡Ì“ª÷÷ÃÓ≥‰∑Ω Ω
+///Âè¶‰∏ÄÁßçÂ°´ÂÖÖÊñπÂºè
 
 	//m_vecErrTypeString[LV1_TS_SYNC_LOST]=(IDS_TR_LV1_SYNC_LOST);
 	//m_vecErrTypeString[LV1_SYNC_BYTE_ERROR]=(IDS_TR_LV1_SYNC_BYTE_ERR);
@@ -322,7 +322,7 @@ void CTrMsgView::InitErrorTypeString()
 	//m_vecErrTypeString[LV2_CRC_ERROR_TOT]=(IDS_TR_LV2_CRC_ERR_TOT);
 	//m_vecErrTypeString[LV2_CRC_ERROR_EIT]=(IDS_TR_LV2_CRC_ERR_EIT);
 
-	////œ¬√Êµƒªπ√ª∏ƒ
+	////‰∏ãÈù¢ÁöÑËøòÊ≤°Êîπ
 	//m_vecErrTypeString[TR_LV2_PCR_REPET_ERR]=(IDS_TR_LV2_PCR_REPET_ERR);
 	//m_vecErrTypeString[TR_LV2_PCR_DISCON_ERR]=(IDS_TR_LV2_PCR_DISCON_ERR);
 	//m_vecErrTypeString[TR_LV2_PCR_AC_ERR]=(IDS_TR_LV2_PCR_AC_ERR);

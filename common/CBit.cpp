@@ -182,7 +182,7 @@ void CBit::setBits48 (u_char *buf, int byte_offset, int startbit, int bitlen,uns
 	}
 
 	srcdata &= ((unsigned long long)1<<bitlen) - 1;
-	unsigned long long shiftdata = srcdata<<shiftlen;///ºÍbufµÄÊý¾Ý¶ÔÆë
+	unsigned long long shiftdata = srcdata<<shiftlen;///å’Œbufçš„æ•°æ®å¯¹é½
 	int reverse_temp = len;
 	for (int i =0;i< len;++i)
 	{

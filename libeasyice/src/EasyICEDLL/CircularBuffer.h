@@ -18,7 +18,7 @@ class CCircularBuffer
 public:
 typedef struct _ITEMINFO_T
 {
-		int item_size;  // and thus the size of said item's data array  ×Ö½ÚÊı
+		int item_size;  // and thus the size of said item's data array  å­—èŠ‚æ•°
 		long long time; //usec
 }ITEMINFO_T;
 
@@ -36,7 +36,7 @@ private:
 	int      m_end;        // end of data "pointer" (you guessed)
 	int      m_size;       // the actual length of the `item` array
 
-	int      m_TS_in_item; // max number of TS packets in a circular buffer item Ã¿ÔªËØ×î´óTS°üÊıÁ¿
+	int      m_TS_in_item; // max number of TS packets in a circular buffer item æ¯å…ƒç´ æœ€å¤§TSåŒ…æ•°é‡
 
 	int		m_item_size;
 	BYTE     *m_item_data;

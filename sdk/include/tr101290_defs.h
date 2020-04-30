@@ -57,7 +57,7 @@ typedef enum _ERROR_NAME_T
 	LV2_PTS_ERROR,
 	LV2_CAT_ERROR_TID,
 
-	//PSI/SI ╪Д╦Т
+	//PSI/SI И≈╢И ■
 	LV3_PSI_INTERVAL_PAT,
 	LV3_PSI_INTERVAL_PMT,
 	LV3_PSI_INTERVAL_CAT,
@@ -111,16 +111,16 @@ typedef struct _REPORT_PARAM_T
 		fVal = -1;
 	}
 
-	//╠ьлН
+	//Е©┘Е║╚
 	int level;
 	ERROR_NAME_T errName;
 	long long llOffset;
 	void* pApp;
 
-	//©ия║
+	//Е▐╞И─┴
 	int pid;
 
-	//©ия║1╦Ж
+	//Е▐╞И─┴1Д╦╙
 	long long llVal;		
 	double fVal;
 	

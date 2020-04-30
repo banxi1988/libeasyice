@@ -21,7 +21,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <curl/curl.h>
 
 /**
- * m3u8ÓëtsÔÚ²»Í¬Ïß³ÌÏÂÔØ£¬±ØĞëÓĞ±¾ÀàµÄÁ½¸ö¸÷×ÔµÄÊµÀı¡£²»ÄÜÓÃÍ¬Ò»¸öÀàÖ¸Õë
+ * m3u8ä¸tsåœ¨ä¸åŒçº¿ç¨‹ä¸‹è½½ï¼Œå¿…é¡»æœ‰æœ¬ç±»çš„ä¸¤ä¸ªå„è‡ªçš„å®ä¾‹ã€‚ä¸èƒ½ç”¨åŒä¸€ä¸ªç±»æŒ‡é’ˆ
 */
 
 
@@ -30,7 +30,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 typedef enum {
 	CHC_OK = 0,
 	CHC_FAILED_INIT,
-	CHC_CANCEL, //ÓÃ»§ÖĞÖ¹
+	CHC_CANCEL, //ç”¨æˆ·ä¸­æ­¢
 	CHC_TIMEOUT,
 	CHC_SELECT_ERROR,
 	CHC_FDSET_ERROR,
@@ -71,39 +71,39 @@ public:
 	~CHttpClient(void);
 
 	/**
-	* @brief HTTP POSTÇëÇó
-	* @param strUrl ÊäÈë²ÎÊı,ÇëÇóµÄUrlµØÖ·,Èç:http://www.baidu.com
-	* @param strPost ÊäÈë²ÎÊı,Ê¹ÓÃÈçÏÂ¸ñÊ½para1=val12=val2&¡­
-	* @param strResponse Êä³ö²ÎÊı,·µ»ØµÄÄÚÈİ
-	* @return ·µ»ØÊÇ·ñPost³É¹¦
+	* @brief HTTP POSTè¯·æ±‚
+	* @param strUrl è¾“å…¥å‚æ•°,è¯·æ±‚çš„Urlåœ°å€,å¦‚:http://www.baidu.com
+	* @param strPost è¾“å…¥å‚æ•°,ä½¿ç”¨å¦‚ä¸‹æ ¼å¼para1=val12=val2&â€¦
+	* @param strResponse è¾“å‡ºå‚æ•°,è¿”å›çš„å†…å®¹
+	* @return è¿”å›æ˜¯å¦PostæˆåŠŸ
 	*/
 	CURLcode Post(const std::string & strUrl, const std::string & strPost, std::string & strResponse);
 
 	/**
-	* @brief HTTP GETÇëÇó
-	* @param strUrl ÊäÈë²ÎÊı,ÇëÇóµÄUrlµØÖ·,Èç:http://www.baidu.com
-	* @param strResponse Êä³ö²ÎÊı,·µ»ØµÄÄÚÈİ
-	* @return ·µ»ØÊÇ·ñPost³É¹¦
+	* @brief HTTP GETè¯·æ±‚
+	* @param strUrl è¾“å…¥å‚æ•°,è¯·æ±‚çš„Urlåœ°å€,å¦‚:http://www.baidu.com
+	* @param strResponse è¾“å‡ºå‚æ•°,è¿”å›çš„å†…å®¹
+	* @return è¿”å›æ˜¯å¦PostæˆåŠŸ
 	*/
 	CURLcode Get(const std::string & strUrl, std::string & strResponse);
 	CURLcode Get(const std::string & strUrl, BYTE** pData,int& nLen);
 
 	/**
-	* @brief HTTPS POSTÇëÇó,ÎŞÖ¤Êé°æ±¾
-	* @param strUrl ÊäÈë²ÎÊı,ÇëÇóµÄUrlµØÖ·,Èç:https://www.alipay.com
-	* @param strPost ÊäÈë²ÎÊı,Ê¹ÓÃÈçÏÂ¸ñÊ½para1=val12=val2&¡­
-	* @param strResponse Êä³ö²ÎÊı,·µ»ØµÄÄÚÈİ
-	* @param pCaPath ÊäÈë²ÎÊı,ÎªCAÖ¤ÊéµÄÂ·¾¶.Èç¹ûÊäÈëÎªNULL,Ôò²»ÑéÖ¤·şÎñÆ÷¶ËÖ¤ÊéµÄÓĞĞ§ĞÔ.
-	* @return ·µ»ØÊÇ·ñPost³É¹¦
+	* @brief HTTPS POSTè¯·æ±‚,æ— è¯ä¹¦ç‰ˆæœ¬
+	* @param strUrl è¾“å…¥å‚æ•°,è¯·æ±‚çš„Urlåœ°å€,å¦‚:https://www.alipay.com
+	* @param strPost è¾“å…¥å‚æ•°,ä½¿ç”¨å¦‚ä¸‹æ ¼å¼para1=val12=val2&â€¦
+	* @param strResponse è¾“å‡ºå‚æ•°,è¿”å›çš„å†…å®¹
+	* @param pCaPath è¾“å…¥å‚æ•°,ä¸ºCAè¯ä¹¦çš„è·¯å¾„.å¦‚æœè¾“å…¥ä¸ºNULL,åˆ™ä¸éªŒè¯æœåŠ¡å™¨ç«¯è¯ä¹¦çš„æœ‰æ•ˆæ€§.
+	* @return è¿”å›æ˜¯å¦PostæˆåŠŸ
 	*/
 	CURLcode Posts(const std::string & strUrl, const std::string & strPost, std::string & strResponse, const char * pCaPath = NULL);
 
 	/**
-	* @brief HTTPS GETÇëÇó,ÎŞÖ¤Êé°æ±¾
-	* @param strUrl ÊäÈë²ÎÊı,ÇëÇóµÄUrlµØÖ·,Èç:https://www.alipay.com
-	* @param strResponse Êä³ö²ÎÊı,·µ»ØµÄÄÚÈİ
-	* @param pCaPath ÊäÈë²ÎÊı,ÎªCAÖ¤ÊéµÄÂ·¾¶.Èç¹ûÊäÈëÎªNULL,Ôò²»ÑéÖ¤·şÎñÆ÷¶ËÖ¤ÊéµÄÓĞĞ§ĞÔ.
-	* @return ·µ»ØÊÇ·ñPost³É¹¦
+	* @brief HTTPS GETè¯·æ±‚,æ— è¯ä¹¦ç‰ˆæœ¬
+	* @param strUrl è¾“å…¥å‚æ•°,è¯·æ±‚çš„Urlåœ°å€,å¦‚:https://www.alipay.com
+	* @param strResponse è¾“å‡ºå‚æ•°,è¿”å›çš„å†…å®¹
+	* @param pCaPath è¾“å…¥å‚æ•°,ä¸ºCAè¯ä¹¦çš„è·¯å¾„.å¦‚æœè¾“å…¥ä¸ºNULL,åˆ™ä¸éªŒè¯æœåŠ¡å™¨ç«¯è¯ä¹¦çš„æœ‰æ•ˆæ€§.
+	* @return è¿”å›æ˜¯å¦PostæˆåŠŸ
 	*/
 	CURLcode Gets(const std::string & strUrl, std::string & strResponse, const char * pCaPath = NULL);
 	CURLcode Gets(const std::string & strUrl, BYTE** pData,int& nLen, const char * pCaPath = NULL);
@@ -115,7 +115,7 @@ public:
 
 	void SetProxy(const string& strProxy);
 
-	////////////////////////////////////Òì²½½Ó¿Ú///////////////////////////////////////////
+	////////////////////////////////////å¼‚æ­¥æ¥å£///////////////////////////////////////////
 	CHCcode Async_Get(const std::string & strUrl, BYTE** pData,int& nLen,const char * pCaPath = NULL,bool bEnableReportProgress = false);
 	CHCcode Async_GetBin(const std::string & strUrl, BYTE** pData,int& nLen,HLS_REPORT_PARAM_DOWNLOAD_HISTORY_T& info);
 	CHCcode Async_GetString(const std::string & strUrl, std::string & strResponse);

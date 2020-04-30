@@ -19,7 +19,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <deque>
 #include <list>
 
-//Á½¸öÏß³Ì·Ö±ğĞ´tsºÍm3u8,×¢ÒâÏß³Ì°²È«
+//ä¸¤ä¸ªçº¿ç¨‹åˆ†åˆ«å†™tså’Œm3u8,æ³¨æ„çº¿ç¨‹å®‰å…¨
 class CSaveFile
 {
 public:
@@ -39,7 +39,7 @@ private:
         HLS_RECORD_INIT_PARAM_T m_stParam;
 
         string m_m3u8pathname;
-        string m_path;//±£´æÎÄ¼şµÄ¾ø¶ÔÂ·¾¶
+        string m_path;//ä¿å­˜æ–‡ä»¶çš„ç»å¯¹è·¯å¾„
         list<string> m_lstTsHistory;
         
         bool m_bFirstSave;

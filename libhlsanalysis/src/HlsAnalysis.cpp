@@ -10,7 +10,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// HlsAnalysis.cpp : ���� DLL Ӧ�ó������ڵ㡣
+// HlsAnalysis.cpp : 定义 DLL 应用程序的入口点。
 //
 
 #include "HlsAnalysis.h"
@@ -25,13 +25,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #define SDK_RELEASE
 
 static bool b_RunErrorMode = false;
-// ���ǵ���������һ��ʾ��
+// 这是导出变量的一个示例
 int nHlsAnalysis=0;
 
 
 
-// �����ѵ�����Ĺ��캯����
-// �й��ඨ�����Ϣ������� HlsAnalysis.h
+// 这是已导出类的构造函数。
+// 有关类定义的信息，请参阅 HlsAnalysis.h
 CHlsAnalysis::CHlsAnalysis()
 {
 #ifdef SDK_RELEASE

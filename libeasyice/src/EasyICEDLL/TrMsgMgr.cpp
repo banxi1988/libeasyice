@@ -174,7 +174,7 @@ TR_MSG_T* CTrMsgMgr::AddMsg(const REPORT_PARAM_T& msg)
 
 	m_vecMsg.push_back(msg);
 
-	//·§Öµ¹ıÂË¿ª¹Ø
+	//é˜€å€¼è¿‡æ»¤å¼€å…³
 	if (!CheckFilter(msg))
 	{
 		m_pTrMsg->nErrCount = -1;
@@ -182,7 +182,7 @@ TR_MSG_T* CTrMsgMgr::AddMsg(const REPORT_PARAM_T& msg)
 		return m_pTrMsg;
 	}
 
-	//·ÖÀàĞÅÏ¢¼°ÊıÖµÍ³¼Æ
+	//åˆ†ç±»ä¿¡æ¯åŠæ•°å€¼ç»Ÿè®¡
 
 	return ProcessReport(msg);
 }
@@ -192,14 +192,14 @@ TR_MSG_T* CTrMsgMgr::PlayBackMsg(const REPORT_PARAM_T& msg)
 	m_pTrMsg->nErrCount = -1;
 	m_pTrMsg->nSiRepetitionCount = -1;
 
-	//·§Öµ¹ıÂË¿ª¹Ø
+	//é˜€å€¼è¿‡æ»¤å¼€å…³
 	if (!CheckFilter(msg))
 	{
 		m_pTrMsg->nErrCount = -1;
 		return m_pTrMsg;
 	}
 
-	//·ÖÀàĞÅÏ¢¼°ÊıÖµÍ³¼Æ
+	//åˆ†ç±»ä¿¡æ¯åŠæ•°å€¼ç»Ÿè®¡
 
 	return ProcessReport(msg,true);
 }
@@ -636,7 +636,7 @@ TR_MSG_T* CTrMsgMgr::ProcessReport(const REPORT_PARAM_T& msg,bool bRepaly)
 		m_pTrMsg->nErrCount = m_nErrCnt_tdt;
 		break;
 
-// ----------Ê£ÓàÃ»´¦ÀíµÄSI_repetition------------
+// ----------å‰©ä½™æ²¡å¤„ç†çš„SI_repetition------------
 	case LV3_PSI_INTERVAL_BAT:
 		if (msg.llVal / 27000 < 25)
 		{

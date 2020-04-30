@@ -10,12 +10,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// ���� ifdef ���Ǵ���ʹ�� DLL �������򵥵�
-// ��ı�׼�������� DLL �е������ļ��������������϶���� LIBTR101290_EXPORTS
-// ���ű���ġ���ʹ�ô� DLL ��
-// �κ�������Ŀ�ϲ�Ӧ����˷��š�������Դ�ļ��а������ļ����κ�������Ŀ���Ὣ
-// LIBTR101290_API ������Ϊ�Ǵ� DLL ����ģ����� DLL ���ô˺궨���
-// ������Ϊ�Ǳ������ġ�
+// 下列 ifdef 块是创建使从 DLL 导出更简单的
+// 宏的标准方法。此 DLL 中的所有文件都是用命令行上定义的 LIBTR101290_EXPORTS
+// 符号编译的。在使用此 DLL 的
+// 任何其他项目上不应定义此符号。这样，源文件中包含此文件的任何其他项目都会将
+// LIBTR101290_API 函数视为是从 DLL 导入的，而此 DLL 则将用此宏定义的
+// 符号视为是被导出的。
 
 #ifndef LIBTR101290_H
 #define LIBTR101290_H
@@ -32,7 +32,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 /*
- report ˵��
+ report 说明
 
  ------------------------------------------------
  LV1_PID_ERROR
@@ -40,12 +40,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
  ------------------------------------------------
  LV2_PCR_REPETITION_ERROR
- llVal ������ֵ�������壬��λΪ27mϵͳʱ��
- (int)fVal ����discontinuity_indicator
+ llVal 的任意值都有意义，单位为27m系统时钟
+ (int)fVal 代表discontinuity_indicator
 
  ------------------------------------------------
  LV2_PCR_ACCURACY_ERROR
- llVal ������ֵ�������壬��λΪ27mϵͳʱ��
+ llVal 的任意值都有意义，单位为27m系统时钟
 
  ------------------------------------------------
  LV2_CRC_ERROR
@@ -53,7 +53,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
  ------------------------------------------------
  LV3_PSI_INTERVAL_XXX
- llVal  ������,��λ ms
+ llVal  有意义,单位 ms
 
 
  ------------------------------------------------
@@ -82,7 +82,7 @@ llVal()
 
 
  ------------------------------------------------
- ��������£�llVal��fVal ���� -1 ��ʾû������
+ 其他情况下，llVal与fVal 等于 -1 表示没有意义
 
 
 
@@ -93,15 +93,15 @@ llVal()
 class CTrCore;
 
 
-// �����Ǵ� libtr101290.dll ������
+// 此类是从 libtr101290.dll 导出的
 
-//ÿ���ļ���Ӧһ���µ������,�ر��ļ�ʱdelete����ʱ������һ��
+//每个文件对应一个新的类对象,关闭文件时delete，打开时新申请一个
 class  Clibtr101290 {
 public:
 	Clibtr101290(void);
 	~Clibtr101290(void);
 
-	//PAT��PMT�Ƿ�������
+	//PAT，PMT是否解析完毕
 	bool IsDemuxFinish();
 
 	void SetReportCB(pfReportCB pCB,void* pApp);
@@ -110,10 +110,10 @@ public:
 
 	void SetTsLen(int nLen);
 
-	//the size must eq to LV3_DATA_DELAY_ERROR+1  Ĭ��ȫ������
+	//the size must eq to LV3_DATA_DELAY_ERROR+1  默认全部开启
 	void SetEnable(bool *p);
 
-	//���һ�������õĺ���
+	//最后一个被调用的函数
 	void AddPacket(BYTE* pPacket);
 private:
 	CTrCore* m_pTrCore;

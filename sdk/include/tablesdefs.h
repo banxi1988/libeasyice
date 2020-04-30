@@ -871,7 +871,7 @@ namespace tables{
 
 
 
-    //Ò»¸ö±íµÄÊı¾İ
+    //ä¸€ä¸ªè¡¨çš„æ•°æ®
     typedef vector<BAT> STU_SECTION_BAT;
     typedef vector<CAT> STU_SECTION_CAT;
     typedef vector<DIT> STU_SECTION_DIT;
@@ -907,7 +907,7 @@ namespace tables{
             vecTabTOT.clear();
             vecTabTSDT.clear();
         }
-        vector<STU_SECTION_BAT> vecTabBAT;	//¿ÉÄÜ»áÓĞ¶à¸ö±í,ÀıÈç£¬¶à¸öPMT
+        vector<STU_SECTION_BAT> vecTabBAT;	//å¯èƒ½ä¼šæœ‰å¤šä¸ªè¡¨,ä¾‹å¦‚ï¼Œå¤šä¸ªPMT
         vector<STU_SECTION_CAT> vecTabCAT;
         vector<STU_SECTION_DIT> vecTabDIT;
         vector<STU_SECTION_EIT> vecTabEIT;
@@ -1082,36 +1082,36 @@ namespace tables{
     //
     //   vector<vector<BYTE>> vecSections;
     //
-    //   //¸ù¾İlast_section_numberÅĞ¶ÏÊÇ·ñÒÑ¾­×éÍê
+    //   //æ ¹æ®last_section_numberåˆ¤æ–­æ˜¯å¦å·²ç»ç»„å®Œ
     //   bool bFinish;
     //}SECTION_DATA;
-    //²»×¼±¸Ö§³Ö±í°æ±¾ºÅ¸üĞÂµÄÇé¿ö
-    //ÔÚÍ¬Ò»pidÏÂ£¬Ò»¸ö±í´«ËÍÍêÖ®Ç°£¬ÈÏÎª²»»áÓĞÆäËû±íµÄÊı¾İ³öÏÖ
+    //ä¸å‡†å¤‡æ”¯æŒè¡¨ç‰ˆæœ¬å·æ›´æ–°çš„æƒ…å†µ
+    //åœ¨åŒä¸€pidä¸‹ï¼Œä¸€ä¸ªè¡¨ä¼ é€å®Œä¹‹å‰ï¼Œè®¤ä¸ºä¸ä¼šæœ‰å…¶ä»–è¡¨çš„æ•°æ®å‡ºç°
 
 
 
-    //Ò»¸ösection
+    //ä¸€ä¸ªsection
     typedef struct _SECTION
     {
         _SECTION() : section_length(0){}
-        int section_length;	//ÕâÊÇ½âÎö³öÀ´µÄÓ¦¸ÃÊÇ¶à³¤¡£
+        int section_length;	//è¿™æ˜¯è§£æå‡ºæ¥çš„åº”è¯¥æ˜¯å¤šé•¿ã€‚
         vector<BYTE> vecData;
     }SECTION;
 
     typedef vector<SECTION> TABLE_SECTIONS;
 
-    //Ä³¸ö±íµÄsection,Ò»¸öÍêÕû¶ÀÁ¢µÄ±í
+    //æŸä¸ªè¡¨çš„section,ä¸€ä¸ªå®Œæ•´ç‹¬ç«‹çš„è¡¨
     typedef struct _TABLE_ID_SECTION
     {
         _TABLE_ID_SECTION() : bFinish(false){}
         int table_id;
-        bool bFinish;	//¸ù¾İlast_section_numberÅĞ¶ÏÊÇ·ñÒÑ¾­×éÍê¡£Èç¹ûÈ«¶¼½âÎöĞ§ÂÊÌ«Âı£¬ÓÈÆäÉæ¼°µ½ÃèÊö·û½âÎö
+        bool bFinish;	//æ ¹æ®last_section_numberåˆ¤æ–­æ˜¯å¦å·²ç»ç»„å®Œã€‚å¦‚æœå…¨éƒ½è§£ææ•ˆç‡å¤ªæ…¢ï¼Œå°¤å…¶æ¶‰åŠåˆ°æè¿°ç¬¦è§£æ
         TABLE_SECTIONS sections;
     }TABLE_ID_SECTION;
 
 
-    //Ä³¸öÒ»¸öpidµÄsection.
-    //Ò»¸öpid¿ÉÄÜ»á°üº¬¶à¸ö±í.PMTµÄ¶à¸ö±í£¬Ò²·Åµ½ÕâÀï
+    //æŸä¸ªä¸€ä¸ªpidçš„section.
+    //ä¸€ä¸ªpidå¯èƒ½ä¼šåŒ…å«å¤šä¸ªè¡¨.PMTçš„å¤šä¸ªè¡¨ï¼Œä¹Ÿæ”¾åˆ°è¿™é‡Œ
     typedef vector<TABLE_ID_SECTION> PID_SECTIONS;
 
     typedef struct _PID_SECTION_BUILDING
@@ -1134,14 +1134,14 @@ namespace tables{
     }PID_SECTION_BUILDING;
 
 
-    //¸ù¾İpid×ésection µÄ»º³å
+    //æ ¹æ®pidç»„section çš„ç¼“å†²
     typedef map<int,PID_SECTION_BUILDING> SECTION_BUFFER;
 
     typedef struct _TREAM_TYPE_DES
     {
         u_int    from;          /* e.g. from id 1  */
         u_int    to;            /*      to   id 3  */
-        const char*	 descriptor;     /*      ÃèÊö*/
+        const char*	 descriptor;     /*      æè¿°*/
     } TREAM_TYPE_DES;
 
     static TREAM_TYPE_DES tream_type_des[] = 

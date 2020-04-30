@@ -10,7 +10,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// TrView.cpp : ÊµÏÖÎÄ¼ş
+// TrView.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "TrView.h"
@@ -27,19 +27,19 @@ const int ICON_DISABLE = 3;
 
 #define MAX_ITEM_CNT 50
 
-//ÊµÊ±Ä£Ê½ÏÂ£¬ÊÓÍ¼¸üĞÂ¼ä¸ôÊ±¼ä£¨Ãë£©
+//å®æ—¶æ¨¡å¼ä¸‹ï¼Œè§†å›¾æ›´æ–°é—´éš”æ—¶é—´ï¼ˆç§’ï¼‰
 #define UPDATE_INTERVAL 1000000
 
 
 /*
-1. disable µÄÏîµÄÈÕÖ¾£¬²»Ó¦¸ÃÅ×ÉÏÀ´
-2. ÊµÊ±·ÖÎöÇé¿öÏÂ£¬µ±·ÖÎöÎ´Íê³ÉÊ±£¬µ±µã»÷Ä³Ïî£¬´ËÏîÖ®Ç°µÄÈÕÖ¾²»Ó¦ÏÔÊ¾£¬Ö»ÏÔÊ¾µã»÷¶¯×÷Ö®ºóµÄ
-3. ÀëÏß·ÖÎö£¬TR²»Ó¦ÊµÊ±Ë¢ĞÂ
-4. ÀëÏß·ÖÎö £¬Ê±¼äÏî  ²»Ó¦Ìî³ä
-5. ¿ªÆô»ò½ûÓÃÄ³Ïî£¬Ó¦ÔÚ¿ªÊ¼·ÖÎöÖ®Ç°ÉèÖÃ
-6. ·ÖÎöÍê±ÏÖ®ºóÔÙ¿ªÆô»ò½ûÓÃ£¬¿É½øĞĞ¹ıÂËÏÔÊ¾
+1. disable çš„é¡¹çš„æ—¥å¿—ï¼Œä¸åº”è¯¥æŠ›ä¸Šæ¥
+2. å®æ—¶åˆ†ææƒ…å†µä¸‹ï¼Œå½“åˆ†ææœªå®Œæˆæ—¶ï¼Œå½“ç‚¹å‡»æŸé¡¹ï¼Œæ­¤é¡¹ä¹‹å‰çš„æ—¥å¿—ä¸åº”æ˜¾ç¤ºï¼Œåªæ˜¾ç¤ºç‚¹å‡»åŠ¨ä½œä¹‹åçš„
+3. ç¦»çº¿åˆ†æï¼ŒTRä¸åº”å®æ—¶åˆ·æ–°
+4. ç¦»çº¿åˆ†æ ï¼Œæ—¶é—´é¡¹  ä¸åº”å¡«å……
+5. å¼€å¯æˆ–ç¦ç”¨æŸé¡¹ï¼Œåº”åœ¨å¼€å§‹åˆ†æä¹‹å‰è®¾ç½®
+6. åˆ†æå®Œæ¯•ä¹‹åå†å¼€å¯æˆ–ç¦ç”¨ï¼Œå¯è¿›è¡Œè¿‡æ»¤æ˜¾ç¤º
 
-´æÔÚÈıÖÖ¿ª¹Ø£º1.Ê¹ÄÜ¿ª¹Ø£¬2£¬¹ıÂËÆ÷£¨µ¥¸ö/È«²¿£©£¬3£¬·§ÖµÖØÉè
+å­˜åœ¨ä¸‰ç§å¼€å…³ï¼š1.ä½¿èƒ½å¼€å…³ï¼Œ2ï¼Œè¿‡æ»¤å™¨ï¼ˆå•ä¸ª/å…¨éƒ¨ï¼‰ï¼Œ3ï¼Œé˜€å€¼é‡è®¾
 */
 
 // CTrView
@@ -72,7 +72,7 @@ CTrView::~CTrView()
     delete [] m_pBriefBuf;
 }
 
-// CTrView ÏûÏ¢´¦Àí³ÌĞò
+// CTrView æ¶ˆæ¯å¤„ç†ç¨‹åº
 //
 //int CTrView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 //{
@@ -239,7 +239,7 @@ void CTrView::OnTrReport(REPORT_PARAM_T param)
 		}
 	}
 
-	//¸üĞÂMSGÊÓÍ¼Êı¾İ
+	//æ›´æ–°MSGè§†å›¾æ•°æ®
 	lpthis->m_pMsgView->AddMsg(param,pTrMsg->emErrType);
 
 
@@ -276,11 +276,11 @@ const std::deque<CTrMsgView::MSG_LIST_T>& CTrView:: GetErrorMsgListByErrorType(E
 			continue;
 		}
 
-		if (pTrMsg->emErrType != nItem)	//Æ¥ÅäµÄÀàĞÍÖ±½Ó±£Áô£¬²»Æ¥ÅäµÄÒª¿´ÊÇ·ñSI_REPETION
+		if (pTrMsg->emErrType != nItem)	//åŒ¹é…çš„ç±»å‹ç›´æ¥ä¿ç•™ï¼Œä¸åŒ¹é…çš„è¦çœ‹æ˜¯å¦SI_REPETION
 		{
 			if (nItem == TR_LV3_SI_REPET_ERR && pTrMsg->nSiRepetitionCount > 0)
 			{
-				//µ±Ñ¡ÔñSI repetion Ê±£¬²úÉú sirepetionµÄ±£Áô£¬ÆäÓà¹ıÂËµô
+				//å½“é€‰æ‹©SI repetion æ—¶ï¼Œäº§ç”Ÿ sirepetionçš„ä¿ç•™ï¼Œå…¶ä½™è¿‡æ»¤æ‰
 			}
 			else
 			{
@@ -289,7 +289,7 @@ const std::deque<CTrMsgView::MSG_LIST_T>& CTrView:: GetErrorMsgListByErrorType(E
 		}
 		//if (pTrMsg->nSiRepetitionCount < 0 && pTrMsg->emErrType != nItem)
 		//{
-		//	continue;//²úÉúnSiRepetitionCountµÄ¶¼ÏÔÊ¾,³ı´ËÖ®Íâ·ÇÆ¥ÅäÀàĞÍµÄ¹ıÂËµô
+		//	continue;//äº§ç”ŸnSiRepetitionCountçš„éƒ½æ˜¾ç¤º,é™¤æ­¤ä¹‹å¤–éåŒ¹é…ç±»å‹çš„è¿‡æ»¤æ‰
 		//}
 
 		m_pMsgView->AddMsg(*it,pTrMsg->emErrType);

@@ -24,10 +24,10 @@ bool hm_hevc_check_rap(CTsPacket* tspacket)
         int start_pos = 0;
         BYTE stream_id;
         BYTE adaptation_field_control = tspacket->Get_adaptation_field_control();
-        if (adaptation_field_control == 2 || adaptation_field_control == 3)     //º¬µ÷Õû×Ö¶Î
+        if (adaptation_field_control == 2 || adaptation_field_control == 3)     //å«è°ƒæ•´å­—æ®µ
         {
                 int adaptation_field_length = *(tspacket->m_pPacket + 4);
-                start_pos = adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+                start_pos = adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
         }
         if (tspacket->Get_PES_stream_id(stream_id))
         {
@@ -79,7 +79,7 @@ PARSED_FRAME_INFO CProgramParser::PushBackTsPacket(CTsPacket* tsPacket,long long
 	m_nGopBytesTmp+=m_nTsLength;
 
 	//m_llTotalPacketCounter++;
-	//½«¾ø¶Ô°üÊı×÷Îª¼ÆÊı£¬²»ÔÙÊ¹ÓÃÃ¿¸ö½ÚÄ¿¸÷×ÔµÄts°ü¼ÆÊı
+	//å°†ç»å¯¹åŒ…æ•°ä½œä¸ºè®¡æ•°ï¼Œä¸å†ä½¿ç”¨æ¯ä¸ªèŠ‚ç›®å„è‡ªçš„tsåŒ…è®¡æ•°
 	m_llTotalPacketCounter = packetID;
 	
 	TIMESTAMP tp;
@@ -127,7 +127,7 @@ PARSED_FRAME_INFO CProgramParser::PushBackTsPacket(CTsPacket* tsPacket,long long
 			{
 				H264_AssembleGop(parsed_frame_info.FrameType);
 			}
-			//else if (m_pProgInfo->gopList.empty()) //2017/6/28 Ôö¼Óelse if£¬ÒÔÖ§³ÖµÚÒ»¸öIÖ¡Ç°µÄ°ë¸öGOP
+			//else if (m_pProgInfo->gopList.empty()) //2017/6/28 å¢åŠ else ifï¼Œä»¥æ”¯æŒç¬¬ä¸€ä¸ªIå¸§å‰çš„åŠä¸ªGOP
 			//{
 			//	H264_AssembleGop(parsed_frame_info.FrameType);
 			//}
@@ -139,7 +139,7 @@ PARSED_FRAME_INFO CProgramParser::PushBackTsPacket(CTsPacket* tsPacket,long long
 					bIFrame = true;
 				}
 			}
-			//´øÓĞspsµÄts°üÈÏÎªÊÇIÖ¡ÆğÊ¼¡£ÓÃÓÚÊÊÓ¦sliceÍ·ÔÚPESµÄÏÂÒ»¸öTS°üÖĞµÄÇé¿ö
+			//å¸¦æœ‰spsçš„tsåŒ…è®¤ä¸ºæ˜¯Iå¸§èµ·å§‹ã€‚ç”¨äºé€‚åº”sliceå¤´åœ¨PESçš„ä¸‹ä¸€ä¸ªTSåŒ…ä¸­çš„æƒ…å†µ
 			if (tsPacket->Get_PES_stream_id(stream_id))
 			{
 				if (stream_id >= 0xE0 && stream_id <= 0xEF)
@@ -198,25 +198,25 @@ PARSED_FRAME_INFO CProgramParser::PushBackTsPacket(CTsPacket* tsPacket,long long
 			BYTE flag = tsPacket->Get_PTS_DTS_flag();
 			if (flag == 0x2)	//pts only
 			{
-				//ptsÖµ
+				//ptså€¼
 				tsPacket->Get_PTS(tp.timestamp);
 				tp.timestamp *= 300;
 				m_Vpts = tp.timestamp;
 				pTts.vecVpts.push_back(tp);
 
-				//²îÖµ
+				//å·®å€¼
 				if (curpcr > 0)
 				{
 					tp.timestamp = m_Vpts/300 - curpcr/300;
 					pTts.vecPtsSub.push_back(tp);
 				}
 
-				//×îºóÒ»¸öpcrÖµ
+				//æœ€åä¸€ä¸ªpcrå€¼
 				//pTts.vecPcr.push_back(m_lastPcrtp);
 			}
 			else if (flag == 0x3)	//pts and dts
 			{
-				//pts dts Öµ
+				//pts dts å€¼
 				tsPacket->Get_PTS(tp.timestamp);
 				tp.timestamp *= 300;
 				pTts.vecVpts.push_back(tp);
@@ -227,7 +227,7 @@ PARSED_FRAME_INFO CProgramParser::PushBackTsPacket(CTsPacket* tsPacket,long long
 				m_dts = tp.timestamp;
 				pTts.vecDts.push_back(tp);
 
-				//²îÖµ
+				//å·®å€¼
 				if (curpcr > 0)
 				{
 					tp.timestamp = m_Vpts/300 - curpcr/300;
@@ -236,7 +236,7 @@ PARSED_FRAME_INFO CProgramParser::PushBackTsPacket(CTsPacket* tsPacket,long long
 					tp.timestamp = m_dts/300 - curpcr/300;
 					pTts.vecDtsSub.push_back(tp);
 				}
-				//×îºóÒ»¸öpcrÖµ
+				//æœ€åä¸€ä¸ªpcrå€¼
 				//pTts.vecPcr.push_back(m_lastPcrtp);
 			}
 		}
@@ -261,7 +261,7 @@ inline void CProgramParser::MPEG2_AssembleGop(BYTE bPic)
 	switch(bPic)
 	{
 	case 0x01:	//I
-		if ( !m_gopTmp.empty() )	//×éºÏÍê³É,ĞÂµÄ¿ªÊ¼
+		if ( !m_gopTmp.empty() )	//ç»„åˆå®Œæˆ,æ–°çš„å¼€å§‹
 		{
 			GOP_LIST gl;
 			gl.gop = m_gopTmp;
@@ -295,7 +295,7 @@ inline void CProgramParser::H264_AssembleGop(FRAME_TYPE frame_type)
 	switch(frame_type)
 	{
 	case FRAME_I:	//I
-		if ( !m_gopTmp.empty() )	//×éºÏÍê³É,ĞÂµÄ¿ªÊ¼
+		if ( !m_gopTmp.empty() )	//ç»„åˆå®Œæˆ,æ–°çš„å¼€å§‹
 		{
 			GOP_LIST gl;
 			gl.gop = m_gopTmp;
@@ -310,7 +310,7 @@ inline void CProgramParser::H264_AssembleGop(FRAME_TYPE frame_type)
 		m_nGopBytesTmp = m_nTsLength;
 		break;
 	case FRAME_IDR:	//IDR
-		if ( !m_gopTmp.empty() )	//×éºÏÍê³É,ĞÂµÄ¿ªÊ¼
+		if ( !m_gopTmp.empty() )	//ç»„åˆå®Œæˆ,æ–°çš„å¼€å§‹
 		{
 			GOP_LIST gl;
 			gl.gop = m_gopTmp;

@@ -13,11 +13,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 /*
-���ֲ���
-a: �����ҵ�����
-x:Ҫ���ҵ�Ԫ��
-nSize ����a�Ĵ�С
-return:�ҵ��˷���λ�ã����򷵻� -1
+二分查找
+a: 待查找的数组
+x:要查找的元素
+nSize 数组a的大小
+return:找到了返回位置，否则返回 -1
 */
 
 template<class Type>

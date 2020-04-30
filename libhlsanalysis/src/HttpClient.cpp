@@ -25,12 +25,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #define CONN_TIME_OUT 30
 
 
-//¶à³¤Ê±¼äÃ»ÓĞÊÕµ½Êı¾İ×ö³¬Ê±´¦Àí
+//å¤šé•¿æ—¶é—´æ²¡æœ‰æ”¶åˆ°æ•°æ®åšè¶…æ—¶å¤„ç†
 #define MAX_TIME_OUT 30*1000
 
 
 
-//curl_multi_fdsetÓĞÎÊÌâ£¬»ñÈ¡µÄmaxfdÎª-1£¬¹Ù·½ÒªÇóÖØÊÔ£¬ÕâÀïÉèÖÃÖØÊÔ³¬Ê±
+//curl_multi_fdsetæœ‰é—®é¢˜ï¼Œè·å–çš„maxfdä¸º-1ï¼Œå®˜æ–¹è¦æ±‚é‡è¯•ï¼Œè¿™é‡Œè®¾ç½®é‡è¯•è¶…æ—¶
 #define ERROR_TIME_OUT 2*1000
 
 
@@ -142,15 +142,15 @@ CURLcode CHttpClient::Get(const std::string & strUrl, std::string & strResponse)
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, OnRecvString);
 	curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&strResponse);
 	/**
-	* µ±¶à¸öÏß³Ì¶¼Ê¹ÓÃ³¬Ê±´¦ÀíµÄÊ±ºò£¬Í¬Ê±Ö÷Ïß³ÌÖĞÓĞsleep»òÊÇwaitµÈ²Ù×÷¡£
-	* Èç¹û²»ÉèÖÃÕâ¸öÑ¡Ïî£¬libcurl½«»á·¢ĞÅºÅ´ò¶ÏÕâ¸öwait´Ó¶øµ¼ÖÂ³ÌĞòÍË³ö¡£
+	* å½“å¤šä¸ªçº¿ç¨‹éƒ½ä½¿ç”¨è¶…æ—¶å¤„ç†çš„æ—¶å€™ï¼ŒåŒæ—¶ä¸»çº¿ç¨‹ä¸­æœ‰sleepæˆ–æ˜¯waitç­‰æ“ä½œã€‚
+	* å¦‚æœä¸è®¾ç½®è¿™ä¸ªé€‰é¡¹ï¼Œlibcurlå°†ä¼šå‘ä¿¡å·æ‰“æ–­è¿™ä¸ªwaitä»è€Œå¯¼è‡´ç¨‹åºé€€å‡ºã€‚
 	*/
 	curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
 	curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, CONN_TIME_OUT);
 	curl_easy_setopt(curl, CURLOPT_TIMEOUT, MAX_TIME_OUT);
 	if (!m_strProxy.empty())
 	{
-		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ´úÀí
+		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ä»£ç†
 	}
 
 	res = curl_easy_perform(curl);
@@ -183,15 +183,15 @@ CURLcode CHttpClient::Get(const std::string & strUrl, BYTE** pData,int& nLen)
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, OnRecvData);
 	curl_easy_setopt(curl, CURLOPT_WRITEDATA, this);
 	/**
-	* µ±¶à¸öÏß³Ì¶¼Ê¹ÓÃ³¬Ê±´¦ÀíµÄÊ±ºò£¬Í¬Ê±Ö÷Ïß³ÌÖĞÓĞsleep»òÊÇwaitµÈ²Ù×÷¡£
-	* Èç¹û²»ÉèÖÃÕâ¸öÑ¡Ïî£¬libcurl½«»á·¢ĞÅºÅ´ò¶ÏÕâ¸öwait´Ó¶øµ¼ÖÂ³ÌĞòÍË³ö¡£
+	* å½“å¤šä¸ªçº¿ç¨‹éƒ½ä½¿ç”¨è¶…æ—¶å¤„ç†çš„æ—¶å€™ï¼ŒåŒæ—¶ä¸»çº¿ç¨‹ä¸­æœ‰sleepæˆ–æ˜¯waitç­‰æ“ä½œã€‚
+	* å¦‚æœä¸è®¾ç½®è¿™ä¸ªé€‰é¡¹ï¼Œlibcurlå°†ä¼šå‘ä¿¡å·æ‰“æ–­è¿™ä¸ªwaitä»è€Œå¯¼è‡´ç¨‹åºé€€å‡ºã€‚
 	*/
 	curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
 	curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, CONN_TIME_OUT);
 	curl_easy_setopt(curl, CURLOPT_TIMEOUT, MAX_TIME_OUT);
 	if (!m_strProxy.empty())
 	{
-		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ´úÀí
+		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ä»£ç†
 	}
 
 	res = curl_easy_perform(curl);
@@ -241,7 +241,7 @@ CURLcode CHttpClient::Posts(const std::string & strUrl, const std::string & strP
 	}
 	else
 	{
-		//È±Ê¡Çé¿ö¾ÍÊÇPEM£¬ËùÒÔÎŞĞèÉèÖÃ£¬ÁíÍâÖ§³ÖDER
+		//ç¼ºçœæƒ…å†µå°±æ˜¯PEMï¼Œæ‰€ä»¥æ— éœ€è®¾ç½®ï¼Œå¦å¤–æ”¯æŒDER
 		//curl_easy_setopt(curl,CURLOPT_SSLCERTTYPE,"PEM");
 		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, true);
 		curl_easy_setopt(curl, CURLOPT_CAINFO, pCaPath);
@@ -286,7 +286,7 @@ CURLcode CHttpClient::Gets(const std::string & strUrl, std::string & strResponse
 
 	if (!m_strProxy.empty())
 	{
-		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ´úÀí
+		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ä»£ç†
 	}
 
 	res = curl_easy_perform(curl);
@@ -335,7 +335,7 @@ CURLcode CHttpClient::Gets(const std::string & strUrl, BYTE** pData,int& nLen, c
 
 	if (!m_strProxy.empty())
 	{
-		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ´úÀí
+		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ä»£ç†
 	}
 
 	res = curl_easy_perform(curl);
@@ -436,23 +436,23 @@ CHCcode CHttpClient::Async_Get(const std::string & strUrl, BYTE** pData,int& nLe
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, OnRecvData);
 	curl_easy_setopt(curl, CURLOPT_WRITEDATA, this);
 	/**
-	* µ±¶à¸öÏß³Ì¶¼Ê¹ÓÃ³¬Ê±´¦ÀíµÄÊ±ºò£¬Í¬Ê±Ö÷Ïß³ÌÖĞÓĞsleep»òÊÇwaitµÈ²Ù×÷¡£
-	* Èç¹û²»ÉèÖÃÕâ¸öÑ¡Ïî£¬libcurl½«»á·¢ĞÅºÅ´ò¶ÏÕâ¸öwait´Ó¶øµ¼ÖÂ³ÌĞòÍË³ö¡£
+	* å½“å¤šä¸ªçº¿ç¨‹éƒ½ä½¿ç”¨è¶…æ—¶å¤„ç†çš„æ—¶å€™ï¼ŒåŒæ—¶ä¸»çº¿ç¨‹ä¸­æœ‰sleepæˆ–æ˜¯waitç­‰æ“ä½œã€‚
+	* å¦‚æœä¸è®¾ç½®è¿™ä¸ªé€‰é¡¹ï¼Œlibcurlå°†ä¼šå‘ä¿¡å·æ‰“æ–­è¿™ä¸ªwaitä»è€Œå¯¼è‡´ç¨‹åºé€€å‡ºã€‚
 	*/
 	curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1);
 
 	if (!m_strProxy.empty())
 	{
-		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ´úÀí
+		curl_easy_setopt(curl, CURLOPT_PROXY, m_strProxy.c_str());// ä»£ç†
 	}
 
 	if (bEnableReportProgress)
 	{
-		//curlµÄ½ø¶ÈÌõÉùÃ÷
+		//curlçš„è¿›åº¦æ¡å£°æ˜
 		curl_easy_setopt(curl,CURLOPT_NOPROGRESS, false);
-		//»Øµ÷½ø¶ÈÌõº¯Êı
+		//å›è°ƒè¿›åº¦æ¡å‡½æ•°
 		curl_easy_setopt(curl,CURLOPT_PROGRESSFUNCTION,download_progress);
-		//ÉèÖÃ½ø¶ÈÌõ»Øµ÷º¯ÊıµÚÒ»¸ö²ÎÊı
+		//è®¾ç½®è¿›åº¦æ¡å›è°ƒå‡½æ•°ç¬¬ä¸€ä¸ªå‚æ•°
 		curl_easy_setopt(curl,CURLOPT_PROGRESSDATA,this);
 
 	}
@@ -472,7 +472,7 @@ CHCcode CHttpClient::Async_Get(const std::string & strUrl, BYTE** pData,int& nLe
 		}
 	}
 
-	//ÉèÖÃhttp Í·²¿´¦Àíº¯Êı  
+	//è®¾ç½®http å¤´éƒ¨å¤„ç†å‡½æ•°  
 	long long filesize;
 	curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, getheaderfunc);  
 	curl_easy_setopt(curl, CURLOPT_HEADERDATA, this);
@@ -547,7 +547,7 @@ CHCcode CHttpClient::Async_Get(const std::string & strUrl, BYTE** pData,int& nLe
 
 		if (rc > 0)
 		{
-			mp_start = tvnow();//Èç¹ûÓĞÊı¾İ£¬ÖØÖÃ¼ÆÊ±Æ÷
+			mp_start = tvnow();//å¦‚æœæœ‰æ•°æ®ï¼Œé‡ç½®è®¡æ—¶å™¨
 		}
 		if (tvdiff(tvnow(), mp_start) > MAX_TIME_OUT) 
 		{
@@ -616,7 +616,7 @@ CHCcode CHttpClient::Async_Get(const std::string & strUrl, BYTE** pData,int& nLe
 		m_fSpeed = d_tmp;
 	}
 
-	//»ñÈ¡×îÖÕÇëÇóµÄurlµØÖ·
+	//è·å–æœ€ç»ˆè¯·æ±‚çš„urlåœ°å€
     if (curl_easy_getinfo(curl, CURLINFO_EFFECTIVE_URL,&pbuff) == CURLE_OK)
 	{
 		m_strEffective_url = pbuff;

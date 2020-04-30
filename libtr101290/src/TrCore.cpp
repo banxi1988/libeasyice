@@ -164,7 +164,7 @@ void CTrCore::AddPacket(BYTE* pPacket)
 			//for (int i= 0; i < m_nBufferPos; i+= m_nTslen)
 			for (int i= 0; i < m_nBufferPos && i+m_nTslen <= m_nBufferPos; i+= m_nTslen)
 			{
-				if  (*(m_pBuffer+i) != 0x47)//·ÀÖ¹Ê£Óà»º³åÖĞ5¸öts°üÖ®ºóÓĞÍ¬²½×Ö½Ú´íµÄ£¬»áËÀµô
+				if  (*(m_pBuffer+i) != 0x47)//é˜²æ­¢å‰©ä½™ç¼“å†²ä¸­5ä¸ªtsåŒ…ä¹‹åæœ‰åŒæ­¥å­—èŠ‚é”™çš„ï¼Œä¼šæ­»æ‰
 				{
 					break;
 				}
@@ -172,7 +172,7 @@ void CTrCore::AddPacket(BYTE* pPacket)
 				m_llOffset+=m_nTslen;
 				usedlen += m_nTslen;
 			}
-			if (usedlen > m_nBufferPos)//ºÜÖØÒªµÄ´¦Àí£¬²»ÅĞ¶Ï¿ÉÄÜ»áÔ½½ç
+			if (usedlen > m_nBufferPos)//å¾ˆé‡è¦çš„å¤„ç†ï¼Œä¸åˆ¤æ–­å¯èƒ½ä¼šè¶Šç•Œ
 			{
 				usedlen -= m_nTslen;
 			}
@@ -188,9 +188,9 @@ void CTrCore::AddPacket(BYTE* pPacket)
 	}
 
 	
-	//ÒÑÍ¬²½£¬»º³åÖĞµÄÊı¾İÎªÒ»¸ö»òÒ»¸ö°ëTS°ü
+	//å·²åŒæ­¥ï¼Œç¼“å†²ä¸­çš„æ•°æ®ä¸ºä¸€ä¸ªæˆ–ä¸€ä¸ªåŠTSåŒ…
 
-	if (!m_bPrevPktSync && *(m_pBuffer+m_nTslen) != 0x47)		//ÉÏÒ»¸öTS²úÉúÍ¬²½×Ö½Ú´íÎó£¬µ±Ç°TSÒ²²úÉúÍ¬²½´íÎó
+	if (!m_bPrevPktSync && *(m_pBuffer+m_nTslen) != 0x47)		//ä¸Šä¸€ä¸ªTSäº§ç”ŸåŒæ­¥å­—èŠ‚é”™è¯¯ï¼Œå½“å‰TSä¹Ÿäº§ç”ŸåŒæ­¥é”™è¯¯
 	{
 		m_bSynced = false;
 		
@@ -198,7 +198,7 @@ void CTrCore::AddPacket(BYTE* pPacket)
 		Report(1,LV1_TS_SYNC_LOST,m_llOffset,-1,-1,-1);
 		return;
 	}
-	else if (!m_bPrevPktSync)									//ÉÏÒ»¸öTS²úÉúÍ¬²½×Ö½Ú´íÎó£¬µ±Ç°TSÃ»²úÉúÍ¬²½´íÎó
+	else if (!m_bPrevPktSync)									//ä¸Šä¸€ä¸ªTSäº§ç”ŸåŒæ­¥å­—èŠ‚é”™è¯¯ï¼Œå½“å‰TSæ²¡äº§ç”ŸåŒæ­¥é”™è¯¯
 	{
 		m_bPrevPktSync = true;
 		m_llOffset+=m_nTslen;
@@ -209,7 +209,7 @@ void CTrCore::AddPacket(BYTE* pPacket)
 		}
 	}
 
-	//Ö´ĞĞ´¦Àí
+	//æ‰§è¡Œå¤„ç†
 	if (*m_pBuffer != 0x47)
 	{
 		m_bPrevPktSync = false;

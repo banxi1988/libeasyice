@@ -102,7 +102,7 @@ void CDemux::Demux(uint8_t* pPacket)
 	}
 	
 
-	//ÅĞ¶ÏÊÇ·ñ½âÎöÍê±Ï
+	//åˆ¤æ–­æ˜¯å¦è§£æå®Œæ¯•
 	map<int,PMTINFO>::iterator it = m_mapPmtmInfo.begin();
 	for (; it != m_mapPmtmInfo.end(); ++it)
 	{
@@ -239,12 +239,12 @@ void CDemux::UpdateClock(uint8_t* pPacket)
 
 	if (pid == m_nUsedPcrPid && tsPacket.Get_PCR_flag())
 	{
-		//¼ì²âPCRÌø±ä
+		//æ£€æµ‹PCRè·³å˜
 		long long calcPCr = m_pParent->m_pSysClock->GetPcr();
 		long long curPcr = tsPacket.Get_PCR();
 		if ( calcPCr >= 0 && llabs( diff_pcr(calcPCr,curPcr))  > 270000 )
 		{
-			m_pParent->m_pSysClock->Reset(); //10msÈÏÎªÌø±ä
+			m_pParent->m_pSysClock->Reset(); //10msè®¤ä¸ºè·³å˜
 		}
 
 		m_pParent->m_pSysClock->AddPcrPacket(curPcr);
@@ -383,7 +383,7 @@ void CDemux::CheckUnreferPid(int pid,long long llCurTime)
 {
 	long long interval = 0;
 
-	//Ìí¼ÓÒ»ÖÖĞÂµÄPID
+	//æ·»åŠ ä¸€ç§æ–°çš„PID
 	if (!m_pKnownPid[pid])
 	{
 		m_pKnownPid[pid] = true;
@@ -391,7 +391,7 @@ void CDemux::CheckUnreferPid(int pid,long long llCurTime)
 		return;
 	}
 
-	//¼ì²â³¬Ê±
+	//æ£€æµ‹è¶…æ—¶
 	map<int,long long>::iterator it = m_mapUnReferPid.begin();
 	for (;it != m_mapUnReferPid.end();++it)
 	{
@@ -511,8 +511,8 @@ void CDemux::ProcessPacket(uint8_t* pPacket)
 
 	if (llCurTime < 0)
 	{
-		//µ±Ã»ÓĞ¼ÆËãµ½Ê±È¥ÂëÁ÷ÖĞÓöµ½µÄµÚÒ»¸öPCR¡£
-		//µ±ÊÕµ½µÚ¶ş¸öPCR°üµÄÊ±ºò£¬N1 PCR ÒÑ¾­¼ÆËã³É¹¦ÁË
+		//å½“æ²¡æœ‰è®¡ç®—åˆ°æ—¶å»ç æµä¸­é‡åˆ°çš„ç¬¬ä¸€ä¸ªPCRã€‚
+		//å½“æ”¶åˆ°ç¬¬äºŒä¸ªPCRåŒ…çš„æ—¶å€™ï¼ŒN1 PCR å·²ç»è®¡ç®—æˆåŠŸäº†
 		m_pOldOccurTime[pid] = m_llFirstPcr;
 	}
 	else

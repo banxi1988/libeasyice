@@ -24,30 +24,30 @@ public:
 	CLiveAnalysis(void);
 	~CLiveAnalysis(void);
 
-	//�ɹ����� 0 �����򷵻ط���ֵ
+	//成功返回 0 ，否则返回非零值
 	int OpenMRL(EASYICE* handle);
 
-	//�ͷ���Դ��ʧ�ܷ���false
+	//释放资源，失败返回false
 	bool Stop(bool bForce = false); 
 
-	//��ȡ��ĿժҪ��Ϣ
+	//获取节目摘要信息
 	ALL_PROGRAM_BRIEF* GetAllProgramBrief();
 
-	//ʵʱ����ʱ����ȡ����,��ȡ����÷�Ӧ�������
+	//实时分析时，获取码率,获取后调用方应清掉缓冲
 	LST_RATE_INFO_T* LockGetRate();
 	void UnlockRate();
 
-	//ʵʱ����ʱ����ȡPCR��Ϣ����ȡ����÷�Ӧ�������
+	//实时分析时，获取PCR信息，获取后调用方应清掉缓冲
 	LST_PCR_INFO_T* LockGetPcrInfo(int pcr_pid);
 	void UnlockPcrInfo(int pcr_pid);
 
-	//���ü�������ʱ����(ms)
+	//设置计算码率时间间隔(ms)
 //	void SetCalcTsRateIntervalTime(int nTime);
 
-	//��ʼ¼������,�ɹ�����0��ʧ�ܷ��ط���
+	//开始录制码流,成功返回0，失败返回非零
 	int StartRecord(const char* strFileName);
 
-	//ֹͣ¼������
+	//停止录制码流
 	void StopRecord();
 private:
 	CLiveAnalysisImpl* m_pLiveAnalysisImpl;

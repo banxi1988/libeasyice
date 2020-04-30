@@ -20,11 +20,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 using namespace std;
 
 /**
- * ·â×°³£ÓÃÎ»²Ù×÷µÄ¿â
+ * å°è£…å¸¸ç”¨ä½æ“ä½œçš„åº“
  * @author ZhuFeng
- * @date 2008-4-25 ´´½¨
- * ²âÊÔ¸²¸ÇÂÊ80%£¬ÒÑ²âÊÔ
- * ÍêÉÆÎÄµµ
+ * @date 2008-4-25 åˆ›å»º
+ * æµ‹è¯•è¦†ç›–ç‡80%ï¼Œå·²æµ‹è¯•
+ * å®Œå–„æ–‡æ¡£
  */
 
 class ZBit
@@ -32,10 +32,10 @@ class ZBit
 
     public:
         /**
-        * ÉèÖÃÒ»¸öÖ¸¶¨±äÁ¿µÄÖ¸¶¨µÄÎ»Îª1
-        * ±äÁ¿µÄ×îµÍÎ» µÄÎ»ÖÃÎª0
-        * @param Var ĞèÒªÉèÖÃµÄ±äÁ¿
-        * @param Bit ĞèÒªÉèÖÃµÄ±äÁ¿µÄÎ»£¬±äÁ¿µÄ×îµÍÎ»Îª0
+        * è®¾ç½®ä¸€ä¸ªæŒ‡å®šå˜é‡çš„æŒ‡å®šçš„ä½ä¸º1
+        * å˜é‡çš„æœ€ä½ä½ çš„ä½ç½®ä¸º0
+        * @param Var éœ€è¦è®¾ç½®çš„å˜é‡
+        * @param Bit éœ€è¦è®¾ç½®çš„å˜é‡çš„ä½ï¼Œå˜é‡çš„æœ€ä½ä½ä¸º0
          */
         template <typename _Ty>
         static inline void VarSet ( _Ty &Var, int Bit )
@@ -44,10 +44,10 @@ class ZBit
         }
 
         /**
-         * ÉèÖÃÒ»¸öÖ¸¶¨±äÁ¿µÄÖ¸¶¨µÄÎ»Îª 0
-         * ±äÁ¿µÄ×îµÍÎ» µÄÎ»ÖÃÎª0
-         * @param Var ĞèÒªÉèÖÃµÄ±äÁ¿
-         * @param Bit ĞèÒªÉèÖÃµÄ±äÁ¿µÄÎ»£¬±äÁ¿µÄ×îµÍÎ»Îª0
+         * è®¾ç½®ä¸€ä¸ªæŒ‡å®šå˜é‡çš„æŒ‡å®šçš„ä½ä¸º 0
+         * å˜é‡çš„æœ€ä½ä½ çš„ä½ç½®ä¸º0
+         * @param Var éœ€è¦è®¾ç½®çš„å˜é‡
+         * @param Bit éœ€è¦è®¾ç½®çš„å˜é‡çš„ä½ï¼Œå˜é‡çš„æœ€ä½ä½ä¸º0
          */
         template <typename _Ty>
         static inline void VarZero ( _Ty &Var, int Bit )
@@ -56,11 +56,11 @@ class ZBit
         }
 
         /**
-         * ²âÊÔÒ»¸öÖ¸¶¨±äÁ¿µÄÖ¸¶¨µÄÎ»
-         * ±äÁ¿µÄ×îµÍÎ» µÄÎ»ÖÃÎª0
-         * @param Var ĞèÒªÉèÖÃµÄ±äÁ¿
-         * @param Bit ĞèÒªÉèÖÃµÄ±äÁ¿µÄÎ»£¬±äÁ¿µÄ×îµÍÎ»Îª0
-         * @return ²¼¶û±äÁ¿£¬true->Ö¸¶¨Î»Îª1,false->Îª0
+         * æµ‹è¯•ä¸€ä¸ªæŒ‡å®šå˜é‡çš„æŒ‡å®šçš„ä½
+         * å˜é‡çš„æœ€ä½ä½ çš„ä½ç½®ä¸º0
+         * @param Var éœ€è¦è®¾ç½®çš„å˜é‡
+         * @param Bit éœ€è¦è®¾ç½®çš„å˜é‡çš„ä½ï¼Œå˜é‡çš„æœ€ä½ä½ä¸º0
+         * @return å¸ƒå°”å˜é‡ï¼Œtrue->æŒ‡å®šä½ä¸º1,false->ä¸º0
          */
         template <typename _Ty>
         static  inline bool VarTest ( const _Ty &Var, int Bit )
@@ -69,8 +69,8 @@ class ZBit
         }
 
         /**
-         * ´òÓ¡Ò»¸ö±äÁ¿µÄËùÓĞÎ»£¬¸ßÎ»ÔÚÇ°£¬Ò»°ãÓÃÓÚµ÷ÊÔ
-         * @param Var Ö¸¶¨±äÁ¿
+         * æ‰“å°ä¸€ä¸ªå˜é‡çš„æ‰€æœ‰ä½ï¼Œé«˜ä½åœ¨å‰ï¼Œä¸€èˆ¬ç”¨äºè°ƒè¯•
+         * @param Var æŒ‡å®šå˜é‡
          */
         template <typename _Ty>
         static inline void VarPrint ( const _Ty &Var )
@@ -89,9 +89,9 @@ class ZBit
         }
 
         /**
-         * ÉèÖÃÖ¸¶¨»º³åÇøµÄÖ¸¶¨Î»Îª1
-         * @param pVar »º³åÇø
-         * @param Bit Î»ÊıÖ¸Ê¾£¬´ÓµÚÒ»¸ö×Ö½ÚµÄ×î¸ßÎ»Îª0¿ªÊ¼¼ÆÊı
+         * è®¾ç½®æŒ‡å®šç¼“å†²åŒºçš„æŒ‡å®šä½ä¸º1
+         * @param pVar ç¼“å†²åŒº
+         * @param Bit ä½æ•°æŒ‡ç¤ºï¼Œä»ç¬¬ä¸€ä¸ªå­—èŠ‚çš„æœ€é«˜ä½ä¸º0å¼€å§‹è®¡æ•°
          */
         static inline void PointSet ( void *pVar, int Bit )
         {
@@ -99,9 +99,9 @@ class ZBit
         }
 
         /**
-        * ÉèÖÃÖ¸¶¨»º³åÇøµÄÖ¸¶¨Î»Îª0
-        * @param pVar »º³åÇø
-        * @param Bit Î»ÊıÖ¸Ê¾£¬´ÓµÚÒ»¸ö×Ö½ÚµÄ×î¸ßÎ»Îª0¿ªÊ¼¼ÆÊı
+        * è®¾ç½®æŒ‡å®šç¼“å†²åŒºçš„æŒ‡å®šä½ä¸º0
+        * @param pVar ç¼“å†²åŒº
+        * @param Bit ä½æ•°æŒ‡ç¤ºï¼Œä»ç¬¬ä¸€ä¸ªå­—èŠ‚çš„æœ€é«˜ä½ä¸º0å¼€å§‹è®¡æ•°
          */
         static inline void PointZero ( void *pVar, int Bit )
         {
@@ -109,9 +109,9 @@ class ZBit
         }
 
         /**
-         * ²âÊÔÖ¸¶¨»º³åÇøµÄÖ¸¶¨Î»
-         * @param pVar »º³åÇø
-         * @param Bit Î»ÊıÖ¸Ê¾£¬´ÓµÚÒ»¸ö×Ö½ÚµÄ×î¸ßÎ»Îª0¿ªÊ¼¼ÆÊı
+         * æµ‹è¯•æŒ‡å®šç¼“å†²åŒºçš„æŒ‡å®šä½
+         * @param pVar ç¼“å†²åŒº
+         * @param Bit ä½æ•°æŒ‡ç¤ºï¼Œä»ç¬¬ä¸€ä¸ªå­—èŠ‚çš„æœ€é«˜ä½ä¸º0å¼€å§‹è®¡æ•°
          * @return true/false
          */
         static inline bool  PointTest ( const void *pVar, int Bit )
@@ -120,9 +120,9 @@ class ZBit
         }
 
         /**
-         * ´òÓ¡Ö¸¶¨»º³åÇøµÄµÄÎ»ÁĞ±í
-         * @param pVar »º³åÇø
-         * @param BitCount Î»×ÜÊı
+         * æ‰“å°æŒ‡å®šç¼“å†²åŒºçš„çš„ä½åˆ—è¡¨
+         * @param pVar ç¼“å†²åŒº
+         * @param BitCount ä½æ€»æ•°
          */
         static inline void PointPrint ( const void *pVar, int BitCount )
         {
@@ -141,13 +141,13 @@ class ZBit
 
 
         /**
-         * ´ÓÔ´»º³åÇøµÄÖ¸¶¨Î»Æ«ÒÆ¿½±´Ö¸¶¨µÄÎ»Êıµ½Ä¿±ê»º³åÇøµÄÖ¸¶¨Î»Æ«Àë´¦
-         * ËùÓĞµÄÎ»Æ«ÒÆÎª´Ó×î¸ßÎ»Îª0Æğ¼ÆÊı
-         * @param pSrc Ô´Êı¾İÖ¸Õë
-         * @param SrcBitPos Ô´Êı¾İÆğÊ¼Æ«ÀëµÄÎ»
-         * @param pDest Ä¿±êÊı¾İÇøÖ¸Õë
-         * @param DestBitPos Ä¿±êÇøµÄÎ»Æ«ÒÆ
-         * @param BitCount ĞèÒª¿½±´µÄÎ»Êı
+         * ä»æºç¼“å†²åŒºçš„æŒ‡å®šä½åç§»æ‹·è´æŒ‡å®šçš„ä½æ•°åˆ°ç›®æ ‡ç¼“å†²åŒºçš„æŒ‡å®šä½åç¦»å¤„
+         * æ‰€æœ‰çš„ä½åç§»ä¸ºä»æœ€é«˜ä½ä¸º0èµ·è®¡æ•°
+         * @param pSrc æºæ•°æ®æŒ‡é’ˆ
+         * @param SrcBitPos æºæ•°æ®èµ·å§‹åç¦»çš„ä½
+         * @param pDest ç›®æ ‡æ•°æ®åŒºæŒ‡é’ˆ
+         * @param DestBitPos ç›®æ ‡åŒºçš„ä½åç§»
+         * @param BitCount éœ€è¦æ‹·è´çš„ä½æ•°
          */
         static inline void CopyPointBits ( const void *pSrc, int SrcBitPos, void *pDest, int DestBitPos, int BitCount )
         {
@@ -167,7 +167,7 @@ class ZBit
         }
 
         /**
-         * ´ÓÊı¾İÔ´ÖĞ¿½±´Ö¸¶¨µÄÎ»µ½Ä¿±êÎ»ÖÃ£¬0Îª×îµÍÎ»
+         * ä»æ•°æ®æºä¸­æ‹·è´æŒ‡å®šçš„ä½åˆ°ç›®æ ‡ä½ç½®ï¼Œ0ä¸ºæœ€ä½ä½
          * SRC     1111 0110 1010 0101
          * DEST    0000 0000 0000 0000 0000 0000
          * CP Src-3 5 TO Dest 9
@@ -178,11 +178,11 @@ class ZBit
         template<typename _Ty>
         static inline void CopyVarBits ( const _Ty &Src, int SrcBitPos, _Ty &Dest, int DestBitPos, int BitCount )
         {
-            //¶ÔÆëÊı¾İ
+            //å¯¹é½æ•°æ®
             _Ty src_value;
             _Ty mask = 0;
 
-            //Ê×ÏÈ¶ÔÆëSrcµ½Dest
+            //é¦–å…ˆå¯¹é½Srcåˆ°Dest
 
             if ( SrcBitPos > DestBitPos )
             {
@@ -200,13 +200,13 @@ class ZBit
         }
 
         /**
-         * ´ÓÒ»¸öÎ»´®»º³åÇøÈ¡³öÖ¸¶¨µÄÎ»´®£¬²¢·ÅÖÃµ½Ö¸¶¨µÄ±äÁ¿ÖĞ
-         * ĞèÒª×¢Òâ£¬Î»´®»º³åÇø¸ßÎ»ÎªµÚ0¸öÎ»£¬µ«±äÁ¿ÔÚx86Æ½Ì¨ÊÇµÍÎ»ÔÚÇ°
-         * ´¦ÀíÎ»´®¸ßµÍ×Ö½Ú×ª»»
-         * !!²»ÒªÖ±½ÓÊ¹ÓÃ´Ëº¯Êı£¬Ê¹ÓÃºê ZBIT_VAR_FROM_POINT ´úÌæ
+         * ä»ä¸€ä¸ªä½ä¸²ç¼“å†²åŒºå–å‡ºæŒ‡å®šçš„ä½ä¸²ï¼Œå¹¶æ”¾ç½®åˆ°æŒ‡å®šçš„å˜é‡ä¸­
+         * éœ€è¦æ³¨æ„ï¼Œä½ä¸²ç¼“å†²åŒºé«˜ä½ä¸ºç¬¬0ä¸ªä½ï¼Œä½†å˜é‡åœ¨x86å¹³å°æ˜¯ä½ä½åœ¨å‰
+         * å¤„ç†ä½ä¸²é«˜ä½å­—èŠ‚è½¬æ¢
+         * !!ä¸è¦ç›´æ¥ä½¿ç”¨æ­¤å‡½æ•°ï¼Œä½¿ç”¨å® ZBIT_VAR_FROM_POINT ä»£æ›¿
          * @param OutVar
          * @param pVar
-         * @param AvailBitsCount ÓĞĞ§Î»×ÜÊı
+         * @param AvailBitsCount æœ‰æ•ˆä½æ€»æ•°
         */
         template<typename _Ty>
         static inline void VarFromPoint ( _Ty &OutVar, const void *pSrc, const short *BitsPatternArray )
@@ -224,18 +224,18 @@ class ZBit
             {
                 if ( BitsPatternArray[i] > 0 )
                 {
-                    //¿½±´Î»µ½Êä³ö»º³åÇø
+                    //æ‹·è´ä½åˆ°è¾“å‡ºç¼“å†²åŒº
                     copy_bit_count = BitsPatternArray[i];
 
                     while ( copy_bit_count != 0 )
                     {
-                        //»ñÈ¡Êı¾İ²¢Ìí¼Óµ½Êä³ö»º³åÇø
+                        //è·å–æ•°æ®å¹¶æ·»åŠ åˆ°è¾“å‡ºç¼“å†²åŒº
                         src_can_bits = 8 - src_bit_pos;
                         need_proc_bit_count = ( copy_bit_count >= src_can_bits ) ? src_can_bits : copy_bit_count;
 
                         src_ch = * ( ( ( BYTE * ) pSrc ) + src_byte_pos );
                         OutVar = ( OutVar << need_proc_bit_count ) | ( ( ( BYTE ) ( src_ch << src_bit_pos ) ) >> ( 8 - need_proc_bit_count ) );
-                        //´¦ÀíÔ´Î»ÖÃ
+                        //å¤„ç†æºä½ç½®
                         src_byte_pos += ( src_bit_pos + need_proc_bit_count ) / 8;
                         src_bit_pos = ( src_bit_pos + need_proc_bit_count ) % 8;
                         copy_bit_count -= need_proc_bit_count;
@@ -243,7 +243,7 @@ class ZBit
                 }
                 else
                 {
-                    //ÔÚSrcÖĞÌø¹ıÖ¸¶¨Î»
+                    //åœ¨Srcä¸­è·³è¿‡æŒ‡å®šä½
                     src_byte_pos += ( src_bit_pos + ( -BitsPatternArray[i] ) ) / 8;
                     src_bit_pos = ( src_bit_pos + ( -BitsPatternArray[i] ) ) % 8;
                 }
@@ -262,7 +262,7 @@ class ZBit
             int dest_can_bits = 0;
             int copy_bit_count = 0;
 
-            //Ê×ÏÈ¼ÆËã×ÜÎ»Êı
+            //é¦–å…ˆè®¡ç®—æ€»ä½æ•°
             int src_proc_bit_count = 0;
 
             for ( i = 0;BitsPatternArray[i] != 0;i++ )
@@ -271,23 +271,23 @@ class ZBit
                     src_proc_bit_count += BitsPatternArray[i];
             }
 
-            //½«Ö¸¶¨µÄÎ»¸´ÖÆµ½Ä¿±ê»º³åÇø
+            //å°†æŒ‡å®šçš„ä½å¤åˆ¶åˆ°ç›®æ ‡ç¼“å†²åŒº
             for ( i = 0;BitsPatternArray[i] != 0;i++ )
             {
                 if ( BitsPatternArray[i] > 0 )
                 {
-                    //¿½±´Î»µ½Êä³ö»º³åÇø
+                    //æ‹·è´ä½åˆ°è¾“å‡ºç¼“å†²åŒº
                     copy_bit_count = BitsPatternArray[i];
 
                     while ( copy_bit_count != 0 )
                     {
-                        //»ñÈ¡Êı¾İ²¢Ìí¼Óµ½Êä³ö»º³åÇø
+                        //è·å–æ•°æ®å¹¶æ·»åŠ åˆ°è¾“å‡ºç¼“å†²åŒº
                         dest_can_bits = 8 - dest_bit_pos;
                         need_proc_bit_count = ( copy_bit_count >= dest_can_bits ) ? dest_can_bits : copy_bit_count;
                         CopyVarBits ( ( BYTE ) ( Var >> ( src_proc_bit_count - need_proc_bit_count ) ), need_proc_bit_count - 1,
                                       * ( ( ( BYTE * ) pDest ) + dest_byte_pos ) , ( 7 - dest_bit_pos ),
                                       need_proc_bit_count );
-                        //´¦ÀíÔ´Î»ÖÃ
+                        //å¤„ç†æºä½ç½®
                         src_proc_bit_count -= need_proc_bit_count;
                         copy_bit_count -= need_proc_bit_count;
                         dest_byte_pos += ( dest_bit_pos + need_proc_bit_count ) / 8;
@@ -297,7 +297,7 @@ class ZBit
                 }
                 else
                 {
-                    //ÔÚDestÖĞÌø¹ıÖ¸¶¨Î»
+                    //åœ¨Destä¸­è·³è¿‡æŒ‡å®šä½
                     dest_byte_pos += ( dest_bit_pos + ( -BitsPatternArray[i] ) ) / 8;
                     dest_bit_pos = ( dest_bit_pos + ( -BitsPatternArray[i] ) ) % 8;
                 }

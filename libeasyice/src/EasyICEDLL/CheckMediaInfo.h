@@ -53,11 +53,11 @@ typedef struct _EI_MEDIAINFO_T
 
 
 /*
-MediaInfo������ֵ����⣬��TaskCenter�� LiveAnalysisͬʱ�����ǣ���������������������޷�������
-���Է����붨�� MediaInfo �����йأ���������Ϊȫ�ֱ���ʱ��˭���ö��ᱨ����
-ֻ��һ���˰���ͨ���÷�ʽû���⣬Ҫ�����඼���ã������ֽ���취:
-1.��ʵ�ִ���ŵ�ͬһ��cpp�У�ͬһ��.h�ǲ����Եģ������ǵ�ǰ�������
-2.һ���ڶ��϶��壬һ����ջ�϶���
+MediaInfo库有奇怪的问题，当TaskCenter与 LiveAnalysis同时引用是，启动软件会崩溃，根本无法启动，
+测试发现与定义 MediaInfo 对象有关，但将其作为全局变量时，谁引用都会报错。
+只有一个人按普通调用方式没问题，要两个类都引用，有两种解决办法:
+1.将实现代码放到同一个cpp中（同一个.h是不可以的），这是当前解决方案
+2.一个在堆上定义，一个在栈上定义
 
 */
 

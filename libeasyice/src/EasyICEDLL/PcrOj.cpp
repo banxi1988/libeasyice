@@ -36,7 +36,7 @@ long long CPcrOj::RecvPcr(long long pcr,long long sys_clock)
 		return 0;
 	}
 
-	// pcr ±‰–°
+	// pcr ÂèòÂ∞è
 	if (pcr < m_llPcrPrev)
 	{
 		m_llPcrDuration = m_llPcrDuration + ((long long)0x1FFFFFFFF*300 + 299 - m_llPcrPrev) + pcr;

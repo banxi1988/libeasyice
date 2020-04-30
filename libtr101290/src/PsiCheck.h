@@ -52,13 +52,13 @@ private:
 	void CheckPrevEitPF(int pid);
 	void UpdatePF(int section_number);
 private:
-	//ÏÂ±êÎªPID£¬ÄÚÈİÎª handle
+	//ä¸‹æ ‡ä¸ºPIDï¼Œå†…å®¹ä¸º handle
 	dvbpsi_handle* m_pAllCkHds;
 
-	//ÏÂ±êÎªtable_id£¬ÄÚÈİÎªÊ±¼ä
+	//ä¸‹æ ‡ä¸ºtable_idï¼Œå†…å®¹ä¸ºæ—¶é—´
 	long long* m_pOldOccurTime;
 
-	//µ±Ç°°üÊÇ·ñEIT PF °ü
+	//å½“å‰åŒ…æ˜¯å¦EIT PF åŒ…
 	//bool m_bEitPFPacket;
 
 	bool m_bHaveEit_P;

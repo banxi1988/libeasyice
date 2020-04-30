@@ -13,31 +13,31 @@
 #include "ztypes.h"
 #include "json/json.h"
 
-//¹²ÏíÄÚ´æÄÜÈİÄÉµÄÊı¾İ´óĞ¡£¬MSG_PACKET_LIST½á¹¹¸öÊı
+//å…±äº«å†…å­˜èƒ½å®¹çº³çš„æ•°æ®å¤§å°ï¼ŒMSG_PACKET_LISTç»“æ„ä¸ªæ•°
 #define PACKET_LIST_FILE_MAPPING_SIZE					1000*1000
 
-//½ø¶ÈÌõ·¶Î§
+//è¿›åº¦æ¡èŒƒå›´
 #define PROGRESS_RANGE									100
 
-//PacketListView ×î´óÌõÄ¿¸öÊı
+//PacketListView æœ€å¤§æ¡ç›®ä¸ªæ•°
 //#define MAXITEM_PACKET_LIST	1000
 
-//ÎÄ¼ş´ò¿ªÊ§°Ü
+//æ–‡ä»¶æ‰“å¼€å¤±è´¥
 #define ERROR_FILE_OPEN_ERROR									-1
 
-//²»ÊÇºÏ·¨µÄMPEG-TS ÎÄ¼ş
+//ä¸æ˜¯åˆæ³•çš„MPEG-TS æ–‡ä»¶
 #define ERROR_FILE_NOT_MPEG_TS									-2
 
-//¶Á³ö´óĞ¡ÓëÆÚÍûÖµ²»Ò»ÖÂ¡£ÈÏÎªÎÄ¼ş¹ıĞ¡£¬Ã»ÓĞ×ã¹»µÄÊı¾İ½øĞĞ·ÖÎö¡£
+//è¯»å‡ºå¤§å°ä¸æœŸæœ›å€¼ä¸ä¸€è‡´ã€‚è®¤ä¸ºæ–‡ä»¶è¿‡å°ï¼Œæ²¡æœ‰è¶³å¤Ÿçš„æ•°æ®è¿›è¡Œåˆ†æã€‚
 #define ERROR_FILE_NOT_DATA										-3
 
-//¶¨ÒåÏûÏ¢-------------------------------------------------------------------------
+//å®šä¹‰æ¶ˆæ¯-------------------------------------------------------------------------
 
 
 
 
 
-//¶¨ÒåÏûÏ¢ËùÓÃÊı¾İ½á¹¹--------------------------------------------------------------
+//å®šä¹‰æ¶ˆæ¯æ‰€ç”¨æ•°æ®ç»“æ„--------------------------------------------------------------
 
 
 typedef enum _AVMEDIATYPE {
@@ -53,7 +53,7 @@ typedef enum _AVMEDIATYPE {
 
 
 
-//°üÀàĞÍ
+//åŒ…ç±»å‹
 typedef enum _PACKET_TYPE
 {
     PACKET_MPEG1_VIDEO,
@@ -88,12 +88,12 @@ typedef enum _PACKET_TYPE
     PACKET_TDT_TOT_ST,
     PACKET_DIT,
     PACKET_SIT,
-    PACKET_NETSYNC,	//ÍøÂçÍ¬²½
-    PACKET_NULL,	//¿Õ°ü
-    PACKET_RESERVED, //±£Áô
-    PACKET_SIGN,		//´øÄÚĞÅÁî
-    PACKET_SURVEY,	//²âÁ¿
-    PACKET_UNKNOWN	//Î´Öª
+    PACKET_NETSYNC,	//ç½‘ç»œåŒæ­¥
+    PACKET_NULL,	//ç©ºåŒ…
+    PACKET_RESERVED, //ä¿ç•™
+    PACKET_SIGN,		//å¸¦å†…ä¿¡ä»¤
+    PACKET_SURVEY,	//æµ‹é‡
+    PACKET_UNKNOWN	//æœªçŸ¥
 }PACKET_TYPE;
 
 typedef struct {
@@ -170,7 +170,7 @@ static AVMEDIATYPE GetMediaTypeByPacketType(PACKET_TYPE type)
 typedef struct _PACKET_TYPE_DES
 {
     PACKET_TYPE		type;
-    const char*	 descriptor;     /*      ÃèÊö*/
+    const char*	 descriptor;     /*      æè¿°*/
 } PACKET_TYPE_DES;
 
 static PACKET_TYPE_DES packet_type_des[] =
@@ -259,7 +259,7 @@ typedef struct _PARSED_FRAME_INFO
     }
 
     bool bNewSlice;
-    bool bNewPicture;	//ĞÂµÄÖ¡»ò³¡
+    bool bNewPicture;	//æ–°çš„å¸§æˆ–åœº
     FRAME_TYPE FrameType;
     int structure;                     //!< Identify picture structure type
 }PARSED_FRAME_INFO;
@@ -381,9 +381,9 @@ typedef enum
 }PAGE_DIRECTION;
 
 /*
-   PacketList¹ö¶¯ÏûÏ¢
-lastItem: µ±Ç°item£¬ÊÓÍ¼ÖĞÏÔÊ¾µÄ¶¥²¿»òµ×²¿itemId
-direction:Ö¸Ê¾ÏòÉÏ»¹ÊÇÏòÏÂÇëÇó,true±íÊ¾ÏòÏÂ£¬false±íÊ¾ÏòÉÏ¡£
+   PacketListæ»šåŠ¨æ¶ˆæ¯
+lastItem: å½“å‰itemï¼Œè§†å›¾ä¸­æ˜¾ç¤ºçš„é¡¶éƒ¨æˆ–åº•éƒ¨itemId
+direction:æŒ‡ç¤ºå‘ä¸Šè¿˜æ˜¯å‘ä¸‹è¯·æ±‚,trueè¡¨ç¤ºå‘ä¸‹ï¼Œfalseè¡¨ç¤ºå‘ä¸Šã€‚
 */
 typedef struct _MSG_PACKET_LIST_PAGE
 {
@@ -392,7 +392,7 @@ typedef struct _MSG_PACKET_LIST_PAGE
 }MSG_PACKET_LIST_PAGE;
 
 /*
-   µ¥»÷PacketListÒ»¸öÌõÄ¿Ê±ËùÓÃÏûÏ¢Êı¾İ½á¹¹
+   å•å‡»PacketListä¸€ä¸ªæ¡ç›®æ—¶æ‰€ç”¨æ¶ˆæ¯æ•°æ®ç»“æ„
    */
 typedef struct _MSG_PACKET_LIST_SELECT
 {
@@ -402,7 +402,7 @@ typedef struct _MSG_PACKET_LIST_SELECT
 }MSG_PACKET_LIST_SELECT;
 
 /*
-   FlagÁĞ±íÏÔÊ¾ËùÓÃ½á¹¹
+   Flagåˆ—è¡¨æ˜¾ç¤ºæ‰€ç”¨ç»“æ„
    */
 
 typedef struct _TS_HEAD
@@ -465,7 +465,7 @@ typedef struct _PID_STREAM_TYPE
     int stream_type;
 }PID_STREAM_TYPE;
 
-//½ÚÄ¿ĞÅÏ¢
+//èŠ‚ç›®ä¿¡æ¯
 typedef struct _PROGRAM_PIDS
 {
     _PROGRAM_PIDS()
@@ -473,7 +473,7 @@ typedef struct _PROGRAM_PIDS
         memset(descriptor,0,sizeof(descriptor));
     }
     std::vector<PID_STREAM_TYPE>	pids;	// pid
-    char	 descriptor[50];     /*      ÃèÊö*/
+    char	 descriptor[50];     /*      æè¿°*/
 }PROGRAM_PIDS;
 
 
@@ -490,13 +490,13 @@ typedef struct _TIMESTAMP
 	}
 }TIMESTAMP;
 
-//Ò»Â·½ÚÄ¿µÄ¸÷ÖÖÊ±¼ä´ÁĞÅÏ¢
+//ä¸€è·¯èŠ‚ç›®çš„å„ç§æ—¶é—´æˆ³ä¿¡æ¯
 typedef struct _PROGRAM_TIMESTAMPS
 {
-    //ÊÓÆµPTS
+    //è§†é¢‘PTS
     std::vector<TIMESTAMP> vecVpts;
 
-    //ÒôÆµPTS <pid,timestamps>
+    //éŸ³é¢‘PTS <pid,timestamps>
     std::vector<TIMESTAMP> vecApts;
     //std::map<int,std::vector<TIMESTAMP>> mapApts;
 
@@ -597,10 +597,10 @@ typedef struct _RATE_LIST
 	}
 }RATE_LIST;
 
-//Ò»Â·½ÚÄ¿µÄĞÅÏ¢
+//ä¸€è·¯èŠ‚ç›®çš„ä¿¡æ¯
 typedef struct _PROGRAM_INFO
 {
-    //Ê±¼äĞÅÏ¢
+    //æ—¶é—´ä¿¡æ¯
     PROGRAM_TIMESTAMPS tts;
     std::vector<GOP_LIST> gopList;
     std::vector<RATE_LIST> rateList;
@@ -625,7 +625,7 @@ typedef struct _PROGRAM_INFO
 	}
 }PROGRAM_INFO;
 
-//ËùÓĞ½ÚÄ¿µÄĞÅÏ¢¡£½ÚÄ¿ºÅ£¬½ÚÄ¿ĞÅÏ¢
+//æ‰€æœ‰èŠ‚ç›®çš„ä¿¡æ¯ã€‚èŠ‚ç›®å·ï¼ŒèŠ‚ç›®ä¿¡æ¯
 typedef std::map<int,PROGRAM_INFO*> ALL_PROGRAM_INFO;
 
 typedef struct _PID_TYPE
@@ -634,10 +634,10 @@ typedef struct _PID_TYPE
     PACKET_TYPE type;
 }PID_TYPE;
 
-//½ÚÄ¿¸ÅÒªĞÅÏ¢£¬°üº¬Ã¿Â·½ÚÄ¿µÄpid£¬ÒÔ¼°pidÀàĞÍÃèÊö
+//èŠ‚ç›®æ¦‚è¦ä¿¡æ¯ï¼ŒåŒ…å«æ¯è·¯èŠ‚ç›®çš„pidï¼Œä»¥åŠpidç±»å‹æè¿°
 typedef std::map<int,std::vector<PID_TYPE> > ALL_PROGRAM_BRIEF;
 
-//ÈÎÎñ×´Ì¬
+//ä»»åŠ¡çŠ¶æ€
 typedef enum _TASK_STATUS
 {
     STATUS_CHECKING_MEDIAINFO,
@@ -752,7 +752,7 @@ typedef enum _LIVE_SOURCE_TYPE_T
 typedef struct _PCR_INFO_T
 {
     long long llPcr_Oj;//ms
-    long long llPcr_Ac;//us Î¢Ãë
+    long long llPcr_Ac;//us å¾®ç§’
     long long llPcr_interval;//ms
     long long llTime;//us
 }PCR_INFO_T;

@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 /*
-* 不可作为临时对象使用
+* 涓嶅彲浣滀负涓存椂瀵硅薄浣跨敤
 * CH264DEC hc;
 * VIDEO_HEAD *phead = hc.ParseTsPacket();
 */

@@ -21,7 +21,7 @@ public:
 	~CLiveSourceFactory(void);
 
 public:
-	//根据协议创建匹配的源模块,并初始化参数，失败返回NULL
+	//鏍规嵁鍗忚鍒涘缓鍖归厤鐨勬簮妯″潡,骞跺垵濮嬪寲鍙傛暟锛屽け璐ヨ繑鍥濶ULL
 	CLiveSourceBase* CreateSource(const char* strMRL,const char* strLocalIp);
 
 private:

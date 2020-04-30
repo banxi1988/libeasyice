@@ -10,7 +10,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// libtr101290.cpp : ¶¨Òå DLL Ó¦ÓÃ³ÌÐòµÄÈë¿Úµã¡£
+// libtr101290.cpp : å®šä¹‰ DLL åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
 //
 
 #include "stdafx.h"
@@ -28,18 +28,18 @@ using namespace tr101290;
 
 
 
-// ÕâÊÇµ¼³ö±äÁ¿µÄÒ»¸öÊ¾Àý
+// è¿™æ˜¯å¯¼å‡ºå˜é‡çš„ä¸€ä¸ªç¤ºä¾‹
  int nlibtr101290=0;
 
-// ÕâÊÇµ¼³öº¯ÊýµÄÒ»¸öÊ¾Àý¡£
+// è¿™æ˜¯å¯¼å‡ºå‡½æ•°çš„ä¸€ä¸ªç¤ºä¾‹ã€‚
  int fnlibtr101290(void)
 {
 	return 42;
 }
 
 
-// ÕâÊÇÒÑµ¼³öÀàµÄ¹¹Ôìº¯Êý¡£
-// ÓÐ¹ØÀà¶¨ÒåµÄÐÅÏ¢£¬Çë²ÎÔÄ libtr101290.h
+// è¿™æ˜¯å·²å¯¼å‡ºç±»çš„æž„é€ å‡½æ•°ã€‚
+// æœ‰å…³ç±»å®šä¹‰çš„ä¿¡æ¯ï¼Œè¯·å‚é˜… libtr101290.h
 Clibtr101290::Clibtr101290()
 {
 	m_pTrCore = new CTrCore();

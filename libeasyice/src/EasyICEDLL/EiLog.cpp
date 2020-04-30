@@ -18,7 +18,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 using namespace std;
 
-// ��ľ�̬��Ա����Ҫ����������ж���
+// 类的静态成员变量要在类体外进行定义
 CEiLog* CEiLog::m_pStatic = NULL;
 
 
@@ -42,7 +42,7 @@ static void logfun(int level,const char* module,const char* sInfo,void *pApp)
 	}
 }
 
-//��Ҫ�����ṩlog�ӿ�ʱ����ȫ�ֱ�������Ϊ��ĺ���ָ��
+//需要对外提供log接口时将此全局变量设置为别的函数指针
 static pfLogFun g_varpfLogFun = logfun;
 static void *g_pApp = NULL;
 

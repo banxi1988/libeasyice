@@ -29,7 +29,7 @@ public:
 	~CH264DecodeCore(void);
 	STRING_TREE* ParseTsPacket(BYTE* pPacket,int nLen);
 
-	//Ö»·µ»ØµÚÒ»¸ö·ûºÏnew pic Ìõ¼şµÄslice
+	//åªè¿”å›ç¬¬ä¸€ä¸ªç¬¦åˆnew pic æ¡ä»¶çš„slice
 	PARSED_FRAME_INFO ParseTsContinue(BYTE* pPacket,int nLen);
 
 	void Reset();
@@ -47,7 +47,7 @@ private:
 	int RestOfSliceHeader_brief(Slice *currSlice,seq_parameter_set_rbsp_t *active_sps,pic_parameter_set_rbsp_t *active_pps,Bitstream *currStream);
 	int is_new_picture_brief(seq_parameter_set_rbsp_t *active_sps,pic_parameter_set_rbsp_t *active_pps, Slice *currSlice, OldSliceParams *p_old_slice);
 
-	//½âÎö½á¹û×ª»»Îª×Ö·û´®
+	//è§£æç»“æœè½¬æ¢ä¸ºå­—ç¬¦ä¸²
 	void slice_result(const Slice* currSlice);
 	void sps_result(const seq_parameter_set_rbsp_t* sps);
 	void pps_result(const pic_parameter_set_rbsp_t* pps);
@@ -63,7 +63,7 @@ private:
 
 
 	/**
-	* @brief Ìí¼ÓÒ»¸ö´ø×ÓÏîµÄÌõÄ¿
+	* @brief æ·»åŠ ä¸€ä¸ªå¸¦å­é¡¹çš„æ¡ç›®
 	* @return return the subset point
 	*/
 	STRING_TREE_LEAF* AddRootItem(const string& element,const string& value,bool exist,STRING_TREE_LEAF* pParent);

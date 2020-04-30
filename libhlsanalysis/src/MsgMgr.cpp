@@ -16,7 +16,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
-// ÀàµÄ¾²Ì¬³ÉÔ±±äÁ¿ÒªÔÚÀàÌåÍâ½øÐÐ¶¨Òå
+// ç±»çš„é™æ€æˆå‘˜å˜é‡è¦åœ¨ç±»ä½“å¤–è¿›è¡Œå®šä¹‰
 //CMsgMgr* CMsgMgr::m_pStatic = NULL;
 
 
@@ -53,7 +53,7 @@ void CMsgMgr::Init()
 
 void CMsgMgr::Destroy()
 {
-	//Ïú»ÙÏß³Ì
+	//é”€æ¯çº¿ç¨‹
 	Clear();
 
 	m_bActiveStop = true;

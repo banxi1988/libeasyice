@@ -29,7 +29,7 @@ inline int te(BYTE src)
 		{
 			if (bStart)
 			{
-				//È¡Ö®ºóµÄZeroBitCountÎ»
+				//å–ä¹‹åçš„ZeroBitCountä½
 				BYTE result = 1;
 				if (i - ZeroBitCount < 0) return -1;
 				for (int j = i -1; j > i -1 - ZeroBitCount; j--)
@@ -131,7 +131,7 @@ BYTE * CTsPacket::Get_adaptation_field(BYTE &Size)
 	{
 		if(*(m_pPacket +4)==0)
 			return NULL;
-		Size = (*(m_pPacket +4)) +1;//°üº¬ÁË³¤¶È×Ö¶Î
+		Size = (*(m_pPacket +4)) +1;//åŒ…å«äº†é•¿åº¦å­—æ®µ
 		return m_pPacket +4;
 	}
 	return NULL;
@@ -246,7 +246,7 @@ PCR CTsPacket::Get_PCR()
 	return INVALID_PCR;
 }
 
-//Î´ÊµÏÖ
+//æœªå®ç°
 __int64 CTsPacket::Get_original_program_clock_reference_base(BYTE *pAF_Data)
 {
 	return NULL;
@@ -434,14 +434,14 @@ bool CTsPacket::Get_PES_stream_id(BYTE &stream_id)
 	}
 	return false;
 }
-bool	CTsPacket::Get_PES_GOP_INFO(DWORD &TimeCode/*Ê±ÂëĞÅÏ¢*/)
+bool	CTsPacket::Get_PES_GOP_INFO(DWORD &TimeCode/*æ—¶ç ä¿¡æ¯*/)
 {
 	BYTE stream_id;
 	if(!Get_PES_stream_id(stream_id))
 	{
 		return false;
 	}
-	//ÅĞ¶ÏÊÇ·ñÊÓÆµÁ÷
+	//åˆ¤æ–­æ˜¯å¦è§†é¢‘æµ
 	if((stream_id & 0xF0) != 0xE0)
 	{
 		return false;
@@ -466,7 +466,7 @@ bool	CTsPacket::Get_PES_GOP_INFO(DWORD &TimeCode/*Ê±ÂëĞÅÏ¢*/)
 			(p_data[i+2] == 1) &&
 			(p_data[i+3] == 0xB8))
 		{
-			//·¢ÏÖGOP£¬»ñÈ¡Ê±Âë
+			//å‘ç°GOPï¼Œè·å–æ—¶ç 
 			//		TIMECODE(25)																									CLOSEGOP(1)		BROKEN(1)
 			//		1            5(H)    6(M)				1(marker)      6(S)                    6(F)
 			//      1        11111     11   1111		1                 111      111        11111		1
@@ -490,7 +490,7 @@ bool	CTsPacket::Get_PES_GOP_INFO(DWORD &TimeCode/*Ê±ÂëĞÅÏ¢*/)
 	return false;
 
 }
-bool	CTsPacket::Get_PES_PIC_INFO(BYTE &PictureType/*ÀàĞÍ1-I,2-P,3-B*/)
+bool	CTsPacket::Get_PES_PIC_INFO(BYTE &PictureType/*ç±»å‹1-I,2-P,3-B*/)
 {
 	/*
 		BYTE stream_id;
@@ -498,7 +498,7 @@ bool	CTsPacket::Get_PES_PIC_INFO(BYTE &PictureType/*ÀàĞÍ1-I,2-P,3-B*/)
 	{
 		return false;
 	}
-	//ÅĞ¶ÏÊÇ·ñÊÓÆµÁ÷
+	//åˆ¤æ–­æ˜¯å¦è§†é¢‘æµ
 	if((stream_id & 0xF0) != 0xE0)
 	{
 		return false;
@@ -576,28 +576,28 @@ BYTE CTsPacket::Get_PTS_DTS_flag()
 bool CTsPacket::Get_PTS(LONGLONG &pts)
 {
     bool retval = false;
-    //Ê×ÏÈ¼ì²âPES_FLAG
+    //é¦–å…ˆæ£€æµ‹PES_FLAG
     if(!Get_payload_unit_start_indicator())
     {
         return false;
     }
 	BYTE* pData = m_pPacket;
 	BYTE adaptation_field_control = Get_adaptation_field_control();
-	if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	{
 		int adaptation_field_length = *(m_pPacket + 4);
-		pData = pData + adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+		pData = pData + adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	}
     
-    //¼ì²âPES°üÍ·
+    //æ£€æµ‹PESåŒ…å¤´
     if((*(pData + 4) == 0x00) 
           && (*(pData + 5) == 0x00) 
           && (*(pData + 6) == 0x01))
     {
-        //´¦ÀíPES°ü£¬¼ì²âPTS±êÖ¾
+        //å¤„ç†PESåŒ…ï¼Œæ£€æµ‹PTSæ ‡å¿—
         if(ZBit::PointTest(pData + 11,0))
         {
-            //»ñÈ¡PTSÊı¾İ
+            //è·å–PTSæ•°æ®
             ZBIT_VAR_FROM_POINT(pts,pData + 13,-4,3,-1,15,-1,15);
             retval = true;
         }
@@ -608,7 +608,7 @@ bool CTsPacket::Get_PTS(LONGLONG &pts)
 bool CTsPacket::Get_DTS(LONGLONG &dts)
 {
     bool retval = false;
-    //Ê×ÏÈ¼ì²âPES_FLAG
+    //é¦–å…ˆæ£€æµ‹PES_FLAG
     if(!Get_payload_unit_start_indicator())
     {
         return false;
@@ -616,21 +616,21 @@ bool CTsPacket::Get_DTS(LONGLONG &dts)
     
 	BYTE* pData = m_pPacket;
 	BYTE adaptation_field_control = Get_adaptation_field_control();
-	if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	{
 		int adaptation_field_length = *(m_pPacket + 4);
-		pData = pData + adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+		pData = pData + adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	}
 
-    //¼ì²âPES°üÍ·
+    //æ£€æµ‹PESåŒ…å¤´
     if((*(pData + 4) == 0x00) 
           && (*(pData + 5) == 0x00) 
           && (*(pData + 6) == 0x01))
     {
-        //´¦ÀíPES°ü£¬¼ì²âPTS±êÖ¾
+        //å¤„ç†PESåŒ…ï¼Œæ£€æµ‹PTSæ ‡å¿—
         if(ZBit::PointTest(pData + 11,1))
         {
-            //»ñÈ¡DTSÊı¾İ
+            //è·å–DTSæ•°æ®
             ZBIT_VAR_FROM_POINT(dts,pData + 13 + 5 ,-4,3,-1,15,-1,15);
             retval = true;
         }
@@ -649,10 +649,10 @@ bool CTsPacket::H264_Get_slice_type(BYTE &SliceType/*10:IDR */)
 	//int start_pos = 4;
 	//BYTE stream_id;
 	//BYTE adaptation_field_control = Get_adaptation_field_control();
-	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	//{
 	//	int adaptation_field_length = *(m_pPacket + 4);
-	//	start_pos = adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+	//	start_pos = adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	//}
 	//if (Get_PES_stream_id(stream_id))
 	//{
@@ -793,10 +793,10 @@ bool CTsPacket::H264_is_new_frame(int frame_mbs_only_flag,int log2_max_frame_num
 	//int start_pos = 4;
 	//BYTE stream_id;
 	//BYTE adaptation_field_control = Get_adaptation_field_control();
-	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	//{
 	//	int adaptation_field_length = *(m_pPacket + 4);
-	//	start_pos = adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+	//	start_pos = adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	//}
 	//if (Get_PES_stream_id(stream_id))
 	//{
@@ -862,10 +862,10 @@ int CTsPacket::H264_Get_NON_I_Frame_Num(int log2_max_frame_num_minus4)
 	//int start_pos = 4;
 	//BYTE stream_id;
 	//BYTE adaptation_field_control = Get_adaptation_field_control();
-	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	//{
 	//	int adaptation_field_length = *(m_pPacket + 4);
-	//	start_pos = adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+	//	start_pos = adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	//}
 	//if (Get_PES_stream_id(stream_id))
 	//{
@@ -922,10 +922,10 @@ bool CTsPacket::H264_Parse_sps(seq_parameter_set_rbsp_t* sps)
 	//int start_pos = 4;
 	//BYTE stream_id;
 	//BYTE adaptation_field_control = Get_adaptation_field_control();
-	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	//if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	//{
 	//	int adaptation_field_length = *(m_pPacket + 4);
-	//	start_pos = adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+	//	start_pos = adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	//}
 	//if (Get_PES_stream_id(stream_id))
 	//{
@@ -972,10 +972,10 @@ int CTsPacket::Get_ES_pos()
 	int start_pos = 4;
 	BYTE stream_id;
 	BYTE adaptation_field_control = Get_adaptation_field_control();
-	if (adaptation_field_control == 2 || adaptation_field_control == 3)	//º¬µ÷Õû×Ö¶Î
+	if (adaptation_field_control == 2 || adaptation_field_control == 3)	//å«è°ƒæ•´å­—æ®µ
 	{
 		int adaptation_field_length = *(m_pPacket + 4);
-		start_pos = start_pos + adaptation_field_length + 1; //°üº¬³¤¶È×Ö¶Î
+		start_pos = start_pos + adaptation_field_length + 1; //åŒ…å«é•¿åº¦å­—æ®µ
 	}
 	if (Get_PES_stream_id(stream_id))
 	{
@@ -986,7 +986,7 @@ int CTsPacket::Get_ES_pos()
 
 
 /*	======================================================
-*	Ë½ÓĞ¶Î½á¹¹½âÎöÆ÷Àà
+*	ç§æœ‰æ®µç»“æ„è§£æå™¨ç±»
 *   CPrivate_Section
 */
 
@@ -1005,7 +1005,7 @@ CPrivate_Section::~CPrivate_Section()
 bool CPrivate_Section::SetPacket(CTsPacket &Packet)
 {
 	BYTE size;
-	BYTE *pData;//Ts°üÖĞĞ¯´øµÄÊı¾İ
+	BYTE *pData;//TsåŒ…ä¸­æºå¸¦çš„æ•°æ®
 	pData = Packet.Get_Data(size);
 	
 	if(pData == NULL)
@@ -1013,16 +1013,16 @@ bool CPrivate_Section::SetPacket(CTsPacket &Packet)
 
 	if((*pData) >= size)
 	{
-		//Ö¸Õë·Ç·¨ 
+		//æŒ‡é’ˆéæ³• 
 		return false;
 	}
-	//(*pData)ÎªË½ÓĞ¶ÎÖ¸Õë
+	//(*pData)ä¸ºç§æœ‰æ®µæŒ‡é’ˆ
 	m_pSection = pData +1 + *pData;
 	return true;
 }
 
 
-//Í¨ÓÃË½ÓĞ¶Î
+//é€šç”¨ç§æœ‰æ®µ
 BYTE CPrivate_Section::Get_table_id()
 {
 	return *m_pSection;
@@ -1044,7 +1044,7 @@ WORD CPrivate_Section::Get_Section_length()
 }
 
 
-//±ê×¼Ë½ÓĞ¶ÎÓï·¨¶¨Òå
+//æ ‡å‡†ç§æœ‰æ®µè¯­æ³•å®šä¹‰
 WORD CPrivate_Section::Get_table_id_extension()
 {
 	WORD ext;
@@ -1077,18 +1077,18 @@ BYTE CPrivate_Section::Get_last_section_number()
 	return (*(m_pSection +7));
 }
 
-//Ë½ÓĞ·Ö¶ÎÊı¾İ
+//ç§æœ‰åˆ†æ®µæ•°æ®
 BYTE *CPrivate_Section::Get_private_data_byte(WORD &Size)
 {
 	if(Get_Section_sytax_indicator())
 	{
-		//±ê×¼Êı¾İ
+		//æ ‡å‡†æ•°æ®
 		Size = Get_Section_length() - 9 ;
 		return m_pSection + 8;
 	}
 	else
 	{
-		//·Ç±êÊı¾İ
+		//éæ ‡æ•°æ®
 		Size = Get_Section_length();
 		return m_pSection + 3;
 	}
@@ -1105,7 +1105,7 @@ DWORD CPrivate_Section::Get_CRC_32()
 	return crc;
 }
 
-bool CTsPacket::Get_VIDEO_TYPE(BYTE &VideoType/*ÀàĞÍ1-PAL,2-NTSC*/)
+bool CTsPacket::Get_VIDEO_TYPE(BYTE &VideoType/*ç±»å‹1-PAL,2-NTSC*/)
 {
 	int i;
 	BYTE size;

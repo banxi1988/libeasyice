@@ -31,7 +31,7 @@ extern string get_uri(const string& url);
 
 extern void Ei_MsgWaitForSingleObjects(const pthread_t *pHandles,int dwMilliseconds);
 
-//输出不带换行符。除非输出与输入相同 
+//杈撳嚭涓嶅甫鎹㈣绗︺�傞櫎闈炶緭鍑轰笌杈撳叆鐩稿悓 
 extern string removeparam(const string& filename);
 
 extern void CreateMulPath( const char *muldir );

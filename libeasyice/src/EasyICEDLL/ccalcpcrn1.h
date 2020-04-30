@@ -21,10 +21,10 @@ public:
 	CCalcPcrN1();
 	~CCalcPcrN1();
 	
-	///Ôö¼ÓÒ»¸öPCR°ü
+	///å¢åŠ ä¸€ä¸ªPCRåŒ…
 	void AddPcrPacket(long long pcr);
 	
-	///Ôö¼ÓÒ»¸ö·ÇPCR°ü
+	///å¢åŠ ä¸€ä¸ªéPCRåŒ…
 	void AddPayloadPacket();
 	
 	long long GetPcr();
@@ -33,7 +33,7 @@ private:
 	long long m_pcrBefor;
 	double m_fTransportRate;
 	
-	///°üº¬ÁËPCR°üÊı
+	///åŒ…å«äº†PCRåŒ…æ•°
 	long long m_nPacketCountOfPcr;
 };
 

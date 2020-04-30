@@ -107,7 +107,7 @@ void CPsiCheck::InitAllCkHds()
 
 void CPsiCheck::AddPmtPid(int pid,int program_num)
 {
-	//ÕâÀï¿ÉÄÜ¸²¸ÇÆäËûPID
+	//è¿™é‡Œå¯èƒ½è¦†ç›–å…¶ä»–PID
 	m_pAllCkHds[pid] = NewHandle();
 }
 
@@ -208,7 +208,7 @@ void CPsiCheck::OnRecvNewSection(dvbpsi_psi_section_t * p_section,int pid)
 		ERROR_NAME_T emName;
 		long long interval = diff_pcr(llCurTime, m_pOldOccurTime[p_section->i_table_id]) /*/ 27000*/;
 
-		//2015-2-11 È¥µô¶Ôi_numberµÄÅĞ¶Ï£¬ËÆºõÃ»ÓÃ,¶øÇÒ»áµ¼ÖÂi_number´óÓÚµÈÓÚ2Ê±Ã»ÓĞ´¦Àí£¬½ø¶øµ¼ÖÂ³ÌĞò±ÀÀ£
+		//2015-2-11 å»æ‰å¯¹i_numberçš„åˆ¤æ–­ï¼Œä¼¼ä¹æ²¡ç”¨,è€Œä¸”ä¼šå¯¼è‡´i_numberå¤§äºç­‰äº2æ—¶æ²¡æœ‰å¤„ç†ï¼Œè¿›è€Œå¯¼è‡´ç¨‹åºå´©æºƒ
 		//if (p_section->i_number == 1)	//EIT_PF_F
 		//{
 		//	switch(p_section->i_table_id)

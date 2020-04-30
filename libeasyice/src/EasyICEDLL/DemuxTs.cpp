@@ -102,7 +102,7 @@ int CDemuxTs::SetupDemux(BYTE* pData, int nLength,int nTsLen)
 		}
 
 		m_mapProgPids.insert(map<int,PROGRAM_PIDS>::value_type(it->first,info));
-		//目前先当做PMT表只有一个section 处理
+		//鐩墠鍏堝綋鍋歅MT琛ㄥ彧鏈変竴涓猻ection 澶勭悊
 		//STU_SECTION_PMT::iterator itpmt = it->second.begin();
 		//for( ; itpmt != it->second.end(); itpmt++ )
 		//{
@@ -111,7 +111,7 @@ int CDemuxTs::SetupDemux(BYTE* pData, int nLength,int nTsLen)
 	}
 
 	
-	//根据节目数量初始化存储器，解析器
+	//鏍规嵁鑺傜洰鏁伴噺鍒濆鍖栧瓨鍌ㄥ櫒锛岃В鏋愬櫒
 	map<int,PROGRAM_PIDS>::iterator itpid = m_mapProgPids.begin();
 	for( ; itpid != m_mapProgPids.end(); itpid++)
 	{
@@ -121,7 +121,7 @@ int CDemuxTs::SetupDemux(BYTE* pData, int nLength,int nTsLen)
 
 		m_mapProgParser[itpid->first]->SetOutputBuffer( (*m_allProgramInfo)[itpid->first] );
 
-		//设置音视频流
+		//璁剧疆闊宠棰戞祦
 		for (int i = 0; i < (int)itpid->second.pids.size(); i++)
 		{
 			if (TypeOfStreamType(itpid->second.pids[i].stream_type) == 1)
@@ -186,7 +186,7 @@ int CDemuxTs::SetupDemux(TABLES* tables,int nTsLen)
 		}
 
 		m_mapProgPids.insert(map<int,PROGRAM_PIDS>::value_type(it->first,info));
-		//目前先当做PMT表只有一个section 处理
+		//鐩墠鍏堝綋鍋歅MT琛ㄥ彧鏈変竴涓猻ection 澶勭悊
 		//STU_SECTION_PMT::iterator itpmt = it->second.begin();
 		//for( ; itpmt != it->second.end(); itpmt++ )
 		//{
@@ -195,7 +195,7 @@ int CDemuxTs::SetupDemux(TABLES* tables,int nTsLen)
 	}
 
 	
-	//根据节目数量初始化存储器，解析器
+	//鏍规嵁鑺傜洰鏁伴噺鍒濆鍖栧瓨鍌ㄥ櫒锛岃В鏋愬櫒
 	map<int,PROGRAM_PIDS>::iterator itpid = m_mapProgPids.begin();
 	for( ; itpid != m_mapProgPids.end(); itpid++)
 	{
@@ -205,7 +205,7 @@ int CDemuxTs::SetupDemux(TABLES* tables,int nTsLen)
 
 		m_mapProgParser[itpid->first]->SetOutputBuffer( (*m_allProgramInfo)[itpid->first] );
 
-		//设置音视频流
+		//璁剧疆闊宠棰戞祦
 		for (int i = 0; i < (int)itpid->second.pids.size(); i++)
 		{
 			if (TypeOfStreamType(itpid->second.pids[i].stream_type) == 1)
@@ -273,7 +273,7 @@ PARSED_FRAME_INFO CDemuxTs::AddTsPacket(CTsPacket* tsPacket)
 					break;
 				}
 			}
-			if (!bFinded)	//2012/7/1  其他节目数据
+			if (!bFinded)	//2012/7/1  鍏朵粬鑺傜洰鏁版嵁
 			{
 				m_mapProgParser[it->first]->AddOtherPacket();
 			}

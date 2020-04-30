@@ -51,7 +51,7 @@ private:
          */
         bool SelectStream(stream_sys_t &sys,hls_stream_t& hls,const string& m3u8_content);
         
-        //判断新增segment，加入待下载列表
+        //鍒ゆ柇鏂板segment锛屽姞鍏ュ緟涓嬭浇鍒楄〃
         void OnNewM3u8(const list<segment_t>& lst);
 
 		string ReplaceM3u8(const string& m3u8_content);
@@ -67,7 +67,7 @@ private:
         pthread_t m_thread;
         pthread_mutex_t m_mutex;
         bool m_bThreadValid;
-        deque<segment_t> m_dqTsUrl;//待下载TS
+        deque<segment_t> m_dqTsUrl;//寰呬笅杞絋S
         
         stream_sys_t m_sys;
         hls_stream_t m_hls;

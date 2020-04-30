@@ -22,7 +22,7 @@ using namespace tr101290;
 //pfReportCB  tr101290::g_pfReportCB;
 
 
-//用于获取当前时间
+//鐢ㄤ簬鑾峰彇褰撳墠鏃堕棿
 //CSysClock* tr101290::g_pSysClock = NULL;
 
 
@@ -55,12 +55,12 @@ long long tr101290::diff_pcr(long long curPcr,long long prevPcr)
 	}
 
 
-	//异常变小
+	//寮傚父鍙樺皬
 	if (PCR_MAX - prevPcr > 27000000)
 	{
 		return curPcr - prevPcr;
 	}
 
-	//正常变小
+	//姝ｅ父鍙樺皬
 	return (PCR_MAX - prevPcr) + curPcr;
 }

@@ -23,7 +23,7 @@ public:
 	CPcrOj(void);
 	~CPcrOj(void);
 
-	//¼ì²â¶¶¶¯
+	//æ£€æµ‹æŠ–åŠ¨
 	long long RecvPcr(long long pcr,long long sys_clock);
 private:
 	//struct timeval m_tvStart;

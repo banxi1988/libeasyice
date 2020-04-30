@@ -21,7 +21,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #define TRMSGMGR_H
 
 
-//×î´ó´æ´¢ÏûÏ¢Êı,°´Ã¿Ãë100ÌõµÄËÙ¶È£¬1000000¿ÉÖ§³Ö3Ğ¡Ê±µÄÊÂ¼ş¡£3Ğ¡Ê±ºó£¬¾ÉÊı¾İ±»³åµô£¬ÆäÖĞ°üº¬ÈÎºÎµÄ¸æ¾¯ÊÂ¼ş¡£
+//æœ€å¤§å­˜å‚¨æ¶ˆæ¯æ•°,æŒ‰æ¯ç§’100æ¡çš„é€Ÿåº¦ï¼Œ1000000å¯æ”¯æŒ3å°æ—¶çš„äº‹ä»¶ã€‚3å°æ—¶åï¼Œæ—§æ•°æ®è¢«å†²æ‰ï¼Œå…¶ä¸­åŒ…å«ä»»ä½•çš„å‘Šè­¦äº‹ä»¶ã€‚
 #define MAX_MSG_SAVE_CNT 1000000
 
 namespace tr101290_mgr
@@ -66,13 +66,13 @@ typedef struct _TR_MSG_T
 		nErrCount = -1;
 	}
 	ERROR_TYPE_T emErrType;
-	int nErrCount;	// -1 ±íÊ¾´Ë¸æ¾¯²»ĞèÒªÏÔÊ¾£¨disabled»òÃÅÏŞ·¶Î§Ö®ÍâµÄ£©
-	int nSiRepetitionCount; // -1 ±íÊ¾Ã»ÓĞ²úÉú
+	int nErrCount;	// -1 è¡¨ç¤ºæ­¤å‘Šè­¦ä¸éœ€è¦æ˜¾ç¤ºï¼ˆdisabledæˆ–é—¨é™èŒƒå›´ä¹‹å¤–çš„ï¼‰
+	int nSiRepetitionCount; // -1 è¡¨ç¤ºæ²¡æœ‰äº§ç”Ÿ
 
 }TR_MSG_T;
 
 
-//PSI/SI ³¬Ê±ÃÅÏŞ £¨µ¥Î»£ºms£©
+//PSI/SI è¶…æ—¶é—¨é™ ï¼ˆå•ä½ï¼šmsï¼‰
 typedef struct _PSI_TIMEOUT_VALUE_T
 {
 	//DVB STD default
@@ -130,16 +130,16 @@ public:
 	CTrMsgMgr(void);
 	~CTrMsgMgr(void);
 
-	//Ìí¼ÓÒ»¸öÊÂ¼ş
+	//æ·»åŠ ä¸€ä¸ªäº‹ä»¶
 	TR_MSG_T* AddMsg(const REPORT_PARAM_T& msg);
 
-	//»Ø·ÅÊÂ¼ş
+	//å›æ”¾äº‹ä»¶
 	TR_MSG_T* PlayBackMsg(const REPORT_PARAM_T& msg);
 
-	//ÉèÖÃ³¬Ê±ÃÅÏŞ
+	//è®¾ç½®è¶…æ—¶é—¨é™
 	void SetPsiTimeOut(PSI_TIMEOUT_VALUE_T ptv);
 
-	//ÉèÖÃ³¬Ê±ÃÅÏŞÎª DVB ±ê×¼ (Ä¬ÈÏ)
+	//è®¾ç½®è¶…æ—¶é—¨é™ä¸º DVB æ ‡å‡† (é»˜è®¤)
 	void SetPsiTimeOutDVB();
 
 	void ClearError();
@@ -148,25 +148,25 @@ public:
 private:
 	TR_MSG_T* ProcessReport(const REPORT_PARAM_T& msg,bool bRepaly = false);
 
-	//ÅĞ¶ÏÊÇ·ñ¿ªÆô
+	//åˆ¤æ–­æ˜¯å¦å¼€å¯
 	bool CheckEnabled(const REPORT_PARAM_T& msg);
 
-	//ÅĞ¶ÏÊÇ·ñ³¬¹ı·§Öµ
+	//åˆ¤æ–­æ˜¯å¦è¶…è¿‡é˜€å€¼
 	bool CheckFilter(const REPORT_PARAM_T& msg);
 
 public:
 
-	//´æ´¢ËùÓĞÊÂ¼ş
+	//å­˜å‚¨æ‰€æœ‰äº‹ä»¶
 	MyList<REPORT_PARAM_T> m_vecMsg;
 private:
 
 	TR_MSG_T* m_pTrMsg;
 
-	//ÃÅÏŞ
+	//é—¨é™
 	PSI_TIMEOUT_VALUE_T m_PsiTimeOut;
 
 public:
-	//Í³¼Æ¼ÆÊı
+	//ç»Ÿè®¡è®¡æ•°
 	int m_nErrCnt_SyncLost;
 	int m_nErrCnt_SyncByte;
 

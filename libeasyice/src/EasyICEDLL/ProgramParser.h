@@ -22,7 +22,7 @@ using namespace std;
 #define MAXPPS  256
 
 
-///@brief	½âÎöµ¥Â·½ÚÄ¿¡£Í³¼Æpts£¬dts£¬pcrµÈ
+///@brief	è§£æå•è·¯èŠ‚ç›®ã€‚ç»Ÿè®¡ptsï¼Œdtsï¼Œpcrç­‰
 class CProgramParser
 {
 public:
@@ -30,75 +30,75 @@ public:
 	~CProgramParser(void);
 public:
 	/**
-	* ĞèÒª±£Ö¤´«ÈëµÄTS°üÊÇ±¾Â·½ÚÄ¿µÄ¡£
+	* éœ€è¦ä¿è¯ä¼ å…¥çš„TSåŒ…æ˜¯æœ¬è·¯èŠ‚ç›®çš„ã€‚
 	*/
 	PARSED_FRAME_INFO PushBackTsPacket(CTsPacket* tsPacket,long long packetID);
 
-	//ÉèÖÃ½âÎö½á¹ûĞÅÏ¢´æ´¢»º³å
+	//è®¾ç½®è§£æç»“æœä¿¡æ¯å­˜å‚¨ç¼“å†²
 	void SetOutputBuffer(PROGRAM_INFO* p) { m_pProgInfo = p; }
 
-	//ÉèÖÃÊÓÆµpid¼°ÆäÀàĞÍ£¨Ä¿Ç°Ö§³Ö½âÂëµÄ£©
+	//è®¾ç½®è§†é¢‘pidåŠå…¶ç±»å‹ï¼ˆç›®å‰æ”¯æŒè§£ç çš„ï¼‰
 	void SetVideoStreamInfo(PID_STREAM_TYPE video_pid_type);
 
-	//Èç¹û´å×Ó°¡¶à¸öÒôÆµPID£¬½öÖ§³Ö1¸ö
+	//å¦‚æœæ‘å­å•Šå¤šä¸ªéŸ³é¢‘PIDï¼Œä»…æ”¯æŒ1ä¸ª
 	void SetAudioPid(int pid);
 
-	//½âÂëÒ»¸öTS°ü
+	//è§£ç ä¸€ä¸ªTSåŒ…
 	int DecodePacket(CTsPacket* tsPacket);
 
-	//¼ÓÈëÒ»¸ö·Ç±¾½ÚÄ¿PIDµÄ°ü
+	//åŠ å…¥ä¸€ä¸ªéæœ¬èŠ‚ç›®PIDçš„åŒ…
 	void AddOtherPacket();
 private:
-	//×éºÏGOP
+	//ç»„åˆGOP
 	void MPEG2_AssembleGop(BYTE bPic);
 
 	void H264_AssembleGop(FRAME_TYPE frame_type);
 
-	//¼ÆËãÂëÂÊ
+	//è®¡ç®—ç ç‡
 	inline void MakeRate(long long pcr);
 private:
-	//±¾½ÚÄ¿µÄTS°ü¼ÆÊıÆ÷
+	//æœ¬èŠ‚ç›®çš„TSåŒ…è®¡æ•°å™¨
 	unsigned long long m_llTotalPacketCounter;
 
-	//¸÷ÖÖÊ±¼ä´ÁĞÅÏ¢
+	//å„ç§æ—¶é—´æˆ³ä¿¡æ¯
 	
 
-	//µ±Ç°pcr£¬pts£¬dtsĞÅÏ¢
+	//å½“å‰pcrï¼Œptsï¼Œdtsä¿¡æ¯
 	long long  m_pcr;
 	long long  m_Vpts;
 	long long  m_Apts;
 	long long  m_dts;
 
-	//×îºóÒ»¸öpcrÖµ
+	//æœ€åä¸€ä¸ªpcrå€¼
 	//TIMESTAMP m_lastPcrtp;
 
-	//×éGOPµÄÁÙÊ±×Ö·û´®
+	//ç»„GOPçš„ä¸´æ—¶å­—ç¬¦ä¸²
 	string m_gopTmp;
 	int m_nGopsizeTmp;
 	int m_nGopBytesTmp;
 
-	//´æ´¢½âÎö³öµÄ½ÚÄ¿ĞÅÏ¢
+	//å­˜å‚¨è§£æå‡ºçš„èŠ‚ç›®ä¿¡æ¯
 	PROGRAM_INFO* m_pProgInfo;
 
 
-	//Á½PCR¼ä°ü¼ÆÊı
+	//ä¸¤PCRé—´åŒ…è®¡æ•°
 	int m_nPacketCountOfPcr;
 
-	//ÉÏÒ»¸öPCR
+	//ä¸Šä¸€ä¸ªPCR
 	long long m_pcrBefor;
 
-	//ÊÓÆµpid¼°ÆäÀàĞÍ
+	//è§†é¢‘pidåŠå…¶ç±»å‹
 	PID_STREAM_TYPE m_video_pid_type;
 
 	int m_nAudioPid;
 
-	//H264Óï·¨½âÎöÆ÷
+	//H264è¯­æ³•è§£æå™¨
 	CH264Dec m_avcParser;
 	
 
 	int m_nTsLength;
 private:
-	//13818-2 p22 ´«ËÍËÙÂÊ(×Ö½ÚÂÊ)
+	//13818-2 p22 ä¼ é€é€Ÿç‡(å­—èŠ‚ç‡)
 	double m_fTransportRate;
 
 private:

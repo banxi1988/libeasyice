@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #pragma once
 #include "Dvb.h"
 
-//¹Ø±Õ½«intÀàĞÍ×ª»»³ÉboolµÄ¾¯¸æĞÅÏ¢
+//å…³é—­å°†intç±»å‹è½¬æ¢æˆboolçš„è­¦å‘Šä¿¡æ¯
 #pragma warning (disable:4800)
 
 #define MPEG_FRAME_TYPE_I	1
@@ -29,12 +29,12 @@ public:
 
 	 bool SetPacket(BYTE *pPacket);
 
-//ÉèÖÃĞÅÏ¢
+//è®¾ç½®ä¿¡æ¯
 	 void Set_PID(PID pid);
 	 bool Set_PCR(PCR pcr);
 	 void Set_continuity_counter(BYTE Counter);
 	 void RemoveAfField();
-//»ù±¾ĞÅÏ¢
+//åŸºæœ¬ä¿¡æ¯
 	 bool Get_transport_error_indicator();
 	 bool Get_payload_unit_start_indicator();
 	 bool Get_transport_priority();
@@ -43,7 +43,7 @@ public:
 	 BYTE Get_adaptation_field_control();
 	 BYTE Get_continuity_counter();
 
-//Ìî³ä×Ö¶ÎĞÅÏ¢
+//å¡«å……å­—æ®µä¿¡æ¯
 	 BYTE * Get_adaptation_field(BYTE &Size);
 	 BYTE Get_adaptation_field_length(BYTE *pAF_Data);
 	 bool Get_discontinuity_indicator(BYTE *pAF_Data);
@@ -76,16 +76,16 @@ public:
 	 __int64 Get_DTS_next_AU(BYTE *pAF_Data);
 	 BYTE *Get_stuffing_byte(BYTE *pAF_Data,BYTE &Size);
 
-//»ñÈ¡PES GOPĞÅÏ¢
+//è·å–PES GOPä¿¡æ¯
 	 bool Get_PES_stream_id(BYTE &stream_id);
-	 bool Get_PES_GOP_INFO(DWORD &TimeCode/*Ê±ÂëĞÅÏ¢*/);
-	 bool Get_PES_PIC_INFO(BYTE &PictureType/*Ê±ÂëĞÅÏ¢*/);
+	 bool Get_PES_GOP_INFO(DWORD &TimeCode/*æ—¶ç ä¿¡æ¯*/);
+	 bool Get_PES_PIC_INFO(BYTE &PictureType/*æ—¶ç ä¿¡æ¯*/);
 	 BYTE Get_PTS_DTS_flag();
-//»ñÈ¡ÊÓÆµĞÅÏ¢
-	 bool Get_VIDEO_TYPE(BYTE &VideoType/*ÀàĞÍ1-PAL,2-NTSC*/);
+//è·å–è§†é¢‘ä¿¡æ¯
+	 bool Get_VIDEO_TYPE(BYTE &VideoType/*ç±»å‹1-PAL,2-NTSC*/);
 	 bool Get_PTS(LONGLONG &pts);
 	 bool Get_DTS(LONGLONG &dts);
-//»ñÈ¡ÓĞĞ§¸ºÔØ
+//è·å–æœ‰æ•ˆè´Ÿè½½
 	 BYTE * Get_Data(BYTE &Size);
 //Section information
 	 bool Get_SectionInfo(WORD& section_length, BYTE& section_number,BYTE& last_section_number);
@@ -97,12 +97,12 @@ public:
 	 bool H264_Get_pps();
 
 	 int Get_ES_pos();
-//»ñÈ¡»º³å
+//è·å–ç¼“å†²
 	BYTE *m_pPacket;
 };
 
 /*	======================================================
-*	Ë½ÓĞ¶Î½á¹¹½âÎöÆ÷Àà
+*	ç§æœ‰æ®µç»“æ„è§£æå™¨ç±»
 */
 
 class CPrivate_Section
@@ -113,20 +113,20 @@ public:
 	
 	bool SetPacket(CTsPacket &Packet);
 	
-//Í¨ÓÃË½ÓĞ¶Î
+//é€šç”¨ç§æœ‰æ®µ
 	BYTE Get_table_id();
 	bool Get_Section_sytax_indicator();
 	WORD Get_Section_length();
-//±ê×¼Ë½ÓĞ¶ÎÓï·¨¶¨Òå
+//æ ‡å‡†ç§æœ‰æ®µè¯­æ³•å®šä¹‰
 	WORD Get_table_id_extension();
 	BYTE Get_version_number();
 	bool Get_current_next_indicator();
 	BYTE Get_section_number();
 	BYTE Get_last_section_number();
 
-//Ë½ÓĞ·Ö¶ÎÊı¾İ
+//ç§æœ‰åˆ†æ®µæ•°æ®
 	BYTE * Get_private_data_byte(WORD &Size);
-//CRCÊı¾İ
+//CRCæ•°æ®
 	DWORD Get_CRC_32();
 	
 private:
@@ -134,7 +134,7 @@ private:
 };
 
 /**
-* ·â×°ÃèÊö×ÓĞÅÏ¢µÄÀà
+* å°è£…æè¿°å­ä¿¡æ¯çš„ç±»
 */
 
 class CDescriptor

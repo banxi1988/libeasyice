@@ -34,16 +34,16 @@ public:
 
 	void SetParam(UDP_OBJ_PARAM_T param);
 
-	//¿ÉÓĞ¿ÉÎŞµÄ¹ıÂËÆ÷¡£Ä¿Ç°Ö»Ö§³ÖÒ»¸ö.±¾Àà¸ºÔğ×Ô¶¯Ïú»Ù¹ıÂËÆ÷
+	//å¯æœ‰å¯æ— çš„è¿‡æ»¤å™¨ã€‚ç›®å‰åªæ”¯æŒä¸€ä¸ª.æœ¬ç±»è´Ÿè´£è‡ªåŠ¨é”€æ¯è¿‡æ»¤å™¨
 	void SetFilter(CStreamFilterBase *pFilter);
 
-	//Í£Ö¹½ÓÊÕ
+	//åœæ­¢æ¥æ”¶
 	void Stop(bool bForce = false);
 
-	//Æô¶¯½ÓÊÕ£¬³É¹¦·µ»Ø 0 £¬·ñÔò·µ»Ø·ÇÁãÖµ
+	//å¯åŠ¨æ¥æ”¶ï¼ŒæˆåŠŸè¿”å› 0 ï¼Œå¦åˆ™è¿”å›éé›¶å€¼
 	virtual int Run() = 0;
 	
-	//½ÓÊÕÏß³Ìº¯Êı
+	//æ¥æ”¶çº¿ç¨‹å‡½æ•°
 	virtual void WorkFun() = 0;
 
 protected:
@@ -58,7 +58,7 @@ protected:
 	BYTE* m_pBuffer;
 	int m_nBufferLen;
 
-	//»Øµôº¯Êı¼°²ÎÊı
+	//å›æ‰å‡½æ•°åŠå‚æ•°
 	ON_RECVDATA_CB m_pRecvDataCB;
 	void* m_pApp;
 

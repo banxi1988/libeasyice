@@ -21,7 +21,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
-//ts¿œªØ ±º‰(√Î)
+//tsËÄÅÂåñÊó∂Èó¥(Áßí)
 const int TS_EXPIRE_TIME = 60*3;
 
 
@@ -120,7 +120,7 @@ void CSaveFile::OnRecvTs(const string& url,const BYTE* pData, int nLen)
         }
         if (m_stParam.savefile != NULL)
         {
-                cout << "‘› ±≤ª÷ß≥÷±£¥Êµ•∏ˆŒƒº˛" << endl;
+                cout << "ÊöÇÊó∂‰∏çÊîØÊåÅ‰øùÂ≠òÂçï‰∏™Êñá‰ª∂" << endl;
                 return;
         }
         string tsname = url.substr(url.rfind("/")+1);
@@ -145,7 +145,7 @@ void CSaveFile::OnRecvTs(const string& url,const BYTE* pData, int nLen)
         
         printf("writefile:%s,size:%d,write:%d,err=%d\n",pathname.c_str(),nLen,writed,errno);
         
-        //’Î∂‘ffmpegµƒ—≠ª∑…˙≥…Œƒº˛∑Ω Ω
+        //ÈíàÂØπffmpegÁöÑÂæ™ÁéØÁîüÊàêÊñá‰ª∂ÊñπÂºè
         list<string>::iterator it = m_lstTsHistory.begin();
         for(; it != m_lstTsHistory.end(); ++it)
         {
@@ -157,8 +157,8 @@ void CSaveFile::OnRecvTs(const string& url,const BYTE* pData, int nLen)
         }
         m_lstTsHistory.push_back(pathname);
         
-        //…æ≥˝æ…µƒ
-        if (m_stParam.realtime_mode && m_lstTsHistory.size() > m_segment_count*3)//∂‡±£¡Ù“ªª·
+        //Âà†Èô§ÊóßÁöÑ
+        if (m_stParam.realtime_mode && m_lstTsHistory.size() > m_segment_count*3)//Â§ö‰øùÁïô‰∏Ä‰ºö
         {
                 printf("remove ts:%s\n",m_lstTsHistory.begin()->c_str());
                 unlink(m_lstTsHistory.begin()->c_str());
@@ -171,7 +171,7 @@ void CSaveFile::OnRecvM3u8(const string& m3u8)
 {
         if (m_stParam.savefile != NULL)
         {
-                cout << "‘› ±≤ª÷ß≥÷±£¥Êµ•∏ˆŒƒº˛" << endl;
+                cout << "ÊöÇÊó∂‰∏çÊîØÊåÅ‰øùÂ≠òÂçï‰∏™Êñá‰ª∂" << endl;
                 return;
         }
         

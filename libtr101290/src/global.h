@@ -39,9 +39,9 @@ extern long long diff_pcr(long long curPcr,long long prevPcr);
 
 
 
-static const char* SDK_CODE="defs_default_streamtype=0x02"; //北京正奇联讯
+static const char* SDK_CODE="defs_default_streamtype=0x02"; //鍖椾含姝ｅ鑱旇
 
-//static const char* SDK_CODE="defs_default_streamtype=0x1b"; //北京正奇联讯
+//static const char* SDK_CODE="defs_default_streamtype=0x1b"; //鍖椾含姝ｅ鑱旇
 
 
 

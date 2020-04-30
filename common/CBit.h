@@ -19,8 +19,8 @@ typedef unsigned char u_char;
 class CBit
 {
 public:
-	static u_int getBits (u_char *buf, int byte_offset, int startbit, int bitlen);///<32λ��Ч
-	static void setBits (u_char *buf, int byte_offset, int startbit, int bitlen,unsigned long long srcdata);///<32λ��Ч
+	static u_int getBits (u_char *buf, int byte_offset, int startbit, int bitlen);///<32位有效
+	static void setBits (u_char *buf, int byte_offset, int startbit, int bitlen,unsigned long long srcdata);///<32位有效
 	
 private:
 	CBit();

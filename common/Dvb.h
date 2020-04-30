@@ -34,7 +34,7 @@ typedef unsigned long long PCR;
 
 #define TS_REF_CLOCK	27000000
 
-//缺省PCR时间间隔
+//缂虹渷PCR鏃堕棿闂撮殧
 #define DEFAULT_TS_PCR_INTERVAL (TS_REF_CLOCK / 20)
 
 #define MS_TO_PCR(time_ms) (time_ms * 27000)

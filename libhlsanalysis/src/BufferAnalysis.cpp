@@ -60,7 +60,7 @@ void CBufferAnalysis::AddSegment(double duration)
 {
 	if (m_llSysClock < 0)
 	{
-		//重新同步系统时钟;
+		//閲嶆柊鍚屾绯荤粺鏃堕挓;
 		Sync(duration+m_fPreBuffered);
 		return;
 	}
